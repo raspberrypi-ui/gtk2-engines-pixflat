@@ -1,0 +1,213 @@
+# French translation of gtk-engines.
+# Copyright (C) 2007-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtk-engines package.
+#
+# Jonathan Ernst <jonathan@ernstfamily.ch>, 2007
+# Claude Paroz <claude@2xlibre.net>, 2007-2009
+# Robert-André Mauchin <zebob.m@pengzone.org>, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines fr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-28 18:59+0100\n"
+"PO-Revision-Date: 2009-02-28 19:49+0100\n"
+"Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
+"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3D (bouton)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3D (dégradé)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animations"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Classique"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Colorer les barres de défilement"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Contraste"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Désactiver les marques du focus"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "Activer les animations pour les barres de progression"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "Plat"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "Éclatant"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "Gélifié"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "Biseauté"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "Inversé"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "Style de la barre de menus"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "Rayon"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "Style du relief"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "Nécessite le style Éclatant ou Gélifié"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "Couleur de la barre de défilement"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "Définit la couleur des barres de défilement"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "Ombre"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "Style"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"Cette option permet de désactiver les marques dessinées par le focus. L'utilité "
+"principale est la création des captures d'écran pour la documentation."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "Style de la barre d'outils"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Taille de l'indicateur de cellule"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Largeur des bordures"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+"Taille des cases à cocher et des boutons radio dans les arborescences (bogue "
+"#351764)."
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Si défini, les angles des boutons sont arrondis"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Boutons arrondis"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Flèche"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Point"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Complet"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Marques de poignées"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Point inversé"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Barre oblique inverse"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Type de marque 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Type de marque pour les boutons des barres de défilement"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "Type de marque pour les poignées (barres de défilement, etc.)"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Aucun"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Rien"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Points de séparation des volets"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Rectangle"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Marques des barres de défilement"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Type de barres de défilement"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Marques de boutons de défilement"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Déformé"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Barre oblique"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Quelques-uns"

@@ -1,0 +1,211 @@
+# translation of eu.po to Basque
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: eu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-12 19:49+0100\n"
+"PO-Revision-Date: 2009-02-12 19:51+0100\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3D (botoia)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3D (gradientea)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animazioak"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Klasikoa"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Margotu korritze-barra"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Kontrastea"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Desgaitu fokua marraztea"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "Gaitu animazioak progresio-barran"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "Laua"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "Satinatua"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "Likatsua"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "Barnekoa"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "Alderantzikatua"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "Menu-barraren estiloa"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "Erradioa"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "Erliebe-estiloa"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "Estilo satinatua edo likatsua behar du"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "Korritze-barren kolorea"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "Korritze-barren kolorea ezartzen du"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "Itzala"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "Estiloa"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"Aukera honek fokua marraztea desgaitzen du. Helburu nagusia pantailako "
+"argazkiak egitea da dokumentazioentzako."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "Tresna-barraren estiloa"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Gelaxka-tamainaren adierazlea"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Ertzen lodiera"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "Zuhaitz-ikuspegiko kontrol- eta erradio-botoien tamaina"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Ezartzen bada, botoien ertzak biribilduko dira"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Botoi biribilak"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Gezia"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Puntua"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Osoa"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Helduleku-laukien markak"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Puntu alderantzikatua"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Barra alderantzikatua"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "1 marka mota"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Korritze-barreko botoien marka mota"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "Korritze-barreko heldulekuen, helduleku-laukien eta abarren marka mota"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Bat ere ez"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Ezer ere ez"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Paneleko puntuak"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Laukizuzena"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Korritze-barren markak"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Korritze-barra mota"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Korritze-botoien markak"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Ingerada"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Barra"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Batzuk"
+

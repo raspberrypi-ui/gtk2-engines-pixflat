@@ -1,0 +1,211 @@
+# Slovenian translation of gtk-engines.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtk-engines package.
+#
+# Matej Urbančič <mateju@svn.gnome.org>, 2007 - 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gtk-engines&amp;component=general\n"
+"POT-Creation-Date: 2008-12-14 13:59+0000\n"
+"PO-Revision-Date: 2010-04-30 10:32+0100\n"
+"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"X-Poedit-Language: Slovenian\n"
+"X-Poedit-Country: SLOVENIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d (gumbi)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d (preliv)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animacije"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Običajno"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Obarvanje drsnikov"
+
+#: ../schema/clearlooks.xml.in.in.h:6
+#: ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Onemogoči žariščno risanje"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "Omogoči animacije vrstice napredka"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "Plosko"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "Bleščeče"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "Lepljivo"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "Vložek"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "Preobrnjeno"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "Slog menijske vrstice"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "Radij"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "Reliefni slog"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "Zahteva bleščeč ali pa lepljiv slog"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "Barva drsnika"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "Določitev barve drsnikov"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "Senca"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "Slog"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid "This option allows to disable the focus drawing. The primary purpose is to create screenshots for documentation."
+msgstr "Izbrana možnost onemogoči žariščno risanje. Osnovni namen je ustvarjanje zaslonskih slik za dokumentacijo."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "Slog orodne vrstice"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Velikost kazalnika celice"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Debelina robov"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "Velikost predmetov programa znotraj drevesnega pogleda"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Izbrana možnost omogoči izris zaobljenih robov."
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Zaobljeni gumbi"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Puščica"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Pika"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Polno"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Sledi ročke predala"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Obrnjena točka"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Obrnjena poševnica"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Sled vrste 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Sled za gumbe drsnika"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "Sled za ročke drsnika, predalov ..."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Brez"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Ničesar"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Točke okna"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Pravokotnik"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Sledi drsnika"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Vrsta drsnika"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Sledi gumba drsnika"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Oblikovano"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Poševnica"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Nekateri"
+

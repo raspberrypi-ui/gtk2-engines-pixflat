@@ -1,0 +1,197 @@
+# Norwegian nynorsk translation of gtk-engines.
+# Copyright (C) 2007
+# This file is distributed under the same license as the gtk-engines package.
+# Kjartan Maraas <kmaraas@gnome.org>, 2007.
+# Eskild Hustvedt <i18n@zerodogg.org>, 2007, 2008
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines 2.19.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-04 08:39+0200\n"
+"PO-Revision-Date: 2008-04-04 08:41+0200\n"
+"Last-Translator: Eskild Hustvedt <eskildh@gnome.org>\n"
+"Language-Team: Norwegian Nynorsk <i18n-no@lister.ping.uio.no>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3D (knapp)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3D (gradient)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animasjonar"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Klassisk"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Set farge på rullefelta"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Enable Animations on Progressbars"
+msgstr "Slå på animerte framdriftsindikatorar."
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Flat"
+msgstr "Flat"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Glossy"
+msgstr "Skinnande"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Gummy"
+msgstr "Gummi"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Inset"
+msgstr "Innsats"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inverted"
+msgstr "Omvendt"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Menubar Style"
+msgstr "Stil for menylinje"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Radius"
+msgstr "Radius"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Relief Style"
+msgstr "Stil for relieff"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Requires style Glossy or Gummy"
+msgstr "Krev skinnande eller gummi-stil"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Scrollbar Color"
+msgstr "Farge for rullefelt"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Sets the Color of Scrollbars"
+msgstr "Set farge på rullefelta"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Shadow"
+msgstr "Skugge"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Style"
+msgstr "Stil"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Toolbar Style"
+msgstr "Stil for verktøylinje"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Storleik på celleindikator"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Tykkelse for kant"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "Storleiken på radio- og avkryssningsknapper (Feil #351764)."
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Gjev knappar avrundede kantar"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Avrundete knappar"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Pil"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Prikk"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Full"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Merker for handtakboks"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Omvendt prikk"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Omvendt skråstrek"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Markeringstype 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Markeringstype for knappar på rullefelt"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "Markeringstype for handtak på rullefelt, handtakboksar osv."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Inga"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Ingenting"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Splitta prikker"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Rektangel"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Markeringar på rullefelt"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Type rullefelt"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Markeringar på rulleknapper"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Formet"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Skråstrek"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Litt"

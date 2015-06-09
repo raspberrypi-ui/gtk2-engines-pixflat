@@ -1,0 +1,212 @@
+# Arabic translations for gnome package.
+# Copyright (C) 2007 THE gnome'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome package.
+# Automatically generated, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome 2-18\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-05 21:51+0200\n"
+"PO-Revision-Date: 2009-09-05 21:51+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.4.0\n"
+"X-Poedit-Language: Arabic\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "شبه ثلاثي الأبعاد (زر)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "شبه ثلاثي الأبعاد (تدرج)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "رسوم متحركة"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "تقليدي"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "لوّن شريط التمرير"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "التباين"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "عطّل رسم البؤرة"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "تفعيل التحريك في أشرطة التقدّم"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "مسطح"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "لمّاع"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "مصمّغ"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "داخلي"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "معكوس"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "طراز شريط القوائم"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "نصف القطر"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "أسلوب التخلي"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "يتطلّب طرازا لمّاعا أو مصمّغا"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "لون شريط التمرير"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "يحدد لون شريط التمرير"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "الظل"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "الطراز"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"يتيح هذا الخيار تعطيل رسم البؤرة. الغرض الرئيسي هو أخذ لقطات الشاشة للتوثيق."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "طراز شريط الأدوات"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "حجم مؤشر الخلايا"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "سمك الحد"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "حجم أزرار الاختيار في مظهر الشجرة"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "إذا حدد هذا، فستدور زوايا الأزرار"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "أزرار مدورة الزوايا"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "سهم"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "نقطة"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "كامل"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "علامات الصناديق"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "نقطة مقلوبة"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "قطع مقلوب"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "علامة نوع 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "علامة نوع لأزرار أعمدة التحريك"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "علامة نوع لأزرار أعمدة التحريك و الصناديق..."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "لا شيء"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "لا شيء"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "نقط لوحية"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "مستطيل"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "علامات شريط التمرير"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "نوع شريط التمرير"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "علامات أزرار التمرير"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "مشكلة"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "قطع"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "بعض"

@@ -1,0 +1,213 @@
+# Bulgarian translation of gtk-engines po-file.
+# Copyright (C) 2007, 2008, 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtk-engines package.
+# Alexander Shopov <ash@contact.bg>, 2007, 2009.
+# Yavor Doganov <yavor@gnu.org>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-22 18:27+0300\n"
+"PO-Revision-Date: 2009-02-10 07:33+0200\n"
+"Last-Translator: Yavor Doganov <yavor@gnu.org>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "тримерен (бутон)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "тримерна (преливка)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Анимации"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Класическа"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Оцветяване на лентите за придвижване"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Контраст"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Изключване на изчертаването на фокуса"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "Включване на анимациите в лентите за прогреса"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "Плосък"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "Гланц"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "Смола"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "Добавка"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "Обърната"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "Стил на лентите за менюта"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "Радиус"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "Стил на релефа"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "Изисква стил „Гланц“ или „Смола“"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "Цвят на лентите за придвижване"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "Задава цвета на лентите за придвижване"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "Сянка"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "Стил"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"Това позволява изключването на изчертаването на фокуса. Ползва се основно за "
+"правенето на снимки на екрана за документация."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "Стил на лентите за инструменти"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Размер на индикатора за клетка"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Дебелина на ръба"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+"Размер на бутоните за отметка и радио бутоните в дървовидните изгледи. "
+"(доклад за грешка #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Ако е ИСТИНА, ъглите на бутоните са загладени"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Загладени бутони"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Стрелка"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Точка"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Пълна"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Знаци на кутиите"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Инвертирана точка"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Инвертирана наклонена черта"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Знак, вид 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Видът на знака за бутоните за придвижване"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr ""
+"Видът на знака в дръжките на лентите за придвижване, кутиите за работа и т.н."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Без"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Нищо"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Точки в прозорче"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Правоъгълник"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Знаци в лентите за придвижване"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Вид на лентата за придвижване"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Знаци в бутоните за придвижване"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Оформени"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Наклонена черта"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Някои"

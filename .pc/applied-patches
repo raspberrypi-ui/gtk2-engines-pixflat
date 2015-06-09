@@ -1,0 +1,3 @@
+01_libm.patch
+02_glib-single-include.patch
+03_automake1.14.patch

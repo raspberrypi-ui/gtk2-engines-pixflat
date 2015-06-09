@@ -1,0 +1,212 @@
+# Danish translation of gtk-engines
+# Copyright (C) 2007-2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtk-engines package.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007.
+# Kenneth Nielsen <k.nielsen81@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-14 04:58+0100\n"
+"PO-Revision-Date: 2009-03-13 22:43+0100\n"
+"Last-Translator: Kenneth Nielsen <k.nielsen81@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-agtig (knap)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-agtig (farveovergang)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animationer"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Klassisk"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Farvelæg rullebjælke"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Deaktivér fokusoptegning"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "Aktivér animation af statusbjælker"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "Flad"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "Blank"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "Tyggegummi"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "Indlagt"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "Omvendt"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "Menubjælkestil"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "Radius"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "Relief-stil"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "Kræver enten blank eller tyggegummi-stil"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "Rullebjælkefarve"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "Indstiller farven af rullebjælker"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "Skygge"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "Stil"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"Dette valg deaktiverer fokusoptegning. Det primære formål er at oprette "
+"skærmbilleder til dokumentation."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "Værktøjsbjælke-stil"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Størrelse af celleindikator"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Kanttykkelse"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+"Størrelse af afkrydsnings- og radioknapper i træperspektiv. (Bug #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Ved tilvalg vil knappers hjørner blive afrundet"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Afrundede knapper"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Pil"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Prik"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Fuld"
+
+# API dokumentationen for noget af gnomes javakode (fundet med google) angiver handleboxes som noget man kan bruge til at hive dele af vinduer fra hinanden - der må altså være tale om de stiplede/prikkede områder som man typisk har på afrivelige menubarer osv.
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Håndtagsmærker"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Inverteret prik"
+
+# Det er åbenbart ikke bare backslash, så vi må hellere skrive inverteret i stedet for omvendt
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Inverteret skråstreg"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Mærketype 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Mærketype for rullebjælkeknapper"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "Mærketype for rullebjælkehåndtag, håndtag osv."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Ingen"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Intet"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Prik-rude"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Rektangel"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Rullebjælkemærker"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Rullebjælketype"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Rulleknapmærker"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Formet"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Skråstreg"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Nogle"

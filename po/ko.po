@@ -1,0 +1,205 @@
+# gtk-engines translation
+# This file is distributed under the same license as the PACKAGE package.
+# Changwoo Ryu <cwryu@debian.org>, 2007, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-28 11:14+0900\n"
+"PO-Revision-Date: 2009-01-29 01:34+0900\n"
+"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Language-Team: GNOME Korea <gnome-kr-hackers@lists.kldp.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3차원 모양 (단추)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3차원 모양 (그라디언트)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "애니메이션"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "클래식"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "스크롤 막대 색 설정"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "색 대비"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "포커스 그리지 않기"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "진행률 표시줄의 애니메이션 사용"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "평평하게"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "광택"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "끈적"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "조각조각"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "반전"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "메뉴모음 종류"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "반지름"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "들어가기 스타일"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "광택이나 끈적 스타일 중 하나가 필요합니다"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "스크롤 막대 색"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "스크롤 막대의 색을 설정합니다"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "그림자"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "종류"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr "이 옵션을 사용하면 포커스를 그리지 않습니다. 이 옵션은 주로 문서 스크린샷을 만드는 용도입니다."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "도구 모음 종류"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "셀 컨트롤 크기"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "가장자리 두께"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "트리뷰 안에서 확인란 및 라디오 단추의 크기. (버그 #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "참이면 단추의 구석 부분을 둥그렇게 만듭니다"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "둥그런 단추"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "화살표"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "점"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "채우기"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "핸들상자 표시"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "반전한 점"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "반전한 슬래시"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "표시 종류 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "스크롤막대 단추의 표시 종류"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "스크롤막대 핸들, 핸들 상자 등의 표시 종류"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "없음"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "없음"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "경계 부분 점선"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "사각형"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "스크롤막대 표시"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "스크롤막대 종류"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "스크롤단추 표시"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "모양"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "슬래시"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "일부"

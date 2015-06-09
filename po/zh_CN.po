@@ -1,0 +1,209 @@
+# Chinese translations for gtk-engines package
+# gtk-engines 软件包的简体中文翻译.
+# Copyright (C) 2007 THE GTK-ENGINES'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtk-engines package.
+# Deng Xiyue <manphiz@gmail.com>, 2007, 2008, 2009.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gtk-"
+"engines&component=general\n"
+"POT-Creation-Date: 2009-04-04 13:18+0000\n"
+"PO-Revision-Date: 2009-04-09 15:08+0800\n"
+"Last-Translator: Ray Wang <wanglei1123@gmail.com>\n"
+"Language-Team: Chinese/Simplified <i18n-zh@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3D风格(按钮)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3D风格(梯度)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "动画效果"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "古典"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "设定滚动条的颜色"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "对比度"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "禁止绘画焦点"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "开启进度条的动画效果"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "平坦"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "光泽"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "黏性"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "插图"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "反转"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "菜单栏风格"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "半径"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "放松风格"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "要求光泽或者黏性风格"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "滚动条颜色"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "设定滚动条的颜色"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "阴影"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "风格"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr "此选项允许禁止绘画焦点。它的主要目的是创建文档的屏幕截图。"
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "工具栏风格"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "单元指示器大小"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "边缘厚度"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "树状显示中多选按钮和单选按钮的大小。(Bug #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "如果开启，按钮边缘将变得圆滑"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "圆滑按钮"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "箭头"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "点"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "满"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "可浮动窗口标记"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "反转的点"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "反转的斜线"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "标记类型1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "滚动条按钮的标记类型"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "滚动条柄、可浮动窗口及其他的标记类型"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "无"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "无"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "网格点"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "矩形"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "滚动条标记"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "滚动条类型"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "滚动按钮标记"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "形状"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "斜线"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "一些"

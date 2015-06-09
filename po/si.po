@@ -1,0 +1,151 @@
+# translation of gtk-engines.si.po to Sinhala
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <snavin@redhat.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines.si\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-27 03:43+0100\n"
+"PO-Revision-Date: 2007-05-31 10:29+0530\n"
+"Last-Translator: Danishka Navin <snavin@redhat.com>\n"
+"Language-Team: Sinhala <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-ish (බොත්තම)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-ish (අනුක්‍ර්‍රමණය)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "සජීවීකරණ"
+
+#: ../schema/clearlooks.xml.in.in.h:4 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "ප්‍රභේදනය"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Enable Animations on Progressbars, Radio-, and CheckButtons"
+msgstr "ප්‍රගති දර්ශකවල, රේඩියෝ-, සහ චෙක් බොත්තම්වල සජීවීකරණ සක්‍රිය කිරිම"
+
+#: ../schema/clearlooks.xml.in.in.h:6
+msgid "Flat"
+msgstr "සමතල"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Menubar Style"
+msgstr "මෙනුබාරයේ රටාව"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Scrollbar Color"
+msgstr "ස්ක්‍රොල්බාරයේ වර්ණය"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Sets the Color of Scrollbars"
+msgstr "ස්ක්‍රොල්බාරයේ වර්ණය සකසන්න"
+
+#: ../schema/hc.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "සෙල් එක දක්වන විශාලත්වය"
+
+#: ../schema/hc.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "දාරයේ ඝනකම"
+
+#: ../schema/hc.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "ට්‍රීවීව්‍ තුළ චෙක්-සහ රේඩියො බොත්තම් වල විශාලත්වය. (Bug #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "බොත්තම් මුළු කවාකාර ලෙස සැකසුව හොත්"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "කවාකාර් බොත්තම්"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "ඊතලය"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "තිත"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "පූර්ණ"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "හැඩල්බොක්ස් සලකුණු"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "අපවර්තිත තිත"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "අපවර්තිත ස්ලැශය"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "මුද්‍රා වර්‍ගය 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "ස්ක්‍රෝල්බාරයේ බොත්තම් සඳහා මුද්‍රා වර්‍ගය"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "ස්ක්‍රෝල්බාර හැන්ඩ්ලර්, හැන්ලර්බොක්සර් සදහා මුද්‍රා වර්‍ගය , වෙනත්"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "කිසිවක් නැත"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "කිසිවක් නැත"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "රාමුගත තිත්"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "සෘජුකෝණාශ්‍රය"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "ස්ක්‍රෝල්බාරයේ සලකුණු"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "ස්ක්‍රෝල්බාරයේ වර්‍ග"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "ස්ක්‍රෝල්බොත්තමේ සලකුණු"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "හැඩගැන්වූ"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "ස්ලැෂ්"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "කිහිපයක්"
+

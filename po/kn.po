@@ -1,0 +1,209 @@
+# translation of gtk-engines.HEAD.po to Kannada
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines.HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gtk-engines&component=general\n"
+"POT-Creation-Date: 2009-03-02 22:28+0000\n"
+"PO-Revision-Date: 2009-03-25 23:37+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-ish (ಗುಂಡಿ)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-ish (ಬದಲಾವಣೆಗೊಂಡ)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "ಸಜೀವನಗಳು(ಅನಿಮೇಶನ್‌ಗಳು)"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "ಸಾಂಪ್ರದಾಯಿಕ"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "ಚಲನಪಟ್ಟಿಕೆಗೆ ಬಣ್ಣ ಹಚ್ಚು"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "ವೈದೃಶ್ಯ"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "ಗಮನಹರಿಸುವಿಕೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "ಪ್ರಗತಿಪಟ್ಟಿಕೆಗಳಲ್ಲಿ ಸಜೀವನವನ್ನು(ಎನಿಮೇಶನ್) ಶಕ್ತಗೊಳಿಸಿ"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "ಚಪ್ಪಟೆ"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "ಹೊಳಪಿನ"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "ಅಂಟುಅಂಟಾದ"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "ಒಳಜೋಡಿಸಿದ"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "ವಿಲೋಮಗೊಳಿಸಿದ"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "ಮೆನುಪಟ್ಟಿಯ ಶೈಲಿ"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "ತ್ರಿಜ್ಯ"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "ಪರಿಹಾರದ ಶೈಲಿ"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "ಹೊಳಪಿನ ಅಥವ ಅಂಟುಅಂಟಾದ ಶೈಲಿಯ ಅಗತ್ಯವಿದೆ"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "ಚಲನಪಟ್ಟಿಕೆಯ ಬಣ್ಣ"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "ಚಲನಪಟ್ಟಿಕೆಗಳ ಬಣ್ಣಗಳನ್ನು ಅಣಿಗೊಳಿಸಿ"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "ನೆರಳು"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "ಶೈಲಿ"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr "ಈ ಆಯ್ಕೆಯು ಗಮನ ಸೆಳೆಯುವಿಕೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸುತ್ತದೆ. ಇದರ ಮುಖ್ಯ ಉದ್ದೇಶವೆಂದರೆ ದಸ್ತಾವೇಜುಗಳಿಗಾಗಿ ತೆರೆಚಿತ್ರಗಳನ್ನು ರಚಿಸುವುದಾಗಿರುತ್ತದ."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "ಉಪಕರಣ ಪಟ್ಟಿಕೆಯ ಶೈಲಿ"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "ಕೋಶದ ಸೂಚಕದ ಗಾತ್ರ"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "ಅಂಚಿನ ದಪ್ಪ"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "ವೃಕ್ಷನೋಟದಲ್ಲಿ ಪರಿಶೀಲನೆ- ಹಾಗು ರೇಡಿಯೋ ಗುಂಡಿಗಳ ಗಾತ್ರ. (Bug #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "ಹೊಂದಿಸಿದಲ್ಲಿ, ಗುಂಡಿಗಳ ಅಂಚುಗಳನ್ನು ವೃತ್ತಾಕಾರಗೊಳಿಸಲಾಗುವುದು"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "ವೃತ್ತಾಕಾರದ ಗುಂಡಿಗಳು"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "ಬಾಣದ ಗುರುತು"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "ಚುಕ್ಕಿ"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "ಸಂಪೂರ್ಣ"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "ಹ್ಯಾಂಡಲ್‌ಬಾಕ್ಸಿನ ಗುರುತುಗಳು"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "ವಿಲೋಮಗೊಂಡ ಚುಕ್ಕಿ"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "ವಿಲೋಮಗೊಂಡ ಅಡ್ಡಗೆರೆ(ಸ್ಲ್ಯಾಶ್)"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "ಬಗೆ 1 ನ್ನು ಗುರುತುಹಾಕು"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "ಚಲನಪಟ್ಟಿಕೆಯ ಗುಂಡಿಗಳ ಬಗೆಯನ್ನು ಗುರುತು ಹಾಕಿ"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "ಚಲನಪಟ್ಟಿಕೆ ಹ್ಯಾಂಡಲ್‌ಗಳು, ಹ್ಯಾಂಡಲ್‌ಚೌಕಗಳು, ಮುಂತಾದವುಗಳಿಗಾಗಿ ಬಗೆಯನ್ನು ಗುರುತುಹಾಕು"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "ಯಾವುದೂ ಇಲ್ಲ"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "ಏನೂ ಇಲ್ಲ"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "ಫಲಕವಾಗಿಸಿದ ಚುಕ್ಕಿಗಳು"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "ಆಯತಾಕಾರ"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "ಚಲನಪಟ್ಟಿಕೆಯ ಗುರುತುಗಳು"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "ಚಲನಪಟ್ಟಿಕೆಯ ಬಗೆ"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "ಚಲನಾಗುಂಡಿಯ ಗುರುತುಗಳು"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "ಆಕಾರಗೊಳಿಸಲಾದ"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "ಅಡ್ಡಗೆರೆ(ಸ್ಲ್ಯಾಶ್)"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "ಕೆಲವು"
+

@@ -1,0 +1,213 @@
+# German translations for gtk-engines package.
+# Copyright (C) 2007 THE gtk-engines'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtk-engines package.
+# JackTheDipper <gnome-color-chooser@punk-ass-bitch.org>, 2007.
+# Hendrik Brandt <heb@gnome-de.org>, 2007.
+# Hendrik Richter <hendrikr@gnome.org>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-10 09:41+0100\n"
+"PO-Revision-Date: 2009-03-10 10:37+0100\n"
+"Last-Translator: Hendrik Richter <hendrikr@gnome.org>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "Plastische Knöpfe"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "Plastischer Farbverlauf"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animationen"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Klassisch"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Bildlaufleiste einfärben"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Zeichnen des Fokus deaktivieren"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "Animationen von Fortschrittsanzeigen aktivieren"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "Flach"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "Glänzend"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "Gummi"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "Eingelassen"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "Invertiert"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "Menüleistenstil"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "Radius"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "Konturstil"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "Benötigt den Stil Glänzend oder Gummi"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "Bildlaufleistenfarbe"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "Legt die Farbe der Bildlaufleisten fest"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "Schatten"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "Stil"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"Legt fest, ob das Zeichnen des Fokus deaktiviert ist. Dies ist nützlich beim "
+"Erstellen von Bildschirmfotos für die Dokumentation."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "Werkzeugleistenstil"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Zellzeigergröße"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Randstärke"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+"Größe von Ankreuzfeldern und Auswahlknöpfen innerhalb einer Listenansicht "
+"(Fehler Nr. 351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Falls aktiviert, werden die Ecken von Knöpfen abgerundet"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Abgerundete Knöpfe"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Pfeil"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Punkt"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Voll"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Grifffeldmarker"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Invertierter Punkt"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Invertierter Schrägstrich"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Markertyp 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Markertyp für Bildlaufleistenknöpfen"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "Markertyp für Bildlaufleistengriffe, Grifffelder usw."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Keine"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Nichts"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Trennbalkenpunkte"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Rechteck"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Bildlaufleistenmarker"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Bildlaufleistentyp"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Bildlaufleistenknopf-Inhalt"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Geformt"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Schrägstrich"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Einige"

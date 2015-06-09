@@ -1,0 +1,8 @@
+[type: gettext/xml] schema/clearlooks.xml.in.in
+[type: gettext/xml] schema/crux-engine.xml.in.in
+[type: gettext/xml] schema/glide.xml.in.in
+[type: gettext/xml] schema/hcengine.xml.in.in
+[type: gettext/xml] schema/industrial.xml.in.in
+[type: gettext/xml] schema/mist.xml.in.in
+[type: gettext/xml] schema/redmond95.xml.in.in
+[type: gettext/xml] schema/thinice.xml.in.in

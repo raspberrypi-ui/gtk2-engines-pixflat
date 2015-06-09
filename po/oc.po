@@ -1,0 +1,198 @@
+# Translation of oc.po to Occitan
+# Occitan translation of gtk-engines.
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gtk-engines package.
+#
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2006-2008
+msgid ""
+msgstr ""
+"Project-Id-Version: oc\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-07 10:22+0100\n"
+"PO-Revision-Date: 2007-12-27 13:34+0100\n"
+"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
+"Language-Team: Occitan <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animacions"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Classic"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Contrast"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Enable Animations on Progressbars"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Flat"
+msgstr "Plan"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Glossy"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Gummy"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Inset"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inverted"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Menubar Style"
+msgstr "Estil de la barra de menuts"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Radius"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Relief Style"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Requires style Glossy or Gummy"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Scrollbar Color"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Sets the Color of Scrollbars"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Shadow"
+msgstr ""
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Style"
+msgstr "Estil"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Toolbar Style"
+msgstr "Estil de barra d'espleches"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr ""
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr ""
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr ""
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Flècha"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Punt"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Pas cap"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Res"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Rectangle"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr ""
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr ""

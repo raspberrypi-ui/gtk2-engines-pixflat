@@ -1,0 +1,211 @@
+# translation of gtk-engines.HEAD.mr.po to marathi
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines.HEAD.mr\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-11-07 14:19+0100\n"
+"PO-Revision-Date: 2009-03-13 16:19+0530\n"
+"Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
+"Language-Team: marathi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+"\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-ish (बटन)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-ish (ग्रेडीऐंट)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "चित्रचेतनीकरण"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "विशिष्ट"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "रंग आकार स्क्रॉलबार"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "विभिन्नता"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "केंद्रीत रेखाटण अकार्यान्वीत करा"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "सक्षम वर"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "सपाट"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "चकाचक"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "चिकटाऊ"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "आंतरीक"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "आतल्या बाजुला वळणारे"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "मेनुपट्टी शैली"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "त्रिज्या"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "रिलीफ प्रकार"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "चकाचक किंवा चिकटाऊ शैली आवश्यक आहे"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "स्क्रॉलबार रंग"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "स्क्रॉलबारचे रंग निश्चित करतो"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "छायाकृती"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "शैली"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr "हा पर्याय केंद्रीत रेखाटण अकार्यान्वीत करण्यास परवानदी देतो. प्राथमिक उद्देश दस्तऐवजीकरण करीता स्क्रीनशॉट बनविणे आहे."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "साधनपट्टी शैली"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "कक्ष सूचकाचा आकार"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "टोकांचा जाडेपणा"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "वृक्षदृश्य मधिल चेक- व रेडिओबटन बटनांचा आकार. (बग #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "निश्चित असल्यास, बनटांचे टोक गोलाकार असतात"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "गोलाकार बटने"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "बाण"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "बिंदू"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "पूर्णतया"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "हँडलबॉक्स चिन्ह"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "आतल्या बाजुला वळणारे बिंदू"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "आतल्या बाजुला वळणारे स्लॅश"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "चिन्ह प्रकार 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "स्क्रॉलबार बटनांकरीता चिन्ह प्रकार"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "स्क्रॉलबार हाताळणी, हॅंडलबॉक्स, इत्यादी करीता चिन्ह प्रकार"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "काहीच नाही"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "काहीच नाही"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "पॅन बिंदू"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "काटकोन"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "स्क्रॉलबार चिन्ह"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "स्क्रॉलबार प्रकार"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "स्क्रॉलबटन चिन्ह"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "पूर्णाकृतीत"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "स्लॅश"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "काहीक"
+

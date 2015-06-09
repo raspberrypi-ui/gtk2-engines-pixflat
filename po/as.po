@@ -1,0 +1,227 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amitakhya Phukan <aphukan@fedoraproject.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: as\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=gtk-engines&component=general\n"
+"POT-Creation-Date: 2009-02-28 18:50+0000\n"
+"PO-Revision-Date: 2009-03-16 12:24+0530\n"
+"Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
+"Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-প্ৰকৃতি (বাটন)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-প্ৰকৃতি (গ্ৰেডিয়েন্ট)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+#
+msgid "Animations"
+msgstr "অ্যানিমেশন"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+#
+msgid "Classic"
+msgstr "পাৰম্পৰিক"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "স্ক্ৰোল-বাৰৰ ৰং নিৰ্ধাৰণ কৰক"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+#
+msgid "Contrast"
+msgstr "বৈপৰিত্য"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "Disable focus drawing"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "প্ৰগ্ৰেস-বাৰৰ বাবে অ্যানিমেশন সক্ৰিয় কৰক"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+#
+msgid "Flat"
+msgstr "সমান্তৰাল"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+#
+msgid "Glossy"
+msgstr "চিকচিকিয়া"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "গামি"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "ইনসেট"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+#
+msgid "Inverted"
+msgstr "বিপৰীত"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "মেনু-বাৰৰ বিন্যাস"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+#
+msgid "Radius"
+msgstr "ব্যাসাৰ্ধ"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "ৰিলিফ বিন্যাস"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "চিকচিকিয়া বা গামি নামক বিন্যাস আবশ্যক"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "স্ক্ৰোল-বাৰৰ ৰং"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "স্ক্ৰোল-বাৰৰ ৰং নিৰ্ধাৰণ কৰতে ব্যবহৃত হয়"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+#
+msgid "Shadow"
+msgstr "ছায়া"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+#
+msgid "Style"
+msgstr "বিন্যাস"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+#
+msgid "Toolbar Style"
+msgstr "টুল-বাৰৰ বিন্যাস"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "সেল নিৰ্দেশকচিহ্নেৰ মাপ"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "প্ৰান্তেৰ প্ৰস্থ"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "ট্ৰি-ভিউয়েৰ অধীন চেক- এবং ৰেডিও-বাটনেৰ মাপ। (বাগ সংখ্যা #৩৫১৭৬৪)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "নিৰ্ধাৰিত হলে, বাটনেৰ কোণাগুলি বৃত্তাকাৰ হবে"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "বৃত্তাকাৰ কোণাসহ বাটন"
+
+#: ../schema/thinice.xml.in.in.h:1
+#
+msgid "Arrow"
+msgstr "তীৰচিহ্ন"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "বিন্দু"
+
+#: ../schema/thinice.xml.in.in.h:3
+#
+msgid "Full"
+msgstr "পূৰ্ণ"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "হ্যান্ডেল-বক্সেৰ চিহ্ন"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "বিপৰীত বিন্দু"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "বিপৰীত স্ল্যাশ চিহ্ন"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "চিহ্নেৰ ধৰন ১"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "স্ক্ৰোল-বাৰ বাটনেৰ চিহ্নেৰ ধৰন"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "স্ক্ৰোল-বাৰ হ্যান্ডেল, হ্যান্ডেল-বক্স প্ৰভৃতিৰ চিহ্নেৰ ধৰন"
+
+#: ../schema/thinice.xml.in.in.h:10
+#
+msgid "None"
+msgstr "শূণ্য"
+
+#: ../schema/thinice.xml.in.in.h:11
+#
+msgid "Nothing"
+msgstr "শূণ্য"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "পেইনেৰ বিন্দু"
+
+#: ../schema/thinice.xml.in.in.h:13
+#
+msgid "Rectangle"
+msgstr "চতুষ্কোণ"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "স্ক্ৰোল-বাৰৰ চিহ্ন"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "স্ক্ৰোল-বাৰৰ প্ৰকৃতি"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "স্ক্ৰোল-বাটনেৰ চিহ্ন"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "বিন্যাসে"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "স্ল্যাশচিহ্ন"
+
+#: ../schema/thinice.xml.in.in.h:19
+#
+msgid "Some"
+msgstr "কিছু"
+

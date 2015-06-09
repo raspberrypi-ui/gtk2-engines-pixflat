@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-03-16 03:34+0000\n"
+"PO-Revision-Date: 2007-03-16 03:31+0530\n"
+"Last-Translator: yangka <yanang_ka@hotmail.com>\n"
+"Language-Team: dzongkha <pgeyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: BHUTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "ཌིཤ་༣(ཨེབ་རྟ)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "ཌིཤ་༣(སྟེགས་རིས་)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "བསྒུལ་བཟོ་ཚུ།"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+#: ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "ཚོན་མདངས།"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Enable Animations on Progressbars, Radio-, and CheckButtons"
+msgstr "བསྒུལ་བཟོ་ཚུ་ཡར་འཕེལ་ཕྲ་རིང་ཚུ་ རེཌིའོ་ དང་བརྟག་ཞིབ་ཨེབ་རྟ་ཚུ་གུ་ལྕོགས་ཅན་བཟོ།"
+
+#: ../schema/clearlooks.xml.in.in.h:6
+msgid "Flat"
+msgstr "ལེབ་ཏེམ།"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Menubar Style"
+msgstr "དཀར་ཆག་ཕྲ་རིང་བཟོ་རྣམ།"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Scrollbar Color"
+msgstr "རྒྱབ་སྒྲིལ་ཚོས་གཞི།"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Sets the Color of Scrollbars"
+msgstr "བཤུད་ཕྲ་ཚུ་གི་ཚོས་གཞི་འདི་གཞི་སྒྲིག་འབདཝ་ཨིན།"
+
+#: ../schema/hc.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "ནང་ཐིག་བརྡ་སྟོན་མིའི་ཚད།"
+
+#: ../schema/hc.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "མཐའམ་སྟུག་ཚད།"
+
+#: ../schema/hc.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "བརྟག་ཞིབ་དང་རེཌིའོ་ཨེབ་རྟ་ཚུའི་ནང་ན་རྩ་འབྲེལ་མཐོང་སྣང་ཚུ་གི་ཚད (རྒྱེན་ #༣༥༡༧༦༤)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "གཞི་སྒྲིག་འབད་ཡོདཔ་ཨིན་པ་ཅིན་ཨེབ་རྟ་སྒྱིད་ཁུག་ཚུ་ཆ་མཉམ་སྒོར་སྒོརམ་བཟོ་ཡོདཔ་ཨིན།"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "སྒོར་སྒོརམ་བཟོ་ཡོད་པའི་ཨེབ་རྟ་ཚུ།"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "མདའ་རྟགས།"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "ཚག"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "གངམ།"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "ལེགས་སྐྱོང་པའི་སྒྲོམ་རྟགས་ཚུ།"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "གནས་ལོག་ཡོད་མི་ཚག"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "གནས་ལོག་ཡོད་མི་གཡོ་ཤད།"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "རྟགས་དབྱེ་བ་༡"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "བཤུད་ཕྲ་ཨེབ་རྟ་ཚུ་གི་དོན་ལུ་རྟགས་དབྱེ་བ།"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "བཤུད་ཕྲ་ལེགས་སྐྱོང་པ་ཚུ་ ལེགས་སྐྱོང་པའི་སྒྲོམ་ཚུ་ ལ་སོགས་པ་གི་དོན་ལུ་རྟགས་དབྱེ་བ།"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "ཅི་མེད།"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "ག་ནི་ཡང་མེདཔ།"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "པེནཌི་ཚག་ཚུ།"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "གྲུ་བཞི་ནར་མོ།"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "བཤུད་ཕྲ་རྟགས་ཚུ།"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "བཤུད་ཕྲ་དབྱེ་བ།"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "བཤུད་སྒྲིལ་ཨེབ་རྟ་གི་རྟགས་ཚུ།"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "དབྱིབས་བཟོ་ཡོདཔ།"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "གཡོ་ཤད།"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "ལ་ལོ།"
+

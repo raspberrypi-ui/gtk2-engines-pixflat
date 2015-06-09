@@ -1,0 +1,198 @@
+# Biełaruski pierakład gtk-engines
+# Copyright (C) 2007 Ihar Hrachyshka
+# This file is distributed under the same license as the gtk-engines package.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-17 01:36+0200\n"
+"PO-Revision-Date: 2008-02-17 01:38+0200\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: Belarusian Latin <be-latin.open-tran.eu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d (knopka)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d (hradyjent)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "Animacyi"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "Klasyčny"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "Pafarbuj panel prakrutki"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "Kantrast"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Enable Animations on Progressbars"
+msgstr "Uklučy animavańnie na panelach prahresu"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Flat"
+msgstr "Roŭny"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Glossy"
+msgstr "Bliskučy"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Gummy"
+msgstr "Smolny"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Inset"
+msgstr "Uklejka"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inverted"
+msgstr "Invertavany"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Menubar Style"
+msgstr "Styl paneli menu"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Radius"
+msgstr "Radyjus"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Relief Style"
+msgstr "Reliefny styl"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Requires style Glossy or Gummy"
+msgstr "Vymahaje ci Bliskučaha, ci Smolnaha stylu"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Scrollbar Color"
+msgstr "Koler paneli prakrutki"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Sets the Color of Scrollbars"
+msgstr "Akreślaje koler dla panelaŭ prakrutki"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Shadow"
+msgstr "Cień"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Style"
+msgstr "Styl"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Toolbar Style"
+msgstr "Styl paneli pryładździa"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "Pamier indykatara jačei"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "Taŭščynia kraju"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+"Pamier opcyj vybaru j zaznačeńnia ŭnutry prahladu dreva. (Pamyłka #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "Kali zaznačana, kuty knopak zakruhlenyja"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "Zakruhlenyja knopki"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "Strełka"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "Punkt"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "Poŭny"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "Paznaki handleboksa"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "Invertavany punkt"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "Invertavany skos"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "Vid paznaki 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "Vid paznaki dla knopak panelaŭ prakrutki"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr ""
+"Vid paznaki dla knopak elementaŭ panelaŭ prakrutki, handleboksaŭ i inš."
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "Niama"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "Ničoha"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "Ustaŭlenyja punkty"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "Trochvuholnik"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "Paznaki paneli prakrutki"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "Vid paneli prakrutki"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "Paznaki knopki prakrutki"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "Formavy"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "Skos"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "Krychu"

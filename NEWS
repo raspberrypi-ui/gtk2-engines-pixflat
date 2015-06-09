@@ -1,0 +1,1006 @@
+Overview of Changes in 2.20.2 (since 2.10.1)
+============================================
+
+Changes in this release:
+ - Fix evolution ETree header in Clearlooks
+ - Minor fixes in mist
+ - Removed Xfce specific workaround from the clearlooks engine (bug #616124)
+
+Added/updated translations:
+ - en@shaw, courtesy of Thomas Thurman 
+ - id, courtesy of Dirgita 
+ - ja, courtesy of Takeshi AIHANA 
+ - lv, courtesy of Anita Reitere 
+ - sl, courtesy of Matej Urbančič 
+
+Overview of Changes in 2.20.1 (since 2.20.0)
+============================================
+
+Changes in this release:
+ - Fixes the shadow around entries in the Clearlooks Gummy style.
+
+Overview of Changes in 2.20.0 (since 2.19.0)
+============================================
+
+Changes in this release:
+ - Increased spacing between icons and labels in Clearlooks
+
+GNOME bugs fixed in this release:
+ 594014 - gtk-engines: system-lua check is buggy
+
+New and updated translations:
+ F Wolff (af)
+ Israt Jahan (bn)
+ Suso Baleato (gl)
+ Xandru Armesto (ast)
+
+
+Overview of Changes in 2.19.0 (since 2.18.2)
+============================================
+
+Changes in this release:
+ - Option to use the systems version of liblua
+ - Removal of a potential endless loop in different Clearlooks styles
+ - Support for Automake 1.11.
+ - Improvements for bug #525065 (small Clearlooks themes)
+
+GNOME bugs fixed in this release:
+ 594014 - gtk-engines: system-lua check is buggy
+ 572178 - Remove deprecated GTK+ symbols
+ 500952 - check/radio buttons have no insensitive states (mist)
+ 502165 - Inconsistent toggle buttons are drawn unselected
+ 
+New and updated translations:
+ Gil Forcada (ca@valencia)
+ Goran Rakić (sr@latin)
+ Israt Jahan (bn)
+ Khaled Hosny (ar)
+ Krix Apolinário (pt_BR)
+ Lucian Adrian Grijincu (ro)
+ Rajesh Ranjan (hi)
+ Runa Bhattacharjee (bn_IN)
+ Sangeeta Kumari (mai)
+ Seán de Búrca (ga)
+ Thomas Thurman (en@shaw)
+ wanderlust (uk)
+ Yavor Doganov (bg)
+ Горан Ракић (sr)
+
+
+Overview of Changes in 2.18.2 (since 2.18.1)
+============================================
+
+Changes in this release:
+ - Changes for the git migration (doap file, ChangeLog)
+
+GNOME bugs fixed in this release:
+ 578882 – gtk-engines-2.18.1 doesn't pass tests due to exported_lua
+
+New and updated translations:
+ Krishna Babu K (te)
+
+
+Overview of Changes in 2.18.1 (since 2.18.0)
+============================================
+
+Changes in this release:
+ - Clearlooks draws the focus line of entries now correct.
+ - Clearlooks now only draws a one pixel line between two adjacent steppers.
+
+GNOME bugs fixed in this release:
+ 576786 – clearlooks is broken on trunk
+ 576787 – export hygiene
+ 572178 – Remove deprecated GTK+ symbols
+
+New and updated translations:
+ Ray Wang (zh_CN)
+ Shankar Prasad (kn)
+ Djihed Afifi (ar)
+ Suso Baleato (gl)
+
+
+Overview of Changes in 2.18.0 (since 2.17.4)
+============================================
+
+Changes in this release:
+ - Improved entry progress drawing in Clearlooks.
+
+New and updated translations:
+ Suso Baleato (gl)
+ Amitakhya Phukan (as)
+ Kenneth Nielsen (da)
+ Jennie Petoumenou (el)
+ Sandeep Shedmake (mr)
+ Ankit Patel (gu)
+ I. Felix (ta)
+ Hendrik Richter (de)
+ Yaron Shahrabani (he)
+ Gintautas Miliauskas (lt)
+ Manoj Kumar Giri (or)
+
+
+Overview of Changes in 2.17.4 (since 2.17.3)
+============================================
+
+Changes in this release:
+ - Many themes have some initial support for progressbars in entries.
+
+New and udpated translations:
+ Claude Paroz (fr)
+ Duarte Loreto (pt)
+ David Lodge (en_GB)
+ Baris Cicek (tr)
+ Adi Roiban (ro)
+ Wouter Bolsterlee (nl)
+
+
+Overview of Changes in 2.17.3 (since 2.17.2)
+============================================
+
+This release of gtk-engines is now solely LGPL 2.1 or any later version.
+
+GNOME Bugs fixed in this release:
+ 563787 – GNOME Goal: Clean up GLib and GTK+ includes
+ 571835 – Focus inconsistent between expander and other widgets in Clearlooks
+
+New and udpated translations:
+ Wouter Bolsterlee (nl)
+ Lucas Lommer (cs)
+ Tomasz Dominikowski (pl)
+ Gabor Kelemen (hu)
+ Iñaki Larrañaga Murgoitio (eu)
+ Gil Forcada (ca)
+ Yavor Doganov (bg)
+ Chao-Hsiung Liao (zh_HK)
+ Chao-Hsiung Liao (zh_TW)
+ Takeshi AIHANA (ja)
+ Theppitak Karoonboonyanan (th)
+ Clytie Siddall (vi)
+ Changwoo Ryu (ko)
+ Ilkka Tuohela (fi)
+ Kjartan Maraas (nb)
+ Daniel Nylander (sv)
+
+
+Overview of Changes in 2.17.2 (since 2.17.1)
+============================================
+
+GNOME Bugs fixed in this release:
+ 563256 – 2.17.1 ftbfs
+
+Overview of Changes in 2.17.1 (since 2.17.0)
+============================================
+
+Changes in this release:
+ - A leak in Clearlooks that happened for default buttons was fixed.
+ - The Clearlooks inconsistent radio indicator drawing was fixed.
+
+GNOME Bugs fixed in this release:
+ 560042 – Sub-optimal -I flag ordering
+ 560443 – GNOME Goal: Remove deprecated GLib symbols
+ 549830 – Use G_DEFINE_DYNAMIC_TYPE in theme engines
+
+New and udpated translations:
+ Daniel Nylander (sv)
+ Jorge González (es)
+ Laurent Dhima (sq)
+
+
+Overview of Changes in 2.17.0 (since 2.16.0)
+============================================
+
+Changes in this release:
+ - Focus indicator drawing in Mist
+ - Clearlooks now has a disable_focus option to do screenshots for
+   documentation
+ - Fixed the background color of viewports in notebooks in Clearlooks.
+
+GNOME Bugs fixed in this release:
+ 553575 – [PATCH] Only draw focus when navigating with the keyboard
+ 555890 – Button rendering bug
+
+
+Overview of Changes in 2.16.0 (since 2.15.4)
+============================================
+
+Changes in this release:
+ - Small fix in Clearlooks spinbutton drawing.
+
+New and udpated translations:
+ Laurent Dhima (sq)
+ Горан Ракић (sr)
+ Goran Rakić (sr@latin)
+ Djihed Afifi (ar)
+ I. Felix (ta)
+ Ivar Smolin (et)
+ Hari Vishnu (ml)
+
+
+Overview of Changes in 2.15.4 (since 2.15.3)
+============================================
+
+Changes in this release:
+ - Reworked Clearlooks gtkrc.
+
+GNOME Bugs fixed in this release:
+  549830 – Use G_DEFINE_DYNAMIC_TYPE in theme engines (only in Clearlooks)
+
+New and udpated translations:
+ Hari Vishnu (ml)
+ Krishna Babu K (te)
+ Goran Rakić (sr@latin)
+ Djihed Afifi (ar)
+
+
+Overview of Changes in 2.15.3 (since 2.15.2)
+============================================
+
+Changes in this release:
+ - A problem in the glide engine where the drawing of some widgets could
+   suddenly disappear forever was fixed.
+
+GNOME Bugs fixed in this release:
+ 546839 – Add special case for transparent entries (for gecko and others)
+ 547024 – size of radio button hardcoded
+
+New and udpated translations:
+ Djihed Afifi (ar)
+ Sweta Kothari (gu)
+
+
+Overview of Changes in 2.15.2 (since 2.15.1)
+============================================
+
+The most important change in this release is that the smooth GTK+ engine has
+been removed. This engine has long lost its popularity and it had a huge
+codebase that has not been properly maintained for years now.
+
+Changes in this release:
+ - Larger menuitem separators in the Clearlooks theme
+ - Frame drawing fixes in the Clearlooks engine
+ - Padding of progress bars inside menus is fixed in the Industrial theme
+
+GNOME Bugs fixed in this release:
+ 511958 – List store tree view contains superfluous border (clearlooks)
+ 542625 – 1px gap between notebook at extension (industrial)
+ 501734 – Dead code in glide_gtk2_drawing.c
+ 535456 – Unnecessary cast breaks build on Solaris
+ 543608 – Fix for Fortify detected problem
+
+New and udpated translations:
+ Djihed Afifi (ar)
+ Clytie Siddall (vi)
+ Yavor Doganov (bg)
+
+
+Overview of Changes in 2.15.1 (since 2.15.0)
+============================================
+
+Changes in this release:
+ - A lot of internal changes in the Clearlooks engine
+ - Modifications to the "classic" style to be more like the pre cairo
+   versions of the engine.
+
+GNOME Bugs fixed in this release:
+ 531633 – Scrollbars trough is drawn smaller even when no stepper is present
+
+New and udpated translations:
+ Yavor Doganov (bg)
+ Massimo Furlani (fur
+ Eskild Hustvedt (nn)
+
+
+Overview of Changes in 2.15.0 (since 2.14.1)
+============================================
+
+Changes in this release:
+ - Schema translations are no longer installed.
+ - Improvements to the Redmond scrollbars, scrolled window and menus.
+
+GNOME Bugs fixed in this release:
+ 526890 – Support inverted scrollbars (ranges)
+
+
+Overview of Changes in 2.14.1 (since 2.14.0)
+============================================
+
+Changes in this release:
+ - Warning and C89 fixes
+ - Parser fix in thinice
+ - Added a workaround for bug 514400 (Glitches on panel launcher)
+ - Some improvements in Clearlooks (insensitive spinbuttons, scales,
+   notebook background color)
+
+GNOME Bugs fixed in this release:
+ 521679 – compile error
+ 523369 – automake warning
+
+New and udpated translations:
+ Eskild Hustvedt (nn)
+ Giannis Katsampirhs (el)
+
+
+Overview of Changes in 2.14.0 (since 2.13.6)
+============================================
+
+Changes in this release:
+ - Several improvements in Crux, this includes spinbuttons and comboboxes.
+ - Text color fixes and workarounds in the different themes
+ - Correct shadow for insensitive entries in Clearlooks
+ - Changed contrast handling in Clearlooks
+
+GNOME Bugs fixed in this release:
+ 395013 – Visual artifacts setting radius to 10.0 (max value)
+ 505334 – work around GtkList label colors
+
+New and udpated translations:
+ Giannis Katsampirhs (el)
+ Kenneth Nielsen (da)
+ Gabor Kelemen (hu)
+ Chao-Hsiung Liao (zh_HK)
+ Chao-Hsiung Liao (zh_TW)
+ Runa Bhattacharjee (bn_IN)
+ Ivar Smolin (et)
+ Maxim V. Dziumanenko (uk)
+ Rajesh Ranjan (hi)
+ Alexandre Prokoudine (ru)
+ David Lodge (en_GB)
+ Sandeep Shedmake (mr)
+ Gintautas Miliauskas (lt)
+ Djihed Afifi (ar)
+ Changwoo Ryu (ko)
+ Luca Ferretti (it)
+
+
+Overview of Changes in 2.13.6 (since 2.13.5)
+============================================
+
+Changes in this release:
+ - Fix in the clearlooks schema file. It listed the wrong default style.
+ - Lighter background color in the Crux theme.
+ - Some small changes in the Clearlooks GUMMY focus drawing.
+
+New and udpated translations:
+ Luca Ferretti (it)
+ Yair Hershkovitz (he)
+ Ivar Smolin (et)
+ Ilkka Tuohela (fi)
+ Wouter Bolsterlee (nl)
+ Baris Cicek (tr)
+ Gil Forcada (ca)
+ Ihar Hrachyshka (be@latin)
+ Chao-Hsiung Liao (zh_HK)
+ Chao-Hsiung Liao (zh_TW)
+ Claude Paroz (fr)
+ Petr Kovar (cs)
+ Arangel Angov (mk)
+ Jorge González (es)
+ Clytie Siddall (vi)
+ Tomasz Dominikowski (pl)
+ Ask Hjorth Larsen (da)
+
+
+Overview of Changes in 2.13.5 (since 2.13.4)
+============================================
+
+Changes in this release:
+ - Read the shadow before drawing toolbars and menubars (Clearlooks)
+
+GNOME Bugs fixed in this release:
+ 500952 – check/radio buttons have no insensitive states (mist)
+
+New and udpated translations:
+ Lukáš Lommer (cs)
+ Duarte Loreto (pt)
+ Hendrik Brandt (de)
+ Theppitak Karoonboonyanan (th)
+ Iñaki Larrañaga Murgoitio (eu)
+ Tomasz Dominikowski (pl)
+ Arangel Angov (mk)
+ Takeshi AIHANA (ja)
+ Kjartan Maraas (nb)
+ Ignacio Casal Quinteiro (gl)
+ Djihed Afifi (ar)
+ Jorge González (es)
+ Daniel Nylander (sv)
+
+
+Overview of Changes in 2.13.4 (since 2.13.3)
+============================================
+
+Changes in this release:
+ - Clearlooks progressbar padding inside menus has been fixed.
+ - New "reliefstyle" option for clearlooks, which controls inset vs. shadow
+   around buttons. GUMMY based themes will now use inset by default and need
+   to be modified.
+ - Updated focus drawing for treeviews and notebook tabs in GUMMY
+
+GNOME Bugs fixed in this release:
+ 509226 – focus rect not painted in aisleriot with clearlooks
+
+New and udpated translations:
+ Iñaki Larrañaga Murgoitio (eu)
+ Ivar Smolin (et)
+
+
+Overview of Changes in 2.13.3 (since 2.13.2)
+============================================
+
+Changes in this release:
+ - autogen.sh script fix
+ - Correct gap size in notebooks and shadows in the HighContrast engine
+ - Added a missing initilization in clearlooks focus drawing
+ - Clearlooks now does not draw a status bar if the shadow is set to NONE
+
+New and udpated translations:
+ Ivar Smolin (et)
+ Clytie Siddall (vi)
+ Kjartan Maraas (nb)
+ Yannig Marchegay (Kokoyaya) (oc)
+ sandeep shedmake (mr)
+ Daniel Nylander (sv)
+
+
+Overview of Changes in 2.13.2 (since 2.13.1)
+============================================
+
+Important changes in this release:
+ - The high contrast engine is fixed and now works again.
+ - Some focus improvements for the gummy style in clearlooks
+
+Bugs fixed in this release:
+ 501611 – Dead code in widget-information.c (ge_combo_box_is_using_list)
+ 501612 – overrun variable in clearlooks
+ 501816 – highcontrast engine is broken with gtk-engines 2.21.3
+ 492372 – ETree fix for other evolution compnoents
+ 475291 – Clearlooks vertical tabs fixes
+ 488850 – Wrong background for disk-usage graph in nautilus
+
+New and udpated translations:
+ Daniel Nylander (sv)
+ Kjartan Maraas (nb)
+ Eskild Hustvedt (nn)
+ Matej Urbančič (sl)
+ Ihar Hrachyshka (be@latin)
+ Jorge González (es)
+ Ignacio Casal Quinteiro (gl)
+
+
+Overview of Changes in 2.13.1 (since 2.13.0)
+============================================
+
+Other changes and bugfixes include:
+ - gtk-engines now depends on GTK+ 2.12 for color parsing (used by Clearlooks)
+ - Some modifications and fixes for the Gummy focus ring.
+ - Fixed descriptions in the clearlooks schema file.
+ - Some initial fixes for bug #486418.
+
+New and udpated translations:
+ Ignacio Casal Quinteiro (gl)
+ Ivar Smolin (et)
+ Matej Urbančič (sl)
+ Ihar Hrachyshka (be@latin)
+ Daniel Nylander (sv)
+ Jorge González (es)
+ Djihed Afifi (ar)
+
+
+Overview of Changes in 2.13.0 (since 2.12.2)
+============================================
+
+This is the first release in the 2.13 unstable series. A major change is
+that the clearlooks and industrial engines now use styles from the rc
+file to determine what to draw, instead of checking widgets that often.
+
+This adresses bug 453499 – Widget specific special cases in the engine.
+
+Other changes and bugfixes include:
+ - Improved treeview header in Industrial
+ - The clearlooks (gummy) vertical tabs were fixed (Bug #475291)
+ - New tab design for the gummy style in Clearlooks
+ - New focus drawing code in Clearlooks with a new style in gummy
+ - Added missing options to the clearlooks schema file. (Bug #475294)
+
+New and udpated translations:
+ Djihed Afifi (ar)
+ Matej Urbančič (sl)
+ Ivar Smolin (et)
+
+Overview of Changes in 2.12.2 (since 2.12.1)
+============================================
+
+Hilights in this release include:
+ - Clearlooks progress bars in menus are now correct
+ - The workaround for the combobox text colors has been fixed in Clearlooks
+ - The RC file parsing in both Thinice and HighContrast has been fixed to
+   correctly merge styles.
+
+Fixed bugs in this release:
+ Bug #475629 – Themes doesn't reflect GtkSpinButton range limits visually
+ Bug #482542 – with edge_thickness = 1, checkboxes always appear unchecked
+ Bug #480629 – Make the padding on menu separators smaller
+ Bug #457087 – gap between notebook and tab label for pack-end tabs in vertical tabs
+ Bug #482922 – Work around evolution new button
+
+New and updated Translations:
+ Ivar Smolin (et)
+ Ihar Hrachyshka (be@latin)
+ Djihed Afifi (ar)
+ Nickolay V. Shmyrev (ru)
+
+Overview of Changes in 2.12.1 (since 2.12.0)
+============================================
+
+Fixed bugs in this release:
+ Bug 478759 - typo in crux gtkrc
+
+Overview of Changes in 2.12.0 (since 2.11.7)
+============================================
+
+Hilights in this release include:
+ - A set of tweaks to the Clearlooks theme and Gummy engine code
+ - Fixed color scheme support in Clearlooks, Crux and Industrial
+ - Fixed GTK+ 2.12 tooltips in Clearlooks, Crux, Industrial and Thinice
+ - Better notebook edge drawing in Clearlooks that addresses bug #457087.
+
+New and updated Translations:
+ Djihed Afifi (ar)
+ Nickolay V. Shmyrev (ru)
+ Горан Ракић (sr)
+ Goran Rakić (sr@Latn)
+ Luca Ferretti (it)
+ Gil Forcada (ca)
+ Ani Peter (ml)
+ Ilkka Tuohela (fi)
+
+Overview of Changes in 2.11.7 (since 2.11.6)
+============================================
+
+Hilights in this release include:
+ - Clearlooks scrollbars are back to being colored
+ - The clearlooks background is now a warmer color
+
+New and updated Translations:
+ Yannig MARCHEGAY (oc)
+
+Overview of Changes in 2.11.6 (since 2.11.5)
+============================================
+
+Hilights in this release include:
+ - Clearlooks theme scrollbars are no longer colored (Bug #462723)
+ - Improved Gummy scale fill level drawing
+ - Clearlooks notebook fix for right to left langues
+
+New and updated Translations:
+  Ilkka Tuohela (fi)
+  Simos Xenitellis (el)
+  Dr.T.Vasudevan (ta)
+
+
+Overview of Changes in 2.11.5 (since 2.11.4)
+============================================
+
+Hilights in this release include:
+ - Cleaned up Clearlooks gtkrc
+ - The Clearlooks menubar height has been fixed
+ - Clearlooks now supports the tooltip color option
+
+New and updated Translations:
+  Dr.T.Vasudevan (ta)
+  Theppitak Karoonboonyanan (th)
+  Hendrik Brandt (de)
+  Kjartan Maraas (nb)
+
+
+Overview of Changes in 2.11.4 (since 2.11.3)
+============================================
+
+Hilights in this release include:
+ - Moved default Clearlooks theme to the Gummy style
+ - Minor improvements to the Glossy and Gummy style of Clearlooks
+ - Radius support for menuitems in Clearlooks
+ - Vertical handles for the Gummy style
+
+Overview of Changes in 2.11.3 (since 2.11.2)
+============================================
+
+Hilights in this release include:
+ - Different shading of the scrollbar color in Clearlooks
+
+New and updated Translations:
+  Lucas Lommer (cs)
+  Takeshi AIHANA (ja)
+  Kjartan Maraas (nb)
+  Artur Flinta (pl)
+  Danishka Navin (si)
+  Clytie Siddall (vi)
+
+Overview of Changes in 2.11.2 (since 2.11.1)
+============================================
+
+Hilights in this release include:
+ - Schema file naming now follows the engine library names
+ - GtkRange fill level implemented in Clearlooks and Industrial
+ - New toolbar styles for the gummy and glossy clearlooks styles
+
+New Translations:
+  Laurent Dhima (sq)
+
+Updated Translations:
+  Ivar Smolin: (et)
+
+Overview of Changes in 2.11.1 (since 2.11.0)
+============================================
+
+Hilights in this release include:
+ - Tabbing fix in Glide
+ - Prevent colors from getting too saturated when shading them
+ - Improved torture test to find more bugs
+ - Reworked README file
+ - Tweaked toolbars that do not have any other widget above them in Clearlooks
+ - New option to colorize the Clearlooks scrollbar sliders
+
+Fixed bugs in this release:
+ Bug 438397 - fix build with gcc 2
+ Bug 438456 - Potential invalid g_free() on slice-allocated data
+ Bug 413055 - make tooltip border color themeable (clearlooks)
+
+New Translations:
+ Runa Bhattacharjee (bn_IN)
+
+Updated Translations:
+ Ignacio Casal Quinteiro (gl)
+ Ivar Smolin (et)
+
+
+Overview of Changes in 2.11.0 (since 2.10.1)
+============================================
+
+Hilights in this release include:
+ - Several improvements to the Redmond theme
+ - A lot of changes to standard Clearlooks and the Glossy style
+ - New Gummy style added by Andrea Cimitan
+
+Fixed bugs in this release:
+ Bug 429988 - Redmond: CombBox should appear as list
+ Bug 430012 - Redmond: Tabs are not drawn correctly
+ Bug 429761 - Redmond: The radio's diameter is too big
+ Bug 429730 - Redmond engine draws radio buttons wrong
+ Bug 428772 - Unnecessary cast breaks build on Solaris
+ Bug 427265 - Clearlooks: invisible resize handle in RTL
+
+New Translations:
+ Gintautas Miliauskas (lt)
+ Subhransu Behera (or)
+ Yannig MARCHEGAY (oc)
+
+
+Overview of Changes in 2.10.1 (since 2.10.0)
+============================================
+
+Hilights in this release include:
+  - Several improvements and fixes to Clearlooks
+  - Removal of fixed colours from Crux
+
+Fixed bugs in this release:
+  Bug 412982 - If text color set to white, tooltips are unreadable.
+  Bug 412647 - Remaining problems with dark themes (arrows)
+
+Overview of Changes in 2.10.0 (since 2.9.4)
+===========================================
+
+Hilights in this release include:
+  - Remove the cairo stroking performance workaround
+  - Added XML information files for third party applications to use
+
+
+Overview of Changes in 2.9.4 (since 2.9.3)
+==========================================
+
+Hilights in this release include:
+  - Revert checkbox style to a tick in Clearlooks
+  - Add clearlooks inverted style to test suite
+  - Fixes to Clearlooks shading, style and colours
+  - Fix inconsistent toggle buttons in Redmond engine
+  - Use quarks with engines name in thinice and mist engines
+  - Skip torture tests if buildin fails (eg. no X server or crashes
+  in GTK+)
+
+
+Fixed bugs in this release:
+  - Bug 407440 - Use text[NORMAL] for active checkmarks
+
+Overview of Changes in 2.9.3 (since 2.9.2)
+==========================================
+
+Hilights in this release include:
+
+  - Many improvements to Clearlooks style from Andrea Cimitan
+  - Added some generic engine checks to "make check"
+  - Use symbolic colors in Crux
+  - c90 fixes
+
+
+Overview of Changes in 2.9.2 (since 2.9.1)
+==========================================
+
+Hilights in this release include:
+
+	- RTL Fixes in Smooth
+	- C89 fixes for lua engine (from TFKyle)
+	- Corrections to hilighted side for inverted scales and vertical ranges in
+	  Smooth engine
+	- Fix menu border spacing in Mist
+
+Fixed bugs in this release:
+
+	Bug 356426 - Don't force Crux icons to be 22x22
+	Bug 393312 - Memory corruption in Smooth engine
+	Bug 395193 - Division by zero bug in Smooth
+
+
+Overview of Changes in 2.9.1 (since 2.9.0)
+==========================================
+
+- New lua scripting engine by Daniel Borgmann
+- New clearlooks options radius, improvements to glossy style 
+- Implement suggestions for clearlooks menu selection from bug 382634
+
+- Plus many other small bug fixes
+
+Fixed bugs in this release:
+
+	- Bug 382397 - Clearlooks: Use @selected_fg_color for text[PRELIGHT] inside menus and
+    for fg[PRELIGHT] in GtkProgressBar
+	- Bug 382704 - Clearlooks: C89 fixes (Patch by Jens Granseuer)
+	- Bug 385106 - Clearlooks: Don't set shadow type to NONE if the detail is not
+	  one of the known ones.
+
+
+Overview of Changes in 2.9.0 (since 2.8.2)
+==========================================
+
+Hilights in this release include:
+
+	- Add glossy options for Clearlooks
+	- Use gtk-colour-scheme in Clearlooks, Mist and Industrial themes
+	- Require GTK+ 2.10
+	- Misc. fixes to Clearlooks
+
+
+Overview of Changes in 2.8.2 (since 2.8.1)
+==========================================
+
+Hilights in this release include:
+
+	- Don't draw boxes around handles on gnome-panels in Mist
+	- Add a --disable-all option, so that it is possible to build one
+	  engine without requiring to disable every other engine manually.
+	- Various changes to avoid expensive code paths in cairo
+	- Fix background fill for redmond slider widgets (GtkScale)
+	- Improvements in Crux arrows and scrollbar troughs
+	- Fixes to enable gtk-engines to compile on win32 with VC++
+	- Set some "Redmond" style icon sizes in the Redmond theme
+  
+See the ChangeLog for full details of other smaller fixes and enhancements.
+
+Fixed bugs in this release:
+
+	Bug 364750 - Menu separator, tear off dash lines and option menu lines changed shading style
+	Bug 352602 - When accessing parent styles, engines shouldn't assume same type
+	Bug 366716 - mist_style_draw_shadow is missing a SHADOW_NONE test
+
+
+Overview of Changes in 2.8.1 (since 2.8.0)
+==========================================
+
+Highlights in this release include:
+
+	- Visual improvements to the Crux engine
+	- Implement "contrast" option in Industrial
+	- Minor build and information fixes
+
+
+Overview of Changes in 2.8.0 (since 2.7.8)
+==========================================
+
+Highlights in this release include:
+
+	- Ensure all engines (except smooth) compile with paranoia compiler flags
+	- Miscellaneous cleanups to the Clearlooks engine
+	- Many RTL issues fixed in Clearlooks
+	- Fixed minor visual issues in other engines
+
+See the ChangeLog for full details of other smaller fixes and enhancements.
+
+Fixed bugs in this release:
+
+	326309 - Clearlooks read-only checkboxes are nearly invisible
+	328053 - GtkTreeView's title bar's borders isn't shown properly in RTL applications
+	45579 (bugzilla.ximian.com) - sodipodi rulers corrupted when using industrial gtk engine
+
+Overview of Changes in 2.7.8 (since 2.7.7)
+==========================================
+
+Highlights in this release include:
+
+	- Add paranoia and deprecated configure flags
+	- Improve HighContrast (HC) engine inconsistent state check mark
+	- Use the base/text values for expander arrow in HC (fixes invisible
+	  indicator problem)
+	- Improve visibility/contrast of checks in HC
+	- Fix broken Clearlooks menu on panel check
+	- Implement a focus rectangle for GtkEntry
+	- Many other visual improvements to Industrial
+
+See the ChangeLog for full details of other smaller fixes and enhancements.
+
+Fixed bugs in this release:
+
+	349575 - C89 Fixes (Last C89 Patch to close bug)
+	350606 - Location of G_GNUC_INTERNAL breaks Solaris build
+	351057 - Leak in clearlooks_style.c
+
+
+Overview of Changes in 2.7.7 (since 2.7.6)
+==========================================
+
+Highlights in this release include:
+
+* RTL fixes and other enhancements in Crux
+* Lots of namespace and symbol precautions
+* Port of Industrial to cairo
+
+Fixed bugs in this release:
+
+	349575 - C89 Fixes
+	347227 - Add inconsistent state for option buttons (Clearlooks)
+
+
+Overview of Changes in 2.7.6 (since 2.7.5)
+==========================================
+
+Highlights in this release include:
+
+* More improvements to the cairo version of Crux, now using purple highlights.
+* Further improvements to the cairo version of the High Constrast engine
+* New cairo based Engine called Glide for the Glider theme
+
+Fixed bugs in this release:
+
+	343893 - Engines need to handle GTK_ARROW_NONE.
+	348167 - Remove crux/pixmaps directory.
+
+
+Overview of Changes in 2.7.5 (since 2.7.4)
+==========================================
+
+Highlights in this release include:
+
+* Further improvements to the cairo version of Crux, now with a new tango style
+  from a mockup by Lapo Calamandrei
+* Fixed lots of memory leaks in Clearlooks, and several other bugs
+* High Constrast engine conversion to cairo started
+* Redmond, Thinice and Mist engine conversions to cairo almost complete
+* Lighthouseblue and Metal engines have been removed, since no one has
+  volounteered to convert them to cairo, and they are no longer maintained.
+
+Fixed bugs in this release:
+
+	345769 - Clearlooks' gtk_paint_* functions do not correctly obey the 
+	         passed clip rect
+	341694 - Crash in d4x (industrial)
+	338826 - style copy function broken in clearlooks
+	337381 - GtkHScale is improperly displayed in RTL (clearlooks)
+	325760 - panel applets have black background on transparent/solid colour
+	         panels (clearlooks)
+	332639 - Fix memory leaks in draw_flat_box and
+	         gtk_treeview_get_header_index (clearlooks)
+	325932 - "Inconsistent" checkbox state missing (clearlooks)
+
+
+
+Overview of Changes in 2.7.4 (since 2.7.3)
+==========================================
+
+* Not compiling any animation code in clearlooks anymore
+* Crux updated with radio and check buttons drawn using cairo
+* Crux updated with progress bar bars drawn using cairo
+
+
+Overview of Changes in 2.7.3 (since 2.7.2)
+==========================================
+
+* Various fixes and updates to Clearlooks
+* Fixes to hc (#318151)
+* Cleanups in lighthouseblue (#321140)
+
+
+Overview of Changes in 2.7.2 (since 2.7.1)
+==========================================
+
+* Numerous Clearlooks bug fixes (including #315562, #323218, #323218, #325168)
+* Patches and fixes for bug 321140 to hc, industrial, mist, redmond, smooth
+  and thinice engines (cleanups for compiler warnings and removal of unneeded
+  code)
+
+
+Overview of Changes in 2.7.1 (since 2.7.0)
+==========================================
+
+* Bug fixes to metal and thinice engines (bug 323215)
+* Updates and bug fixes to Clearlooks engine
+
+
+Overview of Changes in 2.7.0 (since 2.6.3)
+==========================================
+* Clearlooks and Mist engine now uses cairo to do drawing
+* Redmond and Crux engine conversions to cairo started
+* Various cleanups and fixes
+* Animation code for checkboxes and radiobuttons in clearlooks (off by default)
+
+
+Overview of Changes in 2.6.4 (since 2.6.3)
+==========================================
+* Fixed bugs: 
+	#305374 - Smooth makes d4x crash
+	#161960 - Panel on 2nd screen crashes when using crux
+	#303112 - [lighthouseblue] Radio buttons appear all checked in GtkTreeView
+	#308551 - uninitialized variables in the smooth engine
+	#305432 - smooth theme queries GtkButton style properties for all kind of widgets
+	#170824 - Industrial labels are purple
+	#300530 - clearlooks engine is installed in a different directory than the other engines
+
+* Updated clearlooks engine
+
+
+Overview of Changes in 2.6.3 (since 2.6.2)
+==========================================
+* Added Clearlooks engine and theme [Andrew Johnson, Thomas Wood ]
+* Fixed various Crux bugs, and bug 170113 [ Thomas ]
+* Memory and other fixes for Smooth engine [ Andrew ]
+* Better looking insensitive icons for Industrial [ Michele Cella ]
+* Work arounds for GNOME "Places" and "Desktop" menu bar applet item colours in
+  Industrial, LighthouseBlue, Mist and ThinIce themes [ Thomas ]
+
+Overview of Changes in 2.6.2 (since 2.6.1)
+==========================================
+* Fix bugs #167389 and #163370 [ Andrew Johnson ]
+
+
+Overview of Changes in 2.6.1 (since 2.6.0)
+==========================================
+* Fix bugs 162131, 163099 [ Thomas Wood ]
+* Fix that closes bugs 165942, 166018, 160803 [ Kjartan Maraas ]
+* Fix bug 166201 [ William Jon McCann ]
+* Smooth updates (0.6.0.2) [ Andrew Johnson ]
+
+
+Overview of Changes in 2.6.0 (since 2.2.0)
+==========================================
+* Autogen.sh updates [ James Henstridge ]
+* Pixbuf Engine Moved to GTK+ 2.6 [ Matthias Clasen ]
+* Remove old Pixbuf, and Notif Sources [ Thomas Wood ]
+* Add COPYING.GPL/COPYING.LGPL [ Thomas ]
+* Rewrite/Cleanup Redmond95 Engine [ Andrew Johnson ]
+* Replace Redmond95 Theme with Redmond Theme [ Andrew ]
+* Revise Engine/Theme Build Layout [ Andrew/Thomas ]
+* Add Crux Engine and Theme [ Andrew, Thomas ]
+* Add HC Engine [ Andrew, Thomas ]
+* Add Industrial Engine and Theme [ Andrew, Thomas]
+* Add LightHouseBlue Engine and Theme [ Andrew, Thomas ]
+* Add Mist Engine and Theme [ Andrew, Thomas ]
+* Add Smooth Engine [ Andrew, Thomas ]
+* Add ThinIce Engine and Theme [ Andrew, Thomas ]
+* Improve Smooth/Redmond/Industrial Engines for RTL Locales [ Andrew ]
+* Update README, add COPYING list of licences [ Andrew ]
+
+
+Overview of Changes in 2.2.0 (since 1.9.0)
+==========================================
+* Add a .pc file [Seth Nickell]
+* Various crash fixes [Luca Barbato, Hongli Lai, 
+  Shivaram Upadhyayula, Peter Zelezny)
+* Build fixes [Havoc Pennington]
+* Metal theme drawing improvements [Owen Taylor]
+* Improve installation docs [Owen, Piotr Sawuk]

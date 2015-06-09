@@ -1,0 +1,213 @@
+# translation of gtk-engines.master.ml.po to
+# Copyright (C) 2007-2008 gtk-engines'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtk-engines package.
+#
+# Ani Peter <apeter@redhat.com>, 2007.
+# Hari Vishnu <harivishnu@gmail.com>, 2008
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines.master.ml\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gtk-engines&component=general\n"
+"POT-Creation-Date: 2009-04-26 15:20+0000\n"
+"PO-Revision-Date: 2009-09-12 23:12+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-ish (ബട്ടണ്‍)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-ish (ഗ്രേഡിയന്റ്)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "അനിമേഷനുകള്‍"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "നിത്യഹരിതം"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "സ്ക്രോള്‍ബാറുകള്‍ക്കു് നിറം കൊടുക്കുക"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "വൈരുദ്ധ്യം"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "ഫോക്കസ് ഡ്രോയിങ് പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "പുരോഗതി കാണിയ്ക്കുന്ന പട്ടകളില്‍ അനിമേഷനുകള്‍ പ്രാവര്‍ത്തികമാക്കുക"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "പരന്ന"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "തിളങ്ങുന്ന"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "ഗമ്മി"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "ഇന്‍സെറ്റ്"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "തിരിച്ചിരിക്കുന്നതു്"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "മെനുപ്പട്ടയുടെ രീതികള്‍"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "വ്യാസാര്‍ദ്ധം"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "ആശ്വാസ ശൈലി"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "ഗമ്മി അല്ലെങ്കില്‍ തിളങ്ങുന്ന ശൈലി ആവശ്യമാണു്"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "സ്ക്രോള്‍ബാറിന്റെ നിറം"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "സ്ക്രോള്‍ബാറുകളുടെ നിറം ക്രമികരിക്കുക"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "നിഴല്‍"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "ശൈലി"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"ഈ ഉപാധി ഫോക്കസ് ഡ്രോയിങ് പ്രവര്‍ത്തന രഹിതമാക്കുന്നു. പ്രധാന ഉദ്ദേശം വിവരണക്കുറിപ്പിന്റെ "
+"സ്ക്രീന്‍ഷോട്ടുകള്‍ എടുക്കുകയെന്നതാണു്."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "ഉപകരണ തട്ടിന്റെ രീതികള്‍"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "സെല്‍ സൂചന വലിപ്പം"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "അറ്റത്തിന്റെ വീതി"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr ""
+" ശരി-ചിഹ്നവും (ചെക്കും)  റേഡിയൊ ബട്ടനുകളും (തിരഞ്ഞെടുക്കല്‍ ചതുരങ്ങള്‍) - ഇവയുടെ വലിപ്പം "
+"ട്രീകാഴ്ചകളില്‍ (Bug #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "If set, button corners are rounded"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "വട്ടത്തിലുള്ള ബട്ടണുകള്‍"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "അമ്പു്"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "ബിന്ദു"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "മുഴുവന്‍"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "ഹാന്‍ഡില്‍ബോക്സ് അടയാളങ്ങള്‍"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "തിരിച്ചിരിയ്ക്കുന്ന ബിന്ദു"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "തിരിച്ചിടുന്ന സ്ലാഷ്"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "ടൈപ്പ് 1 അടയാളപ്പെടുത്തുക"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "സ്ക്രോള്‍ബാര്‍ ബട്ടണുകള്‍ക്കുള്ള അടയാള രീതി"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "സ്ക്രീന്‍ താഴോട്ടനക്കാനുള്ള ഹാന്റിലുകള്‍, ഹാന്റില്‍ ചതുരങ്ങള്‍, ഇത്യാദിക്കുള്ള അടയാളതരം"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "ഒന്നുമില്ല"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "ശൂന്യം"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "പാളിയിലാക്കിയ ബിന്ദുക്കള്‍"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "ചതുരം"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "സ്ക്രോള്‍ബാര്‍ അടയാളങ്ങള്‍"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "സ്ക്രോള്‍ബാര്‍ തരം"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "സ്ക്രോള്‍ബട്ടണ്‍ അടയാളങ്ങള്‍"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "ആകൃതിയുള്ള"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "സ്ലാഷ്"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "ചിലതു്"
+

@@ -1,0 +1,213 @@
+# translation of gtk-engines.master.te.po to Telugu
+# Telugu translation of gtk-engines
+# Copyright (C) Krishna Babu K <kkrothap@redhat.com>, 2008.
+# This file is distributed under the same license as the gtk-engines package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk-engines.master.te\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gtk-engines&component=general\n"
+"POT-Creation-Date: 2009-04-26 15:20+0000\n"
+"PO-Revision-Date: 2009-05-15 12:59+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"\n"
+
+#: ../schema/clearlooks.xml.in.in.h:1
+msgid "3d-ish (button)"
+msgstr "3d-ish (బటన్)"
+
+#: ../schema/clearlooks.xml.in.in.h:2
+msgid "3d-ish (gradient)"
+msgstr "3d-ish (గ్రేడియంట్)"
+
+#: ../schema/clearlooks.xml.in.in.h:3
+msgid "Animations"
+msgstr "యానిమేషన్స్"
+
+#: ../schema/clearlooks.xml.in.in.h:4
+msgid "Classic"
+msgstr "శాస్త్రీయ"
+
+#: ../schema/clearlooks.xml.in.in.h:5
+msgid "Colorize Scrollbar"
+msgstr "వర్ణరంజిత స్క్రాల్‌బార్"
+
+#: ../schema/clearlooks.xml.in.in.h:6 ../schema/industrial.xml.in.in.h:1
+msgid "Contrast"
+msgstr "కాంతితీవ్రత"
+
+#: ../schema/clearlooks.xml.in.in.h:7
+msgid "Disable focus drawing"
+msgstr "ఫోకస్ డ్రాయింగ్‌ను అచేతనముచేయుము"
+
+#: ../schema/clearlooks.xml.in.in.h:8
+msgid "Enable Animations on Progressbars"
+msgstr "ప్రోగ్రెస్‌బార్ పైన యానిమేషన్స్ ను చేతనంచేయుము"
+
+#: ../schema/clearlooks.xml.in.in.h:9
+msgid "Flat"
+msgstr "సమతల"
+
+#: ../schema/clearlooks.xml.in.in.h:10
+msgid "Glossy"
+msgstr "నున్నని"
+
+#: ../schema/clearlooks.xml.in.in.h:11
+msgid "Gummy"
+msgstr "జిడ్డుగా"
+
+#: ../schema/clearlooks.xml.in.in.h:12
+msgid "Inset"
+msgstr "లోనిఅమరిక"
+
+#: ../schema/clearlooks.xml.in.in.h:13
+msgid "Inverted"
+msgstr "తలక్రిందులైన"
+
+#: ../schema/clearlooks.xml.in.in.h:14
+msgid "Menubar Style"
+msgstr "మెనూబార్ శైలి"
+
+#: ../schema/clearlooks.xml.in.in.h:15
+msgid "Radius"
+msgstr "వ్యాసార్ధం"
+
+#: ../schema/clearlooks.xml.in.in.h:16
+msgid "Relief Style"
+msgstr "వెసులుబాటు శైలి"
+
+#: ../schema/clearlooks.xml.in.in.h:17
+msgid "Requires style Glossy or Gummy"
+msgstr "నున్నని లేదా జిడ్డు శైలి అవసరం"
+
+#: ../schema/clearlooks.xml.in.in.h:18
+msgid "Scrollbar Color"
+msgstr "స్క్రాల్‌బార్ వర్ణము"
+
+#: ../schema/clearlooks.xml.in.in.h:19
+msgid "Sets the Color of Scrollbars"
+msgstr "స్క్రాల్‌బార్స్  వర్ణమును అమర్చుతుమది"
+
+#: ../schema/clearlooks.xml.in.in.h:20
+msgid "Shadow"
+msgstr "ఛాయ"
+
+#: ../schema/clearlooks.xml.in.in.h:21
+msgid "Style"
+msgstr "శైలి"
+
+#: ../schema/clearlooks.xml.in.in.h:22
+msgid ""
+"This option allows to disable the focus drawing. The primary purpose is to "
+"create screenshots for documentation."
+msgstr ""
+"ఈ ఐచ్చికము ఫోకస్ డ్రాయింగును అచేతనము చేయుటకు అనుమతిస్తుంది. ప్రాధమిక ప్రయోజనం "
+"పత్రికీకరణ కొరకు తెరపట్టులను సృష్టించుట."
+
+#: ../schema/clearlooks.xml.in.in.h:23
+msgid "Toolbar Style"
+msgstr "సాధనముల శైలి"
+
+#: ../schema/hcengine.xml.in.in.h:1
+msgid "Cell Indicator Size"
+msgstr "అర సూచకి పరిమాణం"
+
+#: ../schema/hcengine.xml.in.in.h:2
+msgid "Edge Thickness"
+msgstr "అంచు మందం"
+
+#: ../schema/hcengine.xml.in.in.h:3
+msgid "Size of check- and radiobuttons inside treeviews. (Bug #351764)"
+msgstr "వృక్షదర్శనం లో ఉన్న చెక్ మరియు రెడియో బటన్సు యొక్క పరిమాణం (Bug #351764)"
+
+#: ../schema/industrial.xml.in.in.h:2
+msgid "If set, button corners are rounded"
+msgstr "అమర్చినట్లేతే, బటన్ మూలలు గుండ్రంగాఉంటాయి"
+
+#: ../schema/industrial.xml.in.in.h:3
+msgid "Rounded Buttons"
+msgstr "గుండ్రని బటన్స్"
+
+#: ../schema/thinice.xml.in.in.h:1
+msgid "Arrow"
+msgstr "బాణము"
+
+#: ../schema/thinice.xml.in.in.h:2
+msgid "Dot"
+msgstr "చుక్క"
+
+#: ../schema/thinice.xml.in.in.h:3
+msgid "Full"
+msgstr "పూర్తి"
+
+#: ../schema/thinice.xml.in.in.h:4
+msgid "Handlebox Marks"
+msgstr "హాండిల్‌పెట్టె గుర్తులు"
+
+#: ../schema/thinice.xml.in.in.h:5
+msgid "Inverted Dot"
+msgstr "తిరొగమన చుక్క"
+
+#: ../schema/thinice.xml.in.in.h:6
+msgid "Inverted Slash"
+msgstr "తిరొగమన స్లాష్"
+
+#: ../schema/thinice.xml.in.in.h:7
+msgid "Mark Type 1"
+msgstr "గుర్తు రకం 1"
+
+#: ../schema/thinice.xml.in.in.h:8
+msgid "Mark Type for Scrollbar Buttons"
+msgstr "స్క్రాల్‌బార్ బటన్స్  కొరకు గుర్తు రకం"
+
+#: ../schema/thinice.xml.in.in.h:9
+msgid "Mark Type for Scrollbar Handles, Handleboxes, etc"
+msgstr "స్క్రాల్‌బార్ హాండిల్సు, హాండిల్‌పెట్టెలు, మోద.వానికొరకు గుర్తు రకం"
+
+#: ../schema/thinice.xml.in.in.h:10
+msgid "None"
+msgstr "ఏదీకాదు"
+
+#: ../schema/thinice.xml.in.in.h:11
+msgid "Nothing"
+msgstr "ఏమీలేదు"
+
+#: ../schema/thinice.xml.in.in.h:12
+msgid "Paned Dots"
+msgstr "పాన్డ్  చుక్కలు"
+
+#: ../schema/thinice.xml.in.in.h:13
+msgid "Rectangle"
+msgstr "దీర్ఘచురస్త్రం"
+
+#: ../schema/thinice.xml.in.in.h:14
+msgid "Scrollbar Marks"
+msgstr "స్క్రాల్‌బార్ గుర్తులు"
+
+#: ../schema/thinice.xml.in.in.h:15
+msgid "Scrollbar Type"
+msgstr "స్క్రాల్‌బార్ రకం"
+
+#: ../schema/thinice.xml.in.in.h:16
+msgid "Scrollbutton Marks"
+msgstr "స్క్రాల్‌బటన్ గుర్తులు"
+
+#: ../schema/thinice.xml.in.in.h:17
+msgid "Shaped"
+msgstr "మలిచిన"
+
+#: ../schema/thinice.xml.in.in.h:18
+msgid "Slash"
+msgstr "స్లాష్"
+
+#: ../schema/thinice.xml.in.in.h:19
+msgid "Some"
+msgstr "కొన్ని"
+
