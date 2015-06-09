@@ -23,9 +23,9 @@ INCLUDES = -I$(top_srcdir)/engines/support \
            $(GTK_CFLAGS) $(DEVELOPMENT_CFLAGS)
 
 enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
-engine_LTLIBRARIES = libclearlooks.la
+engine_LTLIBRARIES = libclearlookspix.la
 
-libclearlooks_la_SOURCES =		\
+libclearlookspix_la_SOURCES =		\
 	./src/clearlooks_rc_style.c	\
 	./src/clearlooks_rc_style.h	\
 	./src/clearlooks_style.c	\
@@ -42,8 +42,8 @@ libclearlooks_la_SOURCES =		\
 	./src/clearlooks_draw.h		\
 	./src/clearlooks_types.h
 
-libclearlooks_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols $(top_srcdir)/engines/engine.symbols
-libclearlooks_la_LIBADD =  $(top_builddir)/engines/support/libsupport.la $(GTK_LIBS) -lm
+libclearlookspix_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols $(top_srcdir)/engines/engine.symbols
+libclearlookspix_la_LIBADD =  $(top_builddir)/engines/support/libsupport.la $(GTK_LIBS) -lm
 
 
 -include $(top_srcdir)/git.mk

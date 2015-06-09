@@ -281,7 +281,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-SUBDIRS = engines themes test schema po
+SUBDIRS = engines po
 DIST_SUBDIRS = $(SUBDIRS)
 EXTRA_DIST = \
 	gtk-engines.doap \

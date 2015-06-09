@@ -55,7 +55,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-subdir = engines/clearlooks
+subdir = engines/clearlookspix
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in AUTHORS
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -89,20 +89,20 @@ am__base_list = \
 am__installdirs = "$(DESTDIR)$(enginedir)"
 LTLIBRARIES = $(engine_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-libclearlooks_la_DEPENDENCIES =  \
+libclearlookspix_la_DEPENDENCIES =  \
 	$(top_builddir)/engines/support/libsupport.la \
 	$(am__DEPENDENCIES_1)
-am_libclearlooks_la_OBJECTS = clearlooks_rc_style.lo \
+am_libclearlookspix_la_OBJECTS = clearlooks_rc_style.lo \
 	clearlooks_style.lo clearlooks_theme_main.lo support.lo \
 	animation.lo clearlooks_draw.lo clearlooks_draw_glossy.lo \
 	clearlooks_draw_inverted.lo clearlooks_draw_gummy.lo
-libclearlooks_la_OBJECTS = $(am_libclearlooks_la_OBJECTS)
+libclearlookspix_la_OBJECTS = $(am_libclearlookspix_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
-libclearlooks_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+libclearlookspix_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
-	$(AM_CFLAGS) $(CFLAGS) $(libclearlooks_la_LDFLAGS) $(LDFLAGS) \
+	$(AM_CFLAGS) $(CFLAGS) $(libclearlookspix_la_LDFLAGS) $(LDFLAGS) \
 	-o $@
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/engines/support
 depcomp = $(SHELL) $(top_srcdir)/depcomp
@@ -130,8 +130,8 @@ am__v_CCLD_0 = @echo "  CCLD  " $@;
 AM_V_GEN = $(am__v_GEN_$(V))
 am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
 am__v_GEN_0 = @echo "  GEN   " $@;
-SOURCES = $(libclearlooks_la_SOURCES)
-DIST_SOURCES = $(libclearlooks_la_SOURCES)
+SOURCES = $(libclearlookspix_la_SOURCES)
+DIST_SOURCES = $(libclearlookspix_la_SOURCES)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -289,8 +289,8 @@ INCLUDES = -I$(top_srcdir)/engines/support \
            $(GTK_CFLAGS) $(DEVELOPMENT_CFLAGS)
 
 enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
-engine_LTLIBRARIES = libclearlooks.la
-libclearlooks_la_SOURCES = \
+engine_LTLIBRARIES = libclearlookspix.la
+libclearlookspix_la_SOURCES = \
 	./src/clearlooks_rc_style.c	\
 	./src/clearlooks_rc_style.h	\
 	./src/clearlooks_style.c	\
@@ -307,8 +307,8 @@ libclearlooks_la_SOURCES = \
 	./src/clearlooks_draw.h		\
 	./src/clearlooks_types.h
 
-libclearlooks_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols $(top_srcdir)/engines/engine.symbols
-libclearlooks_la_LIBADD = $(top_builddir)/engines/support/libsupport.la $(GTK_LIBS)
+libclearlookspix_la_LDFLAGS = -module -avoid-version -no-undefined -export-symbols $(top_srcdir)/engines/engine.symbols
+libclearlookspix_la_LIBADD = $(top_builddir)/engines/support/libsupport.la $(GTK_LIBS)
 all: all-am
 
 .SUFFIXES:
@@ -322,9 +322,9 @@ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am  $(am__confi
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu engines/clearlooks/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu engines/clearlookspix/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --gnu engines/clearlooks/Makefile
+	  $(AUTOMAKE) --gnu engines/clearlookspix/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -374,8 +374,8 @@ clean-engineLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-libclearlooks.la: $(libclearlooks_la_OBJECTS) $(libclearlooks_la_DEPENDENCIES) 
-	$(AM_V_CCLD)$(libclearlooks_la_LINK) -rpath $(enginedir) $(libclearlooks_la_OBJECTS) $(libclearlooks_la_LIBADD) $(LIBS)
+libclearlookspix.la: $(libclearlookspix_la_OBJECTS) $(libclearlookspix_la_DEPENDENCIES) 
+	$(AM_V_CCLD)$(libclearlookspix_la_LINK) -rpath $(enginedir) $(libclearlookspix_la_OBJECTS) $(libclearlookspix_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
