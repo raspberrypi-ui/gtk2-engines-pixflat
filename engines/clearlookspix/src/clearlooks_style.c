@@ -56,7 +56,7 @@
 
 #define STYLE_FUNCTION(function) (CLEARLOOKS_STYLE_GET_CLASS (style)->style_functions[CLEARLOOKS_STYLE (style)->style].function)
 
-G_DEFINE_DYNAMIC_TYPE (ClearlooksStyle, clearlooks_style, GTK_TYPE_STYLE)
+G_DEFINE_DYNAMIC_TYPE (ClearlooksPixStyle, clearlooks_style, GTK_TYPE_STYLE)
 
 static void
 clearlooks_set_widget_parameters (const GtkWidget      *widget,
@@ -98,7 +98,7 @@ clearlooks_style_draw_flat_box (DRAW_ARGS)
 	    !strncmp ("cell_odd", detail, 8)))
 	{
 		WidgetParameters params;
-		ClearlooksStyle  *clearlooks_style;
+		ClearlooksPixStyle  *clearlooks_style;
 		ClearlooksColors *colors;
 		cairo_t          *cr;
 
@@ -119,7 +119,7 @@ clearlooks_style_draw_flat_box (DRAW_ARGS)
 	else if (DETAIL ("tooltip"))
 	{
 		WidgetParameters params;
-		ClearlooksStyle  *clearlooks_style;
+		ClearlooksPixStyle  *clearlooks_style;
 		ClearlooksColors *colors;
 		cairo_t          *cr;
 
@@ -138,7 +138,7 @@ clearlooks_style_draw_flat_box (DRAW_ARGS)
 	else if (DETAIL ("icon_view_item"))
 	{
 		WidgetParameters params;
-		ClearlooksStyle  *clearlooks_style;
+		ClearlooksPixStyle  *clearlooks_style;
 		ClearlooksColors *colors;
 		cairo_t          *cr;
 
@@ -171,7 +171,7 @@ clearlooks_style_draw_flat_box (DRAW_ARGS)
 static void
 clearlooks_style_draw_shadow (DRAW_ARGS)
 {
-	ClearlooksStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	cairo_t          *cr     = ge_gdk_drawable_to_cairo (window, area);
 
@@ -290,7 +290,7 @@ clearlooks_style_draw_box_gap (DRAW_ARGS,
                                gint            gap_x,
                                gint            gap_width)
 {
-	ClearlooksStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	cairo_t          *cr;
 
@@ -386,7 +386,7 @@ clearlooks_style_draw_box_gap (DRAW_ARGS,
 static void
 clearlooks_style_draw_extension (DRAW_ARGS, GtkPositionType gap_side)
 {
-	ClearlooksStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	cairo_t          *cr;
 
@@ -448,7 +448,7 @@ clearlooks_style_draw_extension (DRAW_ARGS, GtkPositionType gap_side)
 static void
 clearlooks_style_draw_handle (DRAW_ARGS, GtkOrientation orientation)
 {
-	ClearlooksStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	cairo_t          *cr;
 
@@ -500,7 +500,7 @@ clearlooks_style_draw_handle (DRAW_ARGS, GtkOrientation orientation)
 static void
 clearlooks_style_draw_box (DRAW_ARGS)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	const ClearlooksColors *colors;
 	cairo_t *cr;
 
@@ -1150,7 +1150,7 @@ clearlooks_style_draw_box (DRAW_ARGS)
 static void
 clearlooks_style_draw_slider (DRAW_ARGS, GtkOrientation orientation)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	const ClearlooksColors *colors;
 	cairo_t *cr;
 
@@ -1222,7 +1222,7 @@ clearlooks_style_draw_slider (DRAW_ARGS, GtkOrientation orientation)
 static void
 clearlooks_style_draw_option (DRAW_ARGS)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	const ClearlooksColors *colors;
 	WidgetParameters params;
 	CheckboxParameters checkbox;
@@ -1247,7 +1247,7 @@ clearlooks_style_draw_option (DRAW_ARGS)
 static void
 clearlooks_style_draw_check (DRAW_ARGS)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	WidgetParameters params;
 	CheckboxParameters checkbox;
 	cairo_t *cr;
@@ -1283,7 +1283,7 @@ clearlooks_style_draw_vline (GtkStyle               *style,
                              gint                    y2,
                              gint                    x)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	const ClearlooksColors *colors;
 	SeparatorParameters separator = { FALSE };
 	cairo_t *cr;
@@ -1313,7 +1313,7 @@ clearlooks_style_draw_hline (GtkStyle               *style,
                              gint                    x2,
                              gint                    y)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	const ClearlooksColors *colors;
 	cairo_t *cr;
 	SeparatorParameters separator;
@@ -1342,7 +1342,7 @@ clearlooks_style_draw_shadow_gap (DRAW_ARGS,
                                   gint            gap_x,
                                   gint            gap_width)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	const ClearlooksColors *colors;
 	cairo_t *cr;
 
@@ -1393,7 +1393,7 @@ clearlooks_style_draw_resize_grip (GtkStyle       *style,
                                    gint            width,
                                    gint            height)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	cairo_t *cr;
 	WidgetParameters params;
@@ -1419,7 +1419,7 @@ clearlooks_style_draw_resize_grip (GtkStyle       *style,
 static void
 clearlooks_style_draw_tab (DRAW_ARGS)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	WidgetParameters params;
 	ArrowParameters  arrow;
@@ -1454,7 +1454,7 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
                              gint           width,
                              gint           height)
 {
-	ClearlooksStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	WidgetParameters params;
 	ArrowParameters  arrow;
@@ -1498,7 +1498,7 @@ static void
 clearlooks_style_init_from_rc (GtkStyle * style,
                                GtkRcStyle * rc_style)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 
 	GTK_STYLE_CLASS (clearlooks_style_parent_class)->init_from_rc (style, rc_style);
 
@@ -1524,7 +1524,7 @@ clearlooks_style_init_from_rc (GtkStyle * style,
 static void
 clearlooks_style_realize (GtkStyle * style)
 {
-	ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 	double shades[] = {1.15, 0.95, 0.896, 0.82, 0.7, 0.665, 0.475, 0.45, 0.4};
 	CairoColor spot_color;
 	CairoColor bg_normal;
@@ -1575,7 +1575,7 @@ clearlooks_style_draw_focus (GtkStyle *style, GdkWindow *window, GtkStateType st
                              GdkRectangle *area, GtkWidget *widget, const gchar *detail,
                              gint x, gint y, gint width, gint height)
 {
-	ClearlooksStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle  *clearlooks_style = CLEARLOOKS_STYLE (style);
 	ClearlooksColors *colors = &clearlooks_style->colors;
 	WidgetParameters params;
 	FocusParameters focus;
@@ -1749,8 +1749,8 @@ clearlooks_style_draw_focus (GtkStyle *style, GdkWindow *window, GtkStateType st
 static void
 clearlooks_style_copy (GtkStyle * style, GtkStyle * src)
 {
-	ClearlooksStyle * cl_style = CLEARLOOKS_STYLE (style);
-	ClearlooksStyle * cl_src = CLEARLOOKS_STYLE (src);
+	ClearlooksPixStyle * cl_style = CLEARLOOKS_STYLE (style);
+	ClearlooksPixStyle * cl_src = CLEARLOOKS_STYLE (src);
 
 	cl_style->colors              = cl_src->colors;
 	cl_style->reliefstyle         = cl_src->reliefstyle;
@@ -1850,7 +1850,7 @@ clearlooks_style_draw_layout (GtkStyle * style,
 
 	if (state_type == GTK_STATE_INSENSITIVE)
 	{
-		ClearlooksStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
+		ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
 		ClearlooksColors *colors = &clearlooks_style->colors;
 
 		WidgetParameters params;
@@ -1971,12 +1971,12 @@ clearlooks_style_register_types (GTypeModule *module)
 }
 
 static void
-clearlooks_style_init (ClearlooksStyle * style)
+clearlooks_style_init (ClearlooksPixStyle * style)
 {
 }
 
 static void
-clearlooks_style_class_init (ClearlooksStyleClass * klass)
+clearlooks_style_class_init (ClearlooksPixStyleClass * klass)
 {
 	GtkStyleClass *style_class = GTK_STYLE_CLASS (klass);
 
@@ -2023,6 +2023,6 @@ clearlooks_style_class_init (ClearlooksStyleClass * klass)
 }
 
 static void
-clearlooks_style_class_finalize (ClearlooksStyleClass *klass)
+clearlooks_style_class_finalize (ClearlooksPixStyleClass *klass)
 {
 }

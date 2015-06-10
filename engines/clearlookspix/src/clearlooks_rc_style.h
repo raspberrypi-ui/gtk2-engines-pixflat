@@ -32,15 +32,15 @@
 #ifndef CLEARLOOKS_RC_STYLE_H
 #define CLEARLOOKS_RC_STYLE_H
 
-typedef struct _ClearlooksRcStyle ClearlooksRcStyle;
-typedef struct _ClearlooksRcStyleClass ClearlooksRcStyleClass;
+typedef struct _ClearlooksRcStyle ClearlooksPixRcStyle;
+typedef struct _ClearlooksRcStyleClass ClearlooksPixRcStyleClass;
 
 #define CLEARLOOKS_TYPE_RC_STYLE              (clearlooks_rc_style_get_type ())
-#define CLEARLOOKS_RC_STYLE(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), CLEARLOOKS_TYPE_RC_STYLE, ClearlooksRcStyle))
-#define CLEARLOOKS_RC_STYLE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), CLEARLOOKS_TYPE_RC_STYLE, ClearlooksRcStyleClass))
+#define CLEARLOOKS_RC_STYLE(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), CLEARLOOKS_TYPE_RC_STYLE, ClearlooksPixRcStyle))
+#define CLEARLOOKS_RC_STYLE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), CLEARLOOKS_TYPE_RC_STYLE, ClearlooksPixRcStyleClass))
 #define CLEARLOOKS_IS_RC_STYLE(object)        (G_TYPE_CHECK_INSTANCE_TYPE ((object), CLEARLOOKS_TYPE_RC_STYLE))
 #define CLEARLOOKS_IS_RC_STYLE_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), CLEARLOOKS_TYPE_RC_STYLE))
-#define CLEARLOOKS_RC_STYLE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), CLEARLOOKS_TYPE_RC_STYLE, ClearlooksRcStyleClass))
+#define CLEARLOOKS_RC_STYLE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), CLEARLOOKS_TYPE_RC_STYLE, ClearlooksPixRcStyleClass))
 
 /* XXX: needs fixing! */
 typedef enum {
