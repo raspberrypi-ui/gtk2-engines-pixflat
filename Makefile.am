@@ -1,4 +1,4 @@
-SUBDIRS = engines themes test schema po
+SUBDIRS = engines themes po
 DIST_SUBDIRS = $(SUBDIRS)
 
 EXTRA_DIST = \
