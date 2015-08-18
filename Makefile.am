@@ -1,4 +1,4 @@
-SUBDIRS = engines themes po
+SUBDIRS = engines po
 DIST_SUBDIRS = $(SUBDIRS)
 
 EXTRA_DIST = \
