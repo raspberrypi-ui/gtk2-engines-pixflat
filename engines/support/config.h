@@ -12,7 +12,7 @@
 #define GETTEXT_PACKAGE "gtk-engines"
 
 /* Defines whether to compile with animation support */
-#define HAVE_ANIMATION 1
+/* #undef HAVE_ANIMATION */
 
 /* Define to 1 if you have the `bind_textdomain_codeset' function. */
 #define HAVE_BIND_TEXTDOMAIN_CODESET 1
@@ -62,9 +62,6 @@
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
 #define LT_OBJDIR ".libs/"
-
-/* Define to 1 if your C compiler doesn't accept -c and -o together. */
-/* #undef NO_MINUS_C_MINUS_O */
 
 /* Name of package */
 #define PACKAGE "gtk-engines"
