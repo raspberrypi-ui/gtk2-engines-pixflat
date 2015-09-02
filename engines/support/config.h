@@ -1,39 +1,18 @@
 /* engines/support/config.h.  Generated from config.h.in by configure.  */
 /* engines/support/config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* always defined to indicate that i18n is enabled */
-#define ENABLE_NLS 1
-
 /* Defines whether to enable runtime widget checks as a fallback to hints from
    the theme. */
 #define ENABLE_WIDGET_CHECKS 1
 
-/* Gettext package */
-#define GETTEXT_PACKAGE "gtk-engines"
-
 /* Defines whether to compile with animation support */
 /* #undef HAVE_ANIMATION */
-
-/* Define to 1 if you have the `bind_textdomain_codeset' function. */
-#define HAVE_BIND_TEXTDOMAIN_CODESET 1
-
-/* Define to 1 if you have the `dcgettext' function. */
-#define HAVE_DCGETTEXT 1
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #define HAVE_DLFCN_H 1
 
-/* Define if the GNU gettext() function is already present or preinstalled. */
-#define HAVE_GETTEXT 1
-
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
-
-/* Define if your <locale.h> file defines LC_MESSAGES. */
-#define HAVE_LC_MESSAGES 1
-
-/* Define to 1 if you have the <locale.h> header file. */
-#define HAVE_LOCALE_H 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1

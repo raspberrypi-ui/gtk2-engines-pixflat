@@ -20,13 +20,6 @@ AM_DISABLE_STATIC
 AC_LIBTOOL_WIN32_DLL
 AM_PROG_LIBTOOL
 
-dnl Initialize intltool
-AC_PROG_INTLTOOL([0.31.0])
-GETTEXT_PACKAGE=gtk-engines
-AC_SUBST([GETTEXT_PACKAGE])
-AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
-AM_GLIB_GNU_GETTEXT
-
 AC_ARG_ENABLE(all, 		[  --disable-all           skip all engines/themes by default], [defaultval=$enableval], 	[defaultval="yes"])
 AC_ARG_ENABLE(clearlookspix, 	[  --disable-clearlookspix    skip ClearLooks engine/theme], 	[clearlookspix=$enableval], 	[clearlookspix="$defaultval"])
 
@@ -50,7 +43,6 @@ BUILD_SCHEMAS=""
 
 if test $clearlookspix = "yes"; then
 	BUILD_ENGINES="$BUILD_ENGINES clearlookspix"
-	BUILD_THEMES="$BUILD_THEMES PiX"
 fi
 
 # Don't forget to update the README when changing this.
@@ -106,31 +98,8 @@ Makefile
 engines/Makefile
 engines/support/Makefile
 engines/clearlookspix/Makefile
-themes/Makefile
-themes/PiX/Makefile
-themes/PiX/gtk-2.0/Makefile
-themes/PiX/gtk-2.0/Arrows/Makefile
-themes/PiX/gtk-2.0/Buttons/Makefile
-themes/PiX/gtk-2.0/Check-Radio/Makefile
-themes/PiX/gtk-2.0/Entry/Makefile
-themes/PiX/gtk-2.0/Expanders/Makefile
-themes/PiX/gtk-2.0/Handles/Makefile
-themes/PiX/gtk-2.0/Lines/Makefile
-themes/PiX/gtk-2.0/Menu-Menubar/Makefile
-themes/PiX/gtk-2.0/Others/Makefile
-themes/PiX/gtk-2.0/ProgressBar/Makefile
-themes/PiX/gtk-2.0/Range/Makefile
-themes/PiX/gtk-2.0/Scrollbars/Makefile
-themes/PiX/gtk-2.0/Shadows/Makefile
-themes/PiX/gtk-2.0/Spin/Makefile
-themes/PiX/gtk-2.0/Tabs/Makefile
-themes/PiX/gtk-2.0/Toolbar/Makefile
-themes/PiX/gtk-3.0/Makefile
-themes/PiX/gtk-3.0/assets/Makefile
-themes/PiX/openbox-3/Makefile
 gtk-engines-2.pc
 gtk-engines.spec
-po/Makefile.in
 ]) 
 
 AC_OUTPUT
