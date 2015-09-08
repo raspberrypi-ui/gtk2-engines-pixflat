@@ -2,11 +2,8 @@ SUBDIRS = engines
 DIST_SUBDIRS = $(SUBDIRS)
 
 EXTRA_DIST = \
-	gtk-engines.doap \
 	autogen.sh	\
-	gtk-engines-2.pc.in \
-	gtk-engines.spec.in \
-	gtk-engines.spec \
+	gtk-engines-clearlookspix.pc.in \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
@@ -43,7 +40,7 @@ MAINTAINERCLEANFILES = \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = gtk-engines-2.pc
+pkgconfig_DATA = gtk-engines-clearlookspix.pc
 
 test:	all
 	cd test && $(MAKE) $(AM_MAKEFLAGS) test

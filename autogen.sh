@@ -16,7 +16,10 @@ cd $srcdir
 	DIE=1
 }
 
-if automake-1.11 --version < /dev/null > /dev/null 2>&1 ; then
+if automake-1.14 --version < /dev/null > /dev/null 2>&1 ; then
+    AUTOMAKE=automake-1.14
+    ACLOCAL=aclocal-1.14
+elif automake-1.11 --version < /dev/null > /dev/null 2>&1 ; then
     AUTOMAKE=automake-1.11
     ACLOCAL=aclocal-1.11
 elif automake-1.10 --version < /dev/null > /dev/null 2>&1 ; then
@@ -39,7 +42,7 @@ else
         DIE=1
 fi
 
-(libtool --version) < /dev/null > /dev/null 2>&1 || {
+(libtoolize --version) < /dev/null > /dev/null 2>&1 || {
 	echo
 	echo "You must have libtool installed to compile GTK+."
 	echo "Get http://ftp.gnu.org/gnu/libtool/libtool-1.5.10.tar.gz"
@@ -47,11 +50,11 @@ fi
 	DIE=1
 }
 
-(intltoolize --version) < /dev/null > /dev/null 2>&1 || {
-	echo
-	echo "You must have intltool installed to compile gtk-engines."
-	DIE=1
-}
+#(intltoolize --version) < /dev/null > /dev/null 2>&1 || {
+#	echo
+#	echo "You must have intltool installed to compile gtk-engines."
+#	DIE=1
+#}
                         
 
 if test "$DIE" -eq 1; then
@@ -64,7 +67,7 @@ if test -z "$*"; then
 fi
 
 libtoolize --force --copy
-intltoolize --force --copy --automake
+#intltoolize --force --copy --automake
 
 
 $ACLOCAL $ACLOCAL_FLAGS

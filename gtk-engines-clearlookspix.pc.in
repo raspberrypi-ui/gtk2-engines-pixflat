@@ -3,7 +3,7 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: gtk-engines-2
-Description: GTK+ Theme Engines
+Name: gtk-engines-clearlookspix
+Description: GTK+ Clearlooks Engine modified for PiX theme
 Version: @VERSION@
 Requires: gtk+-2.0

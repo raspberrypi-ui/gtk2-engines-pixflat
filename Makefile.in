@@ -82,9 +82,8 @@ subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/gtk-engines-2.pc.in $(srcdir)/gtk-engines.spec.in \
-	COPYING compile config.guess config.sub depcomp install-sh \
-	missing ltmain.sh
+	$(srcdir)/gtk-engines-clearlookspix.pc.in COPYING compile \
+	config.guess config.sub depcomp install-sh missing ltmain.sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -93,7 +92,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/engines/support/config.h
-CONFIG_CLEAN_FILES = gtk-engines-2.pc gtk-engines.spec
+CONFIG_CLEAN_FILES = gtk-engines-clearlookspix.pc
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -353,11 +352,8 @@ top_srcdir = @top_srcdir@
 SUBDIRS = engines
 DIST_SUBDIRS = $(SUBDIRS)
 EXTRA_DIST = \
-	gtk-engines.doap \
 	autogen.sh	\
-	gtk-engines-2.pc.in \
-	gtk-engines.spec.in \
-	gtk-engines.spec \
+	gtk-engines-clearlookspix.pc.in \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
@@ -395,7 +391,7 @@ MAINTAINERCLEANFILES = \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = gtk-engines-2.pc
+pkgconfig_DATA = gtk-engines-clearlookspix.pc
 all: all-recursive
 
 .SUFFIXES:
@@ -433,9 +429,7 @@ $(top_srcdir)/configure: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
-gtk-engines-2.pc: $(top_builddir)/config.status $(srcdir)/gtk-engines-2.pc.in
-	cd $(top_builddir) && $(SHELL) ./config.status $@
-gtk-engines.spec: $(top_builddir)/config.status $(srcdir)/gtk-engines.spec.in
+gtk-engines-clearlookspix.pc: $(top_builddir)/config.status $(srcdir)/gtk-engines-clearlookspix.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 mostlyclean-libtool:

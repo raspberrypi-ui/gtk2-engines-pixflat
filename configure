@@ -12207,7 +12207,7 @@ fi
 ac_config_headers="$ac_config_headers engines/support/config.h"
 
 
-ac_config_files="$ac_config_files Makefile engines/Makefile engines/support/Makefile engines/clearlookspix/Makefile gtk-engines-2.pc gtk-engines.spec"
+ac_config_files="$ac_config_files Makefile engines/Makefile engines/support/Makefile engines/clearlookspix/Makefile gtk-engines-clearlookspix.pc"
 
 
 cat >confcache <<\_ACEOF
@@ -13228,8 +13228,7 @@ do
     "engines/Makefile") CONFIG_FILES="$CONFIG_FILES engines/Makefile" ;;
     "engines/support/Makefile") CONFIG_FILES="$CONFIG_FILES engines/support/Makefile" ;;
     "engines/clearlookspix/Makefile") CONFIG_FILES="$CONFIG_FILES engines/clearlookspix/Makefile" ;;
-    "gtk-engines-2.pc") CONFIG_FILES="$CONFIG_FILES gtk-engines-2.pc" ;;
-    "gtk-engines.spec") CONFIG_FILES="$CONFIG_FILES gtk-engines.spec" ;;
+    "gtk-engines-clearlookspix.pc") CONFIG_FILES="$CONFIG_FILES gtk-engines-clearlookspix.pc" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac

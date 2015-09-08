@@ -98,8 +98,7 @@ Makefile
 engines/Makefile
 engines/support/Makefile
 engines/clearlookspix/Makefile
-gtk-engines-2.pc
-gtk-engines.spec
+gtk-engines-clearlookspix.pc
 ]) 
 
 AC_OUTPUT
