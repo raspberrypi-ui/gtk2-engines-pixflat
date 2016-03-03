@@ -1283,23 +1283,7 @@ clearlooks_style_draw_vline (GtkStyle               *style,
                              gint                    y2,
                              gint                    x)
 {
-	ClearlooksPixStyle *clearlooks_style = CLEARLOOKS_STYLE (style);
-	const ClearlooksColors *colors;
-	SeparatorParameters separator = { FALSE };
-	cairo_t *cr;
-
-	CHECK_ARGS
-
-	colors = &clearlooks_style->colors;
-
-	cr = ge_gdk_drawable_to_cairo (window, area);
-
-	/* There is no such thing as a vertical menu separator
-	 * (and even if, a normal one should be better on menu bars) */
-	STYLE_FUNCTION(draw_separator) (cr, colors, NULL, &separator,
-	                                x, y1, 2, y2-y1+1);
-
-	cairo_destroy (cr);
+    // vlines only appear in file browser buttons, font browser buttons and combo boxes - GTK3 doesn't use lines on any of those
 }
 
 static void

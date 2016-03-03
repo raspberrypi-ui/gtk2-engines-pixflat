@@ -2383,17 +2383,22 @@ static void
 clearlooks_draw_combo_arrow (cairo_t *cr, const CairoColor *color,
                              double x, double y, double width, double height)
 {
-	double arrow_width = MIN (height * 2 / 3.0, width);
-	double arrow_height = arrow_width / 2.0;
-	double gap_size = 1.0 * arrow_height;
+	double asize = MIN (height * 2.0 / 3.0, width);
+	double arrow_width = MIN (asize + MAX (1.0, ceil (asize / 6.0 * 2.0) / 2.0) / 2.0, asize);
 
 	cairo_save (cr);
-	cairo_translate (cr, x, y - (arrow_height + gap_size) / 2.0);
-	cairo_rotate (cr, G_PI);
-	clearlooks_draw_normal_arrow (cr, color, 0, 0, arrow_width, arrow_height);
-	cairo_restore (cr);
 
-	clearlooks_draw_normal_arrow (cr, color, x, y + (arrow_height + gap_size) / 2.0, arrow_width, arrow_height);
+	cairo_translate (cr, x, y);
+
+	cairo_move_to (cr, -arrow_width / 2.0, 0);
+	cairo_line_to (cr, 0, arrow_width / 2.0);
+	cairo_line_to (cr, arrow_width / 2.0, 0);
+	cairo_close_path (cr);
+
+	ge_cairo_set_color (cr, color);
+	cairo_fill (cr);
+
+	cairo_restore (cr);
 }
 
 static void
