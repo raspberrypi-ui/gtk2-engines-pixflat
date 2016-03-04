@@ -1457,7 +1457,7 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
 	arrow.type = CL_ARROW_NORMAL;
 	arrow.direction = (ClearlooksDirection)arrow_type;
 
-	if (ge_is_combo_box (widget, FALSE) && !ge_is_combo_box_entry (widget))
+	if (ge_is_combo_box (widget, FALSE))
 	{
 		arrow.type = CL_ARROW_COMBO;
 	}

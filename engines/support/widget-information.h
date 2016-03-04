@@ -80,6 +80,7 @@ typedef enum {
 #define GE_IS_PANEL_WIDGET(object) ((object) && (ge_object_is_a ((GObject*)(object), "PanelWidget") || ge_object_is_a ((GObject*)(object), "PanelApplet")))
 
 #define GE_IS_COMBO_BOX_ENTRY(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkComboBoxEntry"))
+#define GE_IS_COMBO_BOX_TEXT(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkComboBoxText"))
 #define GE_IS_COMBO_BOX(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkComboBox"))
 #define GE_IS_COMBO(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkCombo"))
 #define GE_IS_OPTION_MENU(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkOptionMenu"))

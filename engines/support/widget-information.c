@@ -96,20 +96,17 @@ ge_check_hint (GEHint      hint,
 	 * TODO: This does not catch the case where the theme uses appears-as-list
 	 *       and the application turns it off again. Though this case
 	 *       is even less likely. */
-	switch (hint) {
-		case GE_HINT_COMBOBOX_ENTRY:
-			if (widget && ge_object_is_a (G_OBJECT (widget), "GtkComboBox"))
-			{
-				gboolean appears_as_list = FALSE;
+	if (hint == GE_HINT_COMBOBOX_ENTRY)
+	{
+        if (widget && ge_object_is_a (G_OBJECT (widget), "GtkComboBox"))
+        {
+            gboolean appears_as_list = FALSE;
 
-				gtk_widget_style_get (widget, "appears-as-list", &appears_as_list, NULL);
+            gtk_widget_style_get (widget, "appears-as-list", &appears_as_list, NULL);
 
-				if (appears_as_list)
-					return TRUE;
-			}
-		break;
-		default:
-		break;
+            if (appears_as_list)
+                return TRUE;
+        }
 	}
 
 
@@ -138,7 +135,7 @@ ge_check_hint (GEHint      hint,
 				return TRUE;
 		break;
 		case GE_HINT_COMBOBOX_ENTRY:
-			if (ge_is_in_combo_box (widget))
+			if (ge_is_combo_box_entry (widget))
 				return TRUE;
 		break;
 		case GE_HINT_SPINBUTTON:
@@ -217,16 +214,14 @@ ge_object_is_a (const GObject * object, const gchar * type_name)
 gboolean
 ge_is_combo_box_entry (GtkWidget * widget)
 {
-  gboolean result = FALSE;
- 
-  if ((widget) && (widget->parent))
+    if (GE_IS_COMBO_BOX_ENTRY (widget)) return TRUE;
+    else if (GE_IS_COMBO_BOX_TEXT (widget))
     {
-      if (GE_IS_COMBO_BOX_ENTRY (widget->parent))
-	result = TRUE;
-      else
-	result = ge_is_combo_box_entry (widget->parent);
+        // if this is a combo box text, does it have an entry as a child?
+        if (GE_IS_ENTRY (gtk_bin_get_child(GTK_BIN(widget)))) return TRUE;
     }
-  return result;
+    else if (widget->parent) return ge_is_combo_box_entry (widget->parent);
+    else return FALSE;
 }
 
 static gboolean
@@ -255,7 +250,7 @@ ge_is_combo_box (GtkWidget * widget, gboolean as_list)
             result = (!ge_combo_box_is_using_list(widget->parent));
         }
       else
-	result = ge_is_combo_box (widget->parent, as_list);
+       result = ge_is_combo_box (widget->parent, as_list);
     }
   return result;
 }
