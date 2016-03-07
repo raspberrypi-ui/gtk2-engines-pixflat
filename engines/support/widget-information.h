@@ -122,6 +122,7 @@ typedef enum {
 #define GE_IS_ENTRY(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkEntry"))
 #define GE_IS_BUTTON(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkButton"))
 #define GE_IS_FIXED(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkFixed"))
+#define GE_IS_COLOR_BUTTON(object) ((object) && ge_object_is_a ((GObject*)(object), "GtkColorButton"))
  
 #define TOGGLE_BUTTON(object) (GE_IS_TOGGLE_BUTTON(object)?(GtkToggleButton *)object:NULL)
  
