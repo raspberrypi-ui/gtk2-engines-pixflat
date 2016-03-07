@@ -283,10 +283,17 @@ clearlooks_draw_button (cairo_t *cr,
 	double xoffset = 0, yoffset = 0;
 	double radius = params->radius;
 	const CairoColor *fill = &colors->bg[params->state_type];
-	CairoColor border_normal = colors->shade[6];
+	CairoColor border_normal = colors->shade[5];
 	CairoColor border_disabled = colors->shade[4];
 
 	CairoColor shadow;
+
+    // this is a nasty hack to darken the border only for menu bar buttons...
+	CairoColor test1 = colors->fg[GTK_STATE_NORMAL];
+	CairoColor test2 = colors->fg[GTK_STATE_ACTIVE];
+	if (test1.r == test2.r && test1.g == test2.g && test1.b == test2.b && test1.a == test2.a)
+	    border_normal = colors->shade[6];
+
 	ge_shade_color (&border_normal, 1.04, &border_normal);
 	ge_shade_color (&border_normal, 0.94, &shadow);
 	ge_shade_color (&border_disabled, 1.08, &border_disabled);
@@ -392,14 +399,8 @@ clearlooks_draw_button (cairo_t *cr,
 	}
 	else
 	{
-		if (!params->active)
-			clearlooks_set_border_gradient (cr, &border_normal,
-			                                params->is_default ? 1.1 : 1.3, 0, height);
-		else
-		{
-			ge_shade_color (&border_normal, 1.08, &border_normal);
-			ge_cairo_set_color (cr, &border_normal);
-		}
+		ge_shade_color (&border_normal, 1.08, &border_normal);
+		ge_cairo_set_color (cr, &border_normal);
 	}
 
 	cairo_stroke (cr);
@@ -415,7 +416,7 @@ clearlooks_draw_entry (cairo_t *cr,
                        int x, int y, int width, int height)
 {
 	const CairoColor *base = &colors->base[params->state_type];
-	CairoColor border = colors->shade[params->disabled ? 3 : 6];
+	CairoColor border = colors->shade[params->disabled ? 3 : 5];
 	double radius = MIN (params->radius, MIN ((width - 4.0) / 2.0, (height - 4.0) / 2.0));
 	int xoffset, yoffset;
 
@@ -476,10 +477,7 @@ clearlooks_draw_entry (cairo_t *cr,
 	ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset,
 	                                  width-2*xoffset, height-2*yoffset,
 	                                  radius, params->corners);
-	if (params->focus || params->disabled)
-		ge_cairo_set_color (cr, &border);
-	else
-		clearlooks_set_border_gradient (cr, &border, 1.32, 0, height);
+	ge_cairo_set_color (cr, &border);
 	cairo_stroke (cr);
 
 	cairo_restore (cr);
