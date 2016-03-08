@@ -600,13 +600,6 @@ clearlooks_draw_spinbutton_down (cairo_t *cr,
 
 	ge_cairo_set_color (cr, &colors->bg[params->state_type]);
 
-	cairo_fill_preserve (cr);
-
-	pattern = cairo_pattern_create_linear (0, 0, 0, height);
-	cairo_pattern_add_color_stop_rgb (pattern, 0.0, shadow.r, shadow.g, shadow.b);
-	cairo_pattern_add_color_stop_rgba (pattern, 1.0, shadow.r, shadow.g, shadow.b, 0.0);
-
-	cairo_set_source (cr, pattern);
 	cairo_fill (cr);
 
 	cairo_pattern_destroy (pattern);

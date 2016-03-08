@@ -642,7 +642,7 @@ clearlooks_style_draw_box (DRAW_ARGS)
 	}
 	else if (DETAIL ("spinbutton_up") || DETAIL ("spinbutton_down"))
 	{
-		if (state_type == GTK_STATE_ACTIVE)
+		if (state_type == GTK_STATE_ACTIVE || state_type == GTK_STATE_PRELIGHT)
 		{
 			WidgetParameters params;
 			clearlooks_set_widget_parameters (widget, style, state_type, &params);
