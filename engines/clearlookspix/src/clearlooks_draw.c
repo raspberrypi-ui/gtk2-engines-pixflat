@@ -386,11 +386,6 @@ clearlooks_draw_button (cairo_t *cr,
 	}
 
 	/* Drawing the border */
-	if (!params->active && params->is_default)
-	{
-		ge_shade_color (&border_normal, 0.74, &border_normal);
-	}
-
 	ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset, width-(xoffset*2), height-(yoffset*2), radius, params->corners);
 
 	if (params->disabled)

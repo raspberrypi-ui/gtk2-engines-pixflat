@@ -244,16 +244,7 @@ clearlooks_style_draw_shadow (DRAW_ARGS)
 		WidgetParameters params;
 		FrameParameters  frame;
 
-		if (widget && widget->parent && (widget->parent)->parent && GE_IS_COLOR_BUTTON ((widget->parent)->parent))
-		{
-		    frame.shadow  = GTK_SHADOW_IN;
-		    x += 1;
-		    y += 1;
-		    width -= 2;
-		    height -= 2;
-		}
-		else
-		    frame.shadow  = shadow_type;
+		frame.shadow  = shadow_type;
 		frame.gap_x   = -1;  /* No gap will be drawn */
 		frame.border  = &colors->shade[4];
 
