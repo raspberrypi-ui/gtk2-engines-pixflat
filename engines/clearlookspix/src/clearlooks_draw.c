@@ -1979,7 +1979,7 @@ clearlooks_draw_menu_frame (cairo_t *cr,
                             const WidgetParameters          *widget,
                             int x, int y, int width, int height)
 {
-	const CairoColor *border = &colors->shade[5];
+	const CairoColor *border = &colors->shade[2];
 	cairo_translate      (cr, x, y);
 	cairo_set_line_width (cr, 1);
 
