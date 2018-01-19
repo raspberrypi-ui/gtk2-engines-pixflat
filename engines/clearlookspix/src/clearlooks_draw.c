@@ -1709,11 +1709,11 @@ clearlooks_draw_scrollbar_trough (cairo_t *cr,
 	cairo_translate (cr, x, y);
 
 	/* Draw fill */
-	if (radius > 3.0)
-		ge_cairo_rounded_rectangle (cr, 1, 0, width-2, height,
-		                            radius, widget->corners);
-	else
-		cairo_rectangle (cr, 1, 0, width-2, height);
+	//if (radius > 3.0)
+	//	ge_cairo_rounded_rectangle (cr, 1, 0, width-2, height,
+	//	                            radius, widget->corners);
+	//else
+		cairo_rectangle (cr, 0, 0, width, height);
 	ge_cairo_set_color (cr, bg);
 	cairo_fill (cr);
 
@@ -1733,7 +1733,7 @@ clearlooks_draw_scrollbar_trough (cairo_t *cr,
 	else
 		cairo_rectangle (cr, 0.5, 0.5, width-1, height-1);
 	ge_cairo_set_color (cr, border);
-	cairo_stroke (cr);
+	//cairo_stroke (cr);
 }
 
 static void
