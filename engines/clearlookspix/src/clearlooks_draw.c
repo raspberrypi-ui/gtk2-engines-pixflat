@@ -1851,6 +1851,20 @@ clearlooks_draw_scrollbar_slider (cairo_t *cr,
 		ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
 
 	cairo_translate (cr, x, y);
+    CairoColor fill;
+
+    if (widget->prelight)
+        fill = colors->shade[6];
+    else if (widget->active)
+        fill = colors->base[1];
+    else
+        fill = colors->shade[5];
+
+    ge_cairo_rounded_rectangle  (cr, 3, 3, width-6, height-6, (height - 4) / 2, CR_CORNER_ALL);
+    cairo_set_source_rgb (cr, fill.r, fill.g, fill.b);
+    cairo_fill (cr);
+    cairo_restore (cr);
+    return;
 
 	if (scrollbar->has_color)
 	{
