@@ -1708,12 +1708,17 @@ clearlooks_draw_scrollbar_trough (cairo_t *cr,
 
 	cairo_translate (cr, x, y);
 
+	cairo_rectangle (cr, 0, 0, width, height);
+	ge_cairo_set_color (cr, bg);
+	cairo_fill (cr);
+	return;
+
 	/* Draw fill */
-	//if (radius > 3.0)
-	//	ge_cairo_rounded_rectangle (cr, 1, 0, width-2, height,
-	//	                            radius, widget->corners);
-	//else
-		cairo_rectangle (cr, 0, 0, width, height);
+	if (radius > 3.0)
+		ge_cairo_rounded_rectangle (cr, 1, 0, width-2, height,
+		                            radius, widget->corners);
+	else
+		cairo_rectangle (cr, 1, 0, width-2, height);
 	ge_cairo_set_color (cr, bg);
 	cairo_fill (cr);
 
@@ -1733,7 +1738,7 @@ clearlooks_draw_scrollbar_trough (cairo_t *cr,
 	else
 		cairo_rectangle (cr, 0.5, 0.5, width-1, height-1);
 	ge_cairo_set_color (cr, border);
-	//cairo_stroke (cr);
+	cairo_stroke (cr);
 }
 
 static void
@@ -1789,6 +1794,17 @@ clearlooks_draw_scrollbar_stepper (cairo_t *cr,
 
 	cairo_translate (cr, x, y);
 	cairo_set_line_width (cr, 1);
+
+	ge_shade_color(&colors->shade[5], 1.08, &border);
+	corners = CR_CORNER_ALL;
+	cairo_rectangle (cr, 1, 1, width-2, height-2);
+	ge_shade_color (&colors->bg[widget->state_type], SHADE_TOP, &s1);
+	cairo_set_source_rgb (cr, s1.r, s1.g, s1.b);
+	cairo_fill (cr);
+	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius / 2.0, corners);
+	clearlooks_set_border_gradient (cr, &border, 1.1, (scrollbar->horizontal ? 0 : width), (scrollbar->horizontal ? height: 0));
+	cairo_stroke (cr);
+	return;
 
 	ge_cairo_rounded_rectangle (cr, 1, 1, width-2, height-2, radius, corners);
 
@@ -2366,8 +2382,8 @@ clearlooks_draw_normal_arrow (cairo_t *cr, const CairoColor *color,
 
 	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
 	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
-	/* cairo_line_to (cr, 0, arrow_height - line_width_2); */
-	cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4);
+	cairo_line_to (cr, 0, arrow_height - 2*line_width_2);
+	/* cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4); */
 	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
 	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
 	cairo_line_to (cr, 0, arrow_height);
