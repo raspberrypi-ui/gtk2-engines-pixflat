@@ -1,3 +1,9 @@
+gtk2-engines-clearlookspix (1:2.20.5) stretch; urgency=medium
+
+  * Modify appearance of scrollbars to match pixbuf engine
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 22 Jan 2018 13:36:29 +0000
+
 gtk2-engines-clearlookspix (1:2.20.4) jessie; urgency=low
 
   * Built from raspberrypi/LXDE-configuration
