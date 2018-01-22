@@ -1,5 +1,5 @@
 
-AC_INIT([gtk-engines], [2.20.2])
+AC_INIT([gtk2-engines-clearlookspix], [2.20.2])
 AC_CONFIG_SRCDIR([README])
 
 AM_INIT_AUTOMAKE

@@ -22,7 +22,7 @@
 INCLUDES = -I$(top_srcdir)/engines/support \
            $(GTK_CFLAGS) $(DEVELOPMENT_CFLAGS)
 
-enginedir = /usr/lib/arm-linux-gnueabihf/gtk-2.0/2.10.0/engines
+enginedir = $(libdir)/gtk-2.0/$(GTK_VERSION)/engines
 engine_LTLIBRARIES = libclearlookspix.la
 
 libclearlookspix_la_SOURCES =		\

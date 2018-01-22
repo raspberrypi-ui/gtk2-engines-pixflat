@@ -1,3 +1,26 @@
+gtk2-engines-clearlookspix (1:2.20.4) jessie; urgency=low
+
+  * Built from raspberrypi/LXDE-configuration
+    5eabf3f1b1633c0417cd289a025b26556b48e6db
+  * Remove coloured highlight from notebook tabs
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 11 Aug 2016 18:20:00 +0100
+
+gtk2-engines-clearlookspix (1:2.20.3) jessie; urgency=medium
+
+  * Built from raspberrypi/LXDE-configuration
+    8726fa1dbf6b90f6cf27a8acb79ea0b259843a7f
+  * Change to native package
+
+ -- Serge Schneider <serge@raspberrypi.org>  Tue, 29 Mar 2016 11:32:59 +0100
+
+gtk2-engines-clearlookspix (1:2.20.2-3+rpi1) jessie; urgency=low
+
+  * Add PiX theme and strip out everything else
+  * Built from cead3d1b215ed2e229ad6ba4f9b4fb74c2d6c737
+
+ -- Serge Schneider <serge@raspberrypi.org>  Wed, 02 Sep 2015 14:55:04 +0100
+
 gtk2-engines (1:2.20.2-3) unstable; urgency=low
 
   * Fix FTBS due to automake bug (Closes: #713353)
