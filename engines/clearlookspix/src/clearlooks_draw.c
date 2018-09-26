@@ -1798,10 +1798,9 @@ clearlooks_draw_scrollbar_stepper (cairo_t *cr,
 	ge_shade_color(&colors->shade[5], 1.08, &border);
 	corners = CR_CORNER_ALL;
 	cairo_rectangle (cr, 1, 1, width-2, height-2);
-	ge_shade_color (&colors->bg[widget->state_type], SHADE_TOP, &s1);
+	ge_shade_color (&colors->shade[2], 1.0, &s1);
 	cairo_set_source_rgb (cr, s1.r, s1.g, s1.b);
 	cairo_fill (cr);
-	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius / 2.0, corners);
 	clearlooks_set_border_gradient (cr, &border, 1.1, (scrollbar->horizontal ? 0 : width), (scrollbar->horizontal ? height: 0));
 	cairo_stroke (cr);
 	return;
@@ -2382,7 +2381,6 @@ clearlooks_draw_normal_arrow (cairo_t *cr, const CairoColor *color,
 
 	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
 	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
-	cairo_line_to (cr, 0, arrow_height - 2*line_width_2);
 	/* cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4); */
 	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
 	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
@@ -2465,7 +2463,7 @@ clearlooks_draw_arrow (cairo_t *cr,
 	{
 		_clearlooks_draw_arrow (cr, &colors->shade[0],
 		                        arrow->direction, arrow->type,
-		                        tx+0.5, ty+0.5, width, height);
+		                        tx, ty, width, height);
 	}
 
 	cairo_identity_matrix (cr);
