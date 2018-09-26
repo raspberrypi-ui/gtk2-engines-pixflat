@@ -1798,7 +1798,10 @@ clearlooks_draw_scrollbar_stepper (cairo_t *cr,
 	ge_shade_color(&colors->shade[5], 1.08, &border);
 	corners = CR_CORNER_ALL;
 	cairo_rectangle (cr, 1, 1, width-2, height-2);
-	ge_shade_color (&colors->shade[2], 1.0, &s1);
+	if (widget->state_type == CL_STATE_SELECTED)
+		ge_shade_color (&colors->shade[0], 1.0, &s1);
+	else
+		ge_shade_color (&colors->shade[2], 1.0, &s1);
 	cairo_set_source_rgb (cr, s1.r, s1.g, s1.b);
 	cairo_fill (cr);
 	clearlooks_set_border_gradient (cr, &border, 1.1, (scrollbar->horizontal ? 0 : width), (scrollbar->horizontal ? height: 0));
