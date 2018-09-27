@@ -111,7 +111,8 @@ typedef enum
 typedef enum
 {
 	CL_ARROW_NORMAL,
-	CL_ARROW_COMBO
+	CL_ARROW_COMBO,
+	CL_ARROW_SCROLLBAR
 } ClearlooksArrowType;
 
 typedef enum

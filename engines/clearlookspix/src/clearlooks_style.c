@@ -1477,6 +1477,7 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
     // fix up scrollbar stepper arrows to align them properly...
     if (widget && (GE_IS_HSCROLLBAR (widget) || GE_IS_VSCROLLBAR (widget)))
     {
+        arrow.type = CL_ARROW_SCROLLBAR;
         width += 3;
         height += 3;
         x -= 1;

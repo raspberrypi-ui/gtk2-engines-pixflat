@@ -2384,6 +2384,37 @@ clearlooks_draw_normal_arrow (cairo_t *cr, const CairoColor *color,
 
 	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
 	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
+	cairo_line_to (cr, 0, arrow_height -2*line_width_2);
+	/* cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4); */
+	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
+	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
+	cairo_line_to (cr, 0, arrow_height);
+	cairo_close_path (cr);
+
+	ge_cairo_set_color (cr, color);
+	cairo_fill (cr);
+
+	cairo_restore (cr);
+}
+
+static void
+clearlooks_draw_scrollbar_arrow (cairo_t *cr, const CairoColor *color,
+                              double x, double y, double width, double height)
+{
+	double arrow_width;
+	double arrow_height;
+	double line_width_2;
+
+	cairo_save (cr);
+
+	arrow_width = MIN (height * 2.0 + MAX (1.0, ceil (height * 2.0 / 6.0 * 2.0) / 2.0) / 2.0, width);
+	line_width_2 = MAX (1.0, ceil (arrow_width / 6.0 * 2.0) / 2.0) / 2.0;
+	arrow_height = arrow_width / 2.0 + line_width_2;
+
+	cairo_translate (cr, x, y - arrow_height / 2.0);
+
+	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
+	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
 	/* cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4); */
 	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
 	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
@@ -2447,6 +2478,12 @@ _clearlooks_draw_arrow (cairo_t *cr, const CairoColor *color,
 		cairo_translate (cr, x, y);
 		clearlooks_draw_combo_arrow (cr, color, 0, 0, width, height);
 	}
+	else if (type == CL_ARROW_SCROLLBAR)
+	{
+		cairo_translate (cr, x, y);
+		cairo_rotate (cr, -rotate);
+		clearlooks_draw_scrollbar_arrow (cr, color, 0, 0, width, height);
+	}
 }
 
 static void
@@ -2466,7 +2503,9 @@ clearlooks_draw_arrow (cairo_t *cr,
 	{
 		_clearlooks_draw_arrow (cr, &colors->shade[0],
 		                        arrow->direction, arrow->type,
-		                        tx, ty, width, height);
+		                        tx + (arrow->type == CL_ARROW_SCROLLBAR ? 0 : 0.5),
+		                        ty + (arrow->type == CL_ARROW_SCROLLBAR ? 0 : 0.5),
+		                        width, height);
 	}
 
 	cairo_identity_matrix (cr);
