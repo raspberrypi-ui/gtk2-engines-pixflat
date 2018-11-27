@@ -644,7 +644,7 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			WidgetParameters params;
 			clearlooks_set_widget_parameters (widget, style, state_type, &params);
 
-			if (style->xthickness == 3)
+			if (style->xthickness > 2)
 			{
 				width++;
 				if (params.ltr)
