@@ -1287,7 +1287,6 @@ clearlooks_draw_tab (cairo_t *cr,
 	double            length;
 
 	radius = MIN (params->radius, MIN ((width - 2.0) / 2.0, (height - 2.0) / 2.0));
-
 	cairo_save (cr);
 
 	/* Set clip */
@@ -1878,7 +1877,8 @@ clearlooks_draw_scrollbar_slider (cairo_t *cr,
     else
         fill = colors->shade[5];
 
-    ge_cairo_rounded_rectangle  (cr, 3, 3, width-6, height-6, (height - 4) / 2, CR_CORNER_ALL);
+	double radius = MIN (widget->radius, (height - 4) / 2);
+    ge_cairo_rounded_rectangle  (cr, 3, 3, width-6, height-6, radius, CR_CORNER_ALL);
     cairo_set_source_rgb (cr, fill.r, fill.g, fill.b);
     cairo_fill (cr);
     cairo_restore (cr);
