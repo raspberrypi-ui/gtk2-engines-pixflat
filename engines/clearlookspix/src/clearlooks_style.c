@@ -775,8 +775,7 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			{
 				if (steppers & (CL_STEPPER_A | CL_STEPPER_B))
 				{
-					x += 2;
-					width -= 2;
+					width += 2;
 				}
 				if (steppers & (CL_STEPPER_C | CL_STEPPER_D))
 				{
@@ -787,8 +786,7 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			{
 				if (steppers & (CL_STEPPER_A | CL_STEPPER_B))
 				{
-					y += 2;
-					height -= 2;
+					height += 2;
 				}
 				if (steppers & (CL_STEPPER_C | CL_STEPPER_D))
 				{
