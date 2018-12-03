@@ -433,6 +433,21 @@ clearlooks_style_draw_extension (DRAW_ARGS, GtkPositionType gap_side)
 
 		tab.focus = focus;
 
+	// this is a nasty hack to fix the default GTK behaviour of making the selected tab taller...
+	if (!params.active)
+	{
+		switch (gap_side)
+		{
+			case CL_GAP_BOTTOM :	y += params.ythickness;
+			case CL_GAP_TOP :		height -= params.ythickness;
+									break;
+
+			case CL_GAP_RIGHT :		x += params.xthickness;
+			case CL_GAP_LEFT :		width -= params.xthickness;
+									break;
+		}
+	}
+
 		STYLE_FUNCTION(draw_tab) (cr, colors, &params, &tab,
 		                          x, y, width, height);
 	}

@@ -1,3 +1,9 @@
+gtk2-engines-clearlookspix (1:2.20.7) stretch; urgency=medium
+
+  * Minor modifications to render widgets with reduced radii and flatter appearance
+
+ -- Simon Long <simon@raspberrypi.org>  Tue, 27 Nov 2018 15:03:09 +0000
+
 gtk2-engines-clearlookspix (1:2.20.6) stretch; urgency=medium
 
   * Modified scrollbar button appearance
