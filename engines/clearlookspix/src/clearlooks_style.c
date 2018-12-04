@@ -434,20 +434,22 @@ clearlooks_style_draw_extension (DRAW_ARGS, GtkPositionType gap_side)
 		tab.focus = focus;
 
 	// this is a nasty hack to fix the default GTK behaviour of making the selected tab taller...
-	if (!params.active)
+	if (clearlooks_style->no_tab_ext)
 	{
-		switch (gap_side)
+		if (!params.active)
 		{
-			case CL_GAP_BOTTOM :	y += params.ythickness;
-			case CL_GAP_TOP :		height -= params.ythickness;
-									break;
+			switch (gap_side)
+			{
+				case CL_GAP_BOTTOM :	y += params.ythickness;
+				case CL_GAP_TOP :		height -= params.ythickness;
+										break;
 
-			case CL_GAP_RIGHT :		x += params.xthickness;
-			case CL_GAP_LEFT :		width -= params.xthickness;
-									break;
+				case CL_GAP_RIGHT :		x += params.xthickness;
+				case CL_GAP_LEFT :		width -= params.xthickness;
+										break;
+			}
 		}
 	}
-
 		STYLE_FUNCTION(draw_tab) (cr, colors, &params, &tab,
 		                          x, y, width, height);
 	}
@@ -1522,6 +1524,7 @@ clearlooks_style_init_from_rc (GtkStyle * style,
 	clearlooks_style->animation           = CLEARLOOKS_RC_STYLE (rc_style)->animation;
 	clearlooks_style->radius              = CLAMP (CLEARLOOKS_RC_STYLE (rc_style)->radius, 0.0, 10.0);
 	clearlooks_style->disable_focus       = CLEARLOOKS_RC_STYLE (rc_style)->disable_focus;
+	clearlooks_style->no_tab_ext          = CLEARLOOKS_RC_STYLE (rc_style)->no_tab_ext;
 
 	if (clearlooks_style->has_focus_color)
 		clearlooks_style->focus_color     = CLEARLOOKS_RC_STYLE (rc_style)->focus_color;
@@ -1773,6 +1776,7 @@ clearlooks_style_copy (GtkStyle * style, GtkStyle * src)
 	cl_style->radius              = cl_src->radius;
 	cl_style->style               = cl_src->style;
 	cl_style->disable_focus       = cl_src->disable_focus;
+	cl_style->no_tab_ext          = cl_src->no_tab_ext;
 
 	GTK_STYLE_CLASS (clearlooks_style_parent_class)->copy (style, src);
 }

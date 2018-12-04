@@ -63,6 +63,7 @@ enum
 	TOKEN_RADIUS,
 	TOKEN_HINT,
 	TOKEN_DISABLE_FOCUS,
+	TOKEN_NO_TAB_EXT,
 
 	TOKEN_CLASSIC,
 	TOKEN_GLOSSY,
@@ -92,6 +93,7 @@ static gchar* clearlooks_rc_symbols =
 	"radius\0"
 	"hint\0"
 	"disable_focus\0"
+	"no_tab_ext\0"
 
 	"CLASSIC\0"
 	"GLOSSY\0"
@@ -406,6 +408,10 @@ clearlooks_rc_style_parse (GtkRcStyle *rc_style,
 				token = clearlooks_gtk2_rc_parse_boolean (settings, scanner, &clearlooks_style->disable_focus);
 				clearlooks_style->flags |= CL_FLAG_DISABLE_FOCUS;
 				break;
+			case TOKEN_NO_TAB_EXT:
+				token = clearlooks_gtk2_rc_parse_boolean (settings, scanner, &clearlooks_style->no_tab_ext);
+				clearlooks_style->flags |= CL_FLAG_NO_TAB_EXT;
+				break;
 
 			/* stuff to ignore */
 			case TOKEN_SUNKENMENU:
@@ -481,6 +487,8 @@ clearlooks_rc_style_merge (GtkRcStyle *dest,
 		dest_w->hint = src_w->hint;
 	if (flags & CL_FLAG_DISABLE_FOCUS)
 		dest_w->disable_focus = src_w->disable_focus;
+	if (flags & CL_FLAG_NO_TAB_EXT)
+		dest_w->no_tab_ext = src_w->no_tab_ext;
 
 	dest_w->flags |= src_w->flags;
 }

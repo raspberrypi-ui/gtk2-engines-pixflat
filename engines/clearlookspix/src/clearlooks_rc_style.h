@@ -55,7 +55,8 @@ typedef enum {
 	CL_FLAG_ANIMATION          = 1 <<  8,
 	CL_FLAG_RADIUS             = 1 <<  9,
 	CL_FLAG_HINT               = 1 <<  10,
-	CL_FLAG_DISABLE_FOCUS      = 1 <<  11
+	CL_FLAG_DISABLE_FOCUS      = 1 <<  11,
+	CL_FLAG_NO_TAB_EXT         = 1 <<  12
 } ClearlooksRcFlags;
 
 
@@ -78,6 +79,7 @@ struct _ClearlooksRcStyle
 	double radius;
 	GQuark hint;
 	gboolean disable_focus;
+	gboolean no_tab_ext;
 };
 
 struct _ClearlooksRcStyleClass
