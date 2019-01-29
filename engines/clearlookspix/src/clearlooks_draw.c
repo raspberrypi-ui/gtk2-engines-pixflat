@@ -321,21 +321,26 @@ clearlooks_draw_button (cairo_t *cr,
 	                                     height-(yoffset*2)-2,
 	                                     radius, params->corners);
 
-	CairoColor c1;
+#define LIGHTEST 0.90
+#define LIGHTER  0.87
+#define DARKER   0.81
+#define DARKEST  0.78
+
+	CairoColor c;
 	cairo_pattern_t *pattern;
 
 	if (params->active)
 	{
-		if (params->prelight) c1 = colors->shade[2];
-		else c1 = colors->shade[3];
+		if (params->prelight) ge_shade_color (&colors->base[0], LIGHTER, &c);
+		else ge_shade_color (&colors->base[0], DARKEST, &c);
 	}
 	else
 	{
-		if (params->prelight) c1 = colors->shade[3];
-		else if (params->disabled) c1 = colors->shade[1];
-		else c1 = colors->shade[2];
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
+		else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTEST, &c);
+		else ge_shade_color (&colors->base[0], LIGHTER, &c);
 	}
-	pattern = cairo_pattern_create_rgb (c1.r, c1.g, c1.b);
+	pattern = cairo_pattern_create_rgb (c.r, c.g, c.b);
 
 	cairo_set_source (cr, pattern);
 	cairo_fill (cr);
@@ -490,11 +495,11 @@ clearlooks_draw_entry (cairo_t *cr,
 		cairo_stroke (cr);
 	}
 
-	ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset,
-	                                  width-2*xoffset, height-2*yoffset,
-	                                  radius, params->corners);
-	ge_cairo_set_color (cr, &border);
-	cairo_stroke (cr);
+	//ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset,
+	//                                  width-2*xoffset, height-2*yoffset,
+	//                                  radius, params->corners);
+	//ge_cairo_set_color (cr, &border);
+	//cairo_stroke (cr);
 
 	cairo_restore (cr);
 }
@@ -608,13 +613,13 @@ clearlooks_draw_spinbutton_down (cairo_t *cr,
 	cairo_pattern_t *pattern;
 	double radius = MIN (params->radius, MIN ((width - 4.0) / 2.0, (height - 4.0) / 2.0));
 	CairoColor shadow;
-	ge_shade_color (&colors->bg[0], 0.8, &shadow);
+	ge_shade_color (&colors->base[0], params->active ? LIGHTER : DARKER, &shadow);
 
 	cairo_translate (cr, x+1, y+1);
 
 	ge_cairo_rounded_rectangle (cr, 1, 1, width-4, height-4, radius, params->corners);
 
-	ge_cairo_set_color (cr, &colors->bg[params->state_type]);
+	ge_cairo_set_color (cr, &shadow);
 
 	cairo_fill (cr);
 
