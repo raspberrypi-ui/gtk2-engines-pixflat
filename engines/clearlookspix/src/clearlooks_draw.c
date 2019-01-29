@@ -694,7 +694,7 @@ clearlooks_draw_slider (cairo_t *cr,
 	const CairoColor *spot   = &colors->shade[0];
 	const CairoColor *fill   = &colors->bg[0];
 	CairoColor border = colors->shade[params->disabled ? 4 : 6];
-	double radius = MIN ((width - 1.0) / 2.0, (height - 1.0) / 2.0);
+	double radius = params->radius;
 
 	cairo_pattern_t *pattern;
 
@@ -705,7 +705,7 @@ clearlooks_draw_slider (cairo_t *cr,
 	//	border = colors->spot[2];
 
 	/* fill the widget */
-	cairo_arc (cr, x + MAX(0, radius), y + MAX(0, radius), MAX(0, radius-1), 0, 2 * G_PI);
+	ge_cairo_rounded_rectangle (cr, 1.0, 1.0, width-2, height-2, radius, params->corners);
 
 	/* Fake light */
 	if (!params->disabled)
@@ -734,33 +734,25 @@ clearlooks_draw_slider (cairo_t *cr,
 	cairo_new_path (cr);
 
 	/* Draw the handles */
-	cairo_arc (cr, x + MAX(0, radius), y + MAX(0, radius), MAX(0, radius-1), 0, 2 * G_PI);
-	pattern = cairo_pattern_create_linear (1.0, 1.0, 1.0, 1.0+height);
+	CairoColor hilight;
+	ge_shade_color (fill, 0.70, &hilight);
 
-	if (params->prelight)
-	{
-		CairoColor highlight;
-		ge_shade_color (spot, 0.9, &highlight);
-		cairo_pattern_add_color_stop_rgb (pattern, 0.0, highlight.r, highlight.g, highlight.b);
-		cairo_pattern_add_color_stop_rgb (pattern, 1.0, spot->r, spot->g, spot->b);
-		cairo_set_source (cr, pattern);
-	}
-	else
-	{
-		CairoColor hilight;
-		ge_shade_color (fill, 0.85, &hilight);
-		cairo_pattern_add_color_stop_rgb (pattern, 0.0, hilight.r, hilight.g, hilight.b);
-		cairo_pattern_add_color_stop_rgb (pattern, 1.0, spot->r, spot->g, spot->b);
-		cairo_set_source (cr, pattern);
-	}
+	ge_cairo_rounded_rectangle (cr, 1.0, 0.0, width/2-1.0, height, radius, params->corners);
+	pattern = cairo_pattern_create_rgb (hilight.r, hilight.g, hilight.b);
+	cairo_set_source (cr, pattern);
+	cairo_fill (cr);
+	cairo_pattern_destroy (pattern);
 
+	ge_cairo_rounded_rectangle (cr, width/2, 0.0, width/2-1.0, height, radius, params->corners);
+	pattern = cairo_pattern_create_rgb (border.r, border.g, border.b);
+	cairo_set_source (cr, pattern);
 	cairo_fill (cr);
 	cairo_pattern_destroy (pattern);
 
 	cairo_restore (cr);
 
 	/* Draw the border */
-	cairo_arc (cr, x + MAX(0, radius), y + MAX(0, radius), MAX(0, radius-1), 0, 2 * G_PI);
+	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
 
 	if (params->prelight || params->disabled)
 		ge_cairo_set_color (cr, &border);
@@ -799,6 +791,8 @@ clearlooks_draw_slider_button (cairo_t *cr,
 
 	if (!slider->horizontal)
 		ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
+	width /= 2;
+	x += width / 2;
 	cairo_translate (cr, x, y);
 
 	//params->style_functions->draw_shadow (cr, colors, radius, width, height);
