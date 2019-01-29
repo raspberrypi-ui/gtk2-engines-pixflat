@@ -321,6 +321,27 @@ clearlooks_draw_button (cairo_t *cr,
 	                                     height-(yoffset*2)-2,
 	                                     radius, params->corners);
 
+	CairoColor c1;
+	cairo_pattern_t *pattern;
+
+	if (params->active)
+	{
+		if (params->prelight) c1 = colors->shade[2];
+		else c1 = colors->shade[3];
+	}
+	else
+	{
+		if (params->prelight) c1 = colors->shade[3];
+		else if (params->disabled) c1 = colors->shade[1];
+		else c1 = colors->shade[2];
+	}
+	pattern = cairo_pattern_create_rgb (c1.r, c1.g, c1.b);
+
+	cairo_set_source (cr, pattern);
+	cairo_fill (cr);
+	cairo_pattern_destroy (pattern);
+
+#if 0
 	if (!params->active)
 	{
 		cairo_pattern_t *pattern;
@@ -399,7 +420,7 @@ clearlooks_draw_button (cairo_t *cr,
 	}
 
 	cairo_stroke (cr);
-
+#endif
 	cairo_restore (cr);
 }
 
