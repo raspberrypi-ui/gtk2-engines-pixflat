@@ -734,17 +734,17 @@ clearlooks_draw_slider (cairo_t *cr,
 	cairo_new_path (cr);
 
 	/* Draw the handles */
-	CairoColor hilight;
-	ge_shade_color (fill, 0.70, &hilight);
+	CairoColor c1 = params->prelight ? colors->shade[3] : colors->shade[5];
+	CairoColor c2 = params->prelight ? colors->shade[4] : colors->shade[6];
 
 	ge_cairo_rounded_rectangle (cr, 1.0, 0.0, width/2-1.0, height, radius, params->corners);
-	pattern = cairo_pattern_create_rgb (hilight.r, hilight.g, hilight.b);
+	pattern = cairo_pattern_create_rgb (c1.r, c1.g, c1.b);
 	cairo_set_source (cr, pattern);
 	cairo_fill (cr);
 	cairo_pattern_destroy (pattern);
 
 	ge_cairo_rounded_rectangle (cr, width/2, 0.0, width/2-1.0, height, radius, params->corners);
-	pattern = cairo_pattern_create_rgb (border.r, border.g, border.b);
+	pattern = cairo_pattern_create_rgb (c2.r, c2.g, c2.b);
 	cairo_set_source (cr, pattern);
 	cairo_fill (cr);
 	cairo_pattern_destroy (pattern);
@@ -1871,9 +1871,16 @@ clearlooks_draw_scrollbar_slider (cairo_t *cr,
     else
         fill = colors->shade[5];
 
+	CairoColor c1 = widget->prelight ? colors->shade[3] : colors->shade[5];
+	CairoColor c2 = widget->prelight ? colors->shade[4] : colors->shade[6];
+
 	double radius = MIN (widget->radius, (height - 4) / 2);
-    ge_cairo_rounded_rectangle  (cr, 3, 3, width-6, height-6, radius, CR_CORNER_ALL);
-    cairo_set_source_rgb (cr, fill.r, fill.g, fill.b);
+    ge_cairo_rounded_rectangle  (cr, 3, 3, width-6, (height-6)/2, radius, CR_CORNER_TOPRIGHT | CR_CORNER_TOPLEFT);
+    cairo_set_source_rgb (cr, c1.r, c1.g, c1.b);
+    cairo_fill (cr);
+
+    ge_cairo_rounded_rectangle  (cr, 3, height/2, width-6, (height-6)/2, radius, CR_CORNER_BOTTOMRIGHT | CR_CORNER_BOTTOMLEFT);
+    cairo_set_source_rgb (cr, c2.r, c2.g, c2.b);
     cairo_fill (cr);
     cairo_restore (cr);
     return;
