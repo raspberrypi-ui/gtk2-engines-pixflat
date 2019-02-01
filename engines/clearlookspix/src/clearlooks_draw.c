@@ -285,14 +285,14 @@ clearlooks_draw_button (cairo_t *cr,
 	const CairoColor *fill = &colors->bg[params->state_type];
 	CairoColor border_normal = colors->shade[5];
 	CairoColor border_disabled = colors->shade[4];
-	gboolean menubar = FALSE;
+	gboolean panel = FALSE;
 
 	CairoColor shadow;
 
     // an lxpanel button has a custom colour scheme in which bg[PRELIGHT] is the same as bg[SELECTED]
 	CairoColor test1 = colors->bg[GTK_STATE_PRELIGHT];
 	CairoColor test2 = colors->bg[GTK_STATE_SELECTED];
-	if (test1.r == test2.r && test1.g == test2.g && test1.b == test2.b && test1.a == test2.a) menubar = TRUE;
+	if (test1.r == test2.r && test1.g == test2.g && test1.b == test2.b && test1.a == test2.a) panel = TRUE;
 
 	ge_shade_color (&border_normal, 1.04, &border_normal);
 	ge_shade_color (&border_normal, 0.94, &shadow);
@@ -330,7 +330,7 @@ clearlooks_draw_button (cairo_t *cr,
 	CairoColor c;
 	cairo_pattern_t *pattern;
 
-	if (menubar)
+	if (panel)
 	{
 		if (params->prelight) ge_shade_color (&colors->bg[GTK_STATE_PRELIGHT], 1.0, &c);
 		else if (params->active) ge_shade_color (&colors->bg[GTK_STATE_ACTIVE], 1.0, &c);
@@ -421,7 +421,7 @@ clearlooks_draw_button (cairo_t *cr,
 	/* Drawing the border */
 	ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset, width-(xoffset*2), height-(yoffset*2), radius, params->corners);
 
-	if (menubar)
+	if (panel)
 	{
 		ge_shade_color (&colors->shade[6], 1.08, &c);
 	}
@@ -600,25 +600,28 @@ clearlooks_draw_spinbutton (cairo_t *cr,
                             const WidgetParameters *params,
                             int x, int y, int width, int height)
 {
-	const CairoColor *border = &colors->shade[!params->disabled ? 5 : 3];
-	CairoColor hilight;
+	CairoColor c;
 
 	params->style_functions->draw_button (cr, colors, params, x, y, width, height);
-
-	ge_shade_color (&colors->bg[0], params->style_constants->topleft_highlight_shade, &hilight);
-	hilight.a = params->style_constants->topleft_highlight_alpha;
+	if (params->active)
+	{
+		if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &c);
+		else ge_shade_color (&colors->base[0], DARKEST, &c);
+	}
+	else
+	{
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
+		else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTER, &c);
+		else ge_shade_color (&colors->base[0], MIDTONE, &c);
+	}
 
 	cairo_translate (cr, x, y);
 
 	cairo_move_to (cr, params->xthickness + 0.5,       (height/2) + 0.5);
 	cairo_line_to (cr, width-params->xthickness - 0.5, (height/2) + 0.5);
-	ge_cairo_set_color (cr, border);
+	ge_cairo_set_color (cr, &c);
 	cairo_stroke (cr);
 
-	cairo_move_to (cr, params->xthickness + 0.5,       (height/2)+1.5);
-	cairo_line_to (cr, width-params->xthickness - 0.5, (height/2)+1.5);
-	ge_cairo_set_color (cr, &hilight);
-	cairo_stroke (cr);
 }
 
 static void
@@ -630,7 +633,16 @@ clearlooks_draw_spinbutton_down (cairo_t *cr,
 	cairo_pattern_t *pattern;
 	double radius = MIN (params->radius, MIN ((width - 4.0) / 2.0, (height - 4.0) / 2.0));
 	CairoColor shadow;
-	ge_shade_color (&colors->base[0], params->active ? LIGHTER : MIDTONE, &shadow);
+	if (params->active)
+	{
+		if (params->prelight) ge_shade_color (&colors->base[0], LIGHTER, &shadow);
+		else ge_shade_color (&colors->base[0], DARKER, &shadow);
+	}
+	else
+	{
+		if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &shadow);
+		else ge_shade_color (&colors->base[0], LIGHTER, &shadow);
+	}
 
 	cairo_translate (cr, x+1, y+1);
 
