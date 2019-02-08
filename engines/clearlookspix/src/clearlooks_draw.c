@@ -1380,7 +1380,7 @@ clearlooks_draw_tab (cairo_t *cr,
 	ge_cairo_set_color (cr, fill);
 	cairo_fill   (cr);
 
-
+#if 0
 	ge_shade_color (fill, 1.3, &hilight);
 
 	/* Draw highlight */
@@ -1460,7 +1460,7 @@ clearlooks_draw_tab (cairo_t *cr,
 		cairo_fill (cr);
 		cairo_pattern_destroy (pattern);
 	}
-
+#endif
 	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
 
 	if (params->active)
