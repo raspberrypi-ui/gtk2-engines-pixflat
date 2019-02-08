@@ -192,6 +192,13 @@ clearlooks_style_draw_shadow (DRAW_ARGS)
 
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 
+		gint w, h;
+		gtk_widget_get_size_request (widget, &w, &h);
+		if (GE_IS_ENTRY (widget) && !GE_IS_COMBO_BOX_TEXT (widget->parent) && h == -1)
+		{
+			height += 2;
+			gtk_widget_set_size_request (widget, -1, height);
+		}
 		if (CHECK_HINT (GE_HINT_COMBOBOX_ENTRY) || CHECK_HINT (GE_HINT_SPINBUTTON))
 		{
 			width += style->xthickness;
@@ -598,6 +605,26 @@ clearlooks_style_draw_box (DRAW_ARGS)
 	{
 	
 		WidgetParameters params;
+		gint w, h;
+		gtk_widget_get_size_request (widget, &w, &h);
+		if (GE_IS_COLOR_BUTTON (widget))
+		{
+			if (h == -1)
+			{
+				height -= 4;
+				gtk_widget_set_size_request (widget, -1, height);
+				gtk_widget_set_size_request (widget->parent, -1, height);
+			}
+		}
+		if (GE_IS_TOGGLE_BUTTON (widget) && GE_IS_COMBO_BOX_TEXT (widget->parent))
+		{
+			if (!CHECK_HINT (GE_HINT_COMBOBOX_ENTRY) && h == -1)
+			{
+				height -= 2;
+				gtk_widget_set_size_request (widget, -1, height);
+				gtk_widget_set_size_request (widget->parent, -1, height);
+			}
+		}
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 		params.active = shadow_type == GTK_SHADOW_IN;
 
