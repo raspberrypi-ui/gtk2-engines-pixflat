@@ -695,9 +695,9 @@ clearlooks_style_draw_box (DRAW_ARGS)
 					x--;
 			}
 
+			height++;
 			if (DETAIL ("spinbutton_up"))
 			{
-				height+=2;
 				if (params.ltr)
 					params.corners = CR_CORNER_TOPRIGHT;
 				else
@@ -705,6 +705,7 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			}
 			else
 			{
+				y += 1;
 				if (params.ltr)
 					params.corners = CR_CORNER_BOTTOMRIGHT;
 				else
@@ -735,6 +736,17 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			if (params.ltr)
 				x--;
 			width++;
+		}
+
+		GtkRequisition req;
+		gtk_widget_get_requisition (widget, &req);
+		if (height == area->height && height == req.height)
+		{
+			gint w, h;
+			w = gdk_window_get_width (GTK_SPIN_BUTTON (widget)->panel);
+			h = gdk_window_get_height (GTK_SPIN_BUTTON (widget)->panel);
+			gdk_window_resize (GTK_SPIN_BUTTON (widget)->panel, w, h + 2);
+			height += 2;
 		}
 
 		STYLE_FUNCTION(draw_spinbutton) (cr, &clearlooks_style->colors, &params,
@@ -1525,6 +1537,8 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
         x -= 1;
         y -= 1;
     }
+
+	if (DETAIL("spinbutton")) y += 2;
 
 	STYLE_FUNCTION(draw_arrow) (cr, colors, &params, &arrow, x, y, width, height);
 
