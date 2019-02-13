@@ -39,6 +39,8 @@
 #define SHADE_CENTER_BOTTOM 0.98
 #define SHADE_BOTTOM 0.90
 
+#define NO_BORDERS
+
 typedef void (*menubar_draw_proto) (cairo_t *cr,
                                     const ClearlooksColors *colors,
                                     const WidgetParameters *params,
@@ -418,6 +420,7 @@ clearlooks_draw_button (cairo_t *cr,
 		cairo_pattern_destroy (pattern);
 	}
 #endif
+#ifndef NO_BORDERS
 	/* Drawing the border */
 	ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset, width-(xoffset*2), height-(yoffset*2), radius, params->corners);
 
@@ -439,6 +442,7 @@ clearlooks_draw_button (cairo_t *cr,
 	ge_cairo_set_color (cr, &c);
 
 	cairo_stroke (cr);
+#endif
 	cairo_restore (cr);
 }
 
@@ -507,7 +511,7 @@ clearlooks_draw_entry (cairo_t *cr,
 		cairo_line_to (cr, width-radius, 2.5);
 		cairo_stroke (cr);
 	}
-
+#ifndef NO_BORDERS
 	ge_cairo_inner_rounded_rectangle (cr, xoffset, yoffset,
 	                                  width-2*xoffset, height-2*yoffset,
 	                                  radius, params->corners);
@@ -517,7 +521,7 @@ clearlooks_draw_entry (cairo_t *cr,
 
 	ge_cairo_set_color (cr, &border);
 	cairo_stroke (cr);
-
+#endif
 	cairo_restore (cr);
 }
 
