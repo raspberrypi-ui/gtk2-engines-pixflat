@@ -646,7 +646,7 @@ clearlooks_draw_spinbutton_down (cairo_t *cr,
 
 	cairo_translate (cr, x+1, y+1);
 
-	ge_cairo_rounded_rectangle (cr, 0, 0, width-2, height-2, radius, params->corners);
+	ge_cairo_rounded_rectangle (cr, 1, 1, width-4, height-4, radius, params->corners);
 
 	ge_cairo_set_color (cr, &shadow);
 
