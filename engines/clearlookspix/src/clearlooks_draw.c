@@ -2311,7 +2311,7 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 	cairo_set_line_width (cr, MAX (1.0, floor (radius/3)));
 	cairo_arc (cr, ceil (cx), ceil (cy), floor (radius - 0.1), 0, G_PI*2);
 	cairo_set_source (cr, pt);
-	cairo_stroke (cr);
+	//cairo_stroke (cr);
 	cairo_pattern_destroy (pt);
 
 	cairo_set_line_width (cr, MAX (1.0, floor (radius/6)));
@@ -2421,13 +2421,14 @@ clearlooks_draw_checkbox (cairo_t *cr,
 		}
 		else
 		{
-			cairo_set_line_width (cr, 1.7);
+			cairo_set_line_width (cr, 2.5);
 			cairo_move_to (cr, 0.5 + (width*0.2), (height*0.5));
 			cairo_line_to (cr, 0.5 + (width*0.4), (height*0.7));
+			cairo_line_to (cr, 0.5 + (width*0.8), (height*0.3));
 
-			cairo_curve_to (cr, 0.5 + (width*0.4), (height*0.7),
-			                    0.5 + (width*0.5), (height*0.4),
-			                    0.5 + (width*0.70), (height*0.25));
+			//cairo_curve_to (cr, 0.5 + (width*0.4), (height*0.7),
+			//                    0.5 + (width*0.5), (height*0.4),
+			//                    0.5 + (width*0.70), (height*0.25));
 
 		}
 
