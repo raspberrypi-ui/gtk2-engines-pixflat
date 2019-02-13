@@ -2265,6 +2265,7 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 {
 	const CairoColor *border;
 	const CairoColor *dot;
+	CairoColor bval;
 	CairoColor shadow;
 	CairoColor highlight;
 	cairo_pattern_t *pt;
@@ -2283,12 +2284,16 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 
 	if (widget->disabled)
 	{
-		border = &colors->shade[5];
+		ge_shade_color (&colors->base[0], MIDTONE, &bval);
+		border = &bval;
+		//border = &colors->shade[5];
 		dot    = &colors->shade[6];
 	}
 	else
 	{
-		border = &colors->shade[6];
+		ge_shade_color (&colors->base[0], MIDTONE, &bval);
+		border = &bval;
+		//border = &colors->shade[6];
 		dot    = &colors->text[0];
 	}
 
@@ -2359,6 +2364,7 @@ clearlooks_draw_checkbox (cairo_t *cr,
 {
 	const CairoColor *border;
 	const CairoColor *dot;
+	CairoColor bval;
 	gboolean inconsistent = FALSE;
 	gboolean draw_bullet = (checkbox->shadow_type == GTK_SHADOW_IN);
 
@@ -2367,12 +2373,16 @@ clearlooks_draw_checkbox (cairo_t *cr,
 
 	if (widget->disabled)
 	{
-		border = &colors->shade[5];
+		ge_shade_color (&colors->base[0], MIDTONE, &bval);
+		border = &bval;
+		//border = &colors->shade[5];
 		dot    = &colors->shade[6];
 	}
 	else
 	{
-		border = &colors->shade[6];
+		ge_shade_color (&colors->base[0], MIDTONE, &bval);
+		border = &bval;
+		//border = &colors->shade[6];
 		dot    = &colors->text[GTK_STATE_NORMAL];
 	}
 
