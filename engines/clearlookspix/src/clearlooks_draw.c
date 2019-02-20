@@ -793,6 +793,7 @@ clearlooks_draw_slider (cairo_t *cr,
 	cairo_new_path (cr);
 
 	/* Draw the handles */
+#ifdef TWOCOLOR_HANDLES
 	CairoColor c1 = params->prelight ? colors->shade[3] : colors->shade[5];
 	CairoColor c2 = params->prelight ? colors->shade[4] : colors->shade[6];
 
@@ -807,7 +808,18 @@ clearlooks_draw_slider (cairo_t *cr,
 	cairo_set_source (cr, pattern);
 	cairo_fill (cr);
 	cairo_pattern_destroy (pattern);
+#else
+	CairoColor c1;
+	if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &c1);
+	else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTEST, &c1);
+	else ge_shade_color (&colors->base[0], LIGHTER, &c1);
 
+	ge_cairo_rounded_rectangle (cr, 1.0, 0.0, width, height, radius, params->corners);
+	pattern = cairo_pattern_create_rgb (c1.r, c1.g, c1.b);
+	cairo_set_source (cr, pattern);
+	cairo_fill (cr);
+	cairo_pattern_destroy (pattern);
+#endif
 	cairo_restore (cr);
 
 	/* Draw the border */
