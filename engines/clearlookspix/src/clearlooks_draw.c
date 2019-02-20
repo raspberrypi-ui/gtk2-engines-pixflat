@@ -39,7 +39,7 @@
 #define SHADE_CENTER_BOTTOM 0.98
 #define SHADE_BOTTOM 0.90
 
-#define NO_BORDERS
+//#define NO_BORDERS
 
 typedef void (*menubar_draw_proto) (cairo_t *cr,
                                     const ClearlooksColors *colors,
@@ -1930,16 +1930,21 @@ clearlooks_draw_scrollbar_slider (cairo_t *cr,
     else
         fill = colors->shade[5];
 
+	double radius = MIN (widget->radius, (height - 4) / 2);
+#ifdef TWOCOLOR_SLIDER
 	CairoColor c1 = widget->prelight ? colors->shade[3] : colors->shade[5];
 	CairoColor c2 = widget->prelight ? colors->shade[4] : colors->shade[6];
 
-	double radius = MIN (widget->radius, (height - 4) / 2);
     ge_cairo_rounded_rectangle  (cr, 3, 3, width-6, (height-6)/2, radius, CR_CORNER_TOPRIGHT | CR_CORNER_TOPLEFT);
     cairo_set_source_rgb (cr, c1.r, c1.g, c1.b);
     cairo_fill (cr);
 
     ge_cairo_rounded_rectangle  (cr, 3, height/2, width-6, (height-6)/2, radius, CR_CORNER_BOTTOMRIGHT | CR_CORNER_BOTTOMLEFT);
     cairo_set_source_rgb (cr, c2.r, c2.g, c2.b);
+#else
+	ge_cairo_rounded_rectangle (cr, 3, 3, width-6, height-6, radius, CR_CORNER_ALL);
+	cairo_set_source_rgb (cr, fill.r, fill.g, fill.b);
+#endif
     cairo_fill (cr);
     cairo_restore (cr);
     return;
