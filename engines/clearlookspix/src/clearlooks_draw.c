@@ -825,10 +825,20 @@ clearlooks_draw_slider (cairo_t *cr,
 	/* Draw the border */
 	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
 
-	if (params->prelight || params->disabled)
-		ge_cairo_set_color (cr, &border);
+	CairoColor c;
+	if (params->active)
+	{
+		if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &c);
+		else ge_shade_color (&colors->base[0], DARKEST, &c);
+	}
 	else
-		clearlooks_set_border_gradient (cr, &border, 1.2, 0, height);
+	{
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
+		else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTER, &c);
+		else ge_shade_color (&colors->base[0], MIDTONE, &c);
+	}
+	ge_cairo_set_color (cr, &c);
+
 	cairo_stroke (cr);
 #if 0
 	/* Draw handle lines */
