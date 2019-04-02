@@ -326,6 +326,7 @@ clearlooks_draw_button (cairo_t *cr,
 #define MIDTONE  0.81
 #define DARKER   0.78
 #define DARKEST  0.75
+#define DARKERST 0.70
 
 	CairoColor c;
 	cairo_pattern_t *pattern;
@@ -428,14 +429,14 @@ clearlooks_draw_button (cairo_t *cr,
 	}
 	else if (params->active)
 	{
-		if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &c);
-		else ge_shade_color (&colors->base[0], DARKEST, &c);
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
+		else ge_shade_color (&colors->base[0], DARKERST, &c);
 	}
 	else
 	{
-		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
-		else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTER, &c);
-		else ge_shade_color (&colors->base[0], MIDTONE, &c);
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKEST, &c);
+		else if (params->disabled) ge_shade_color (&colors->base[0], MIDTONE, &c);
+		else ge_shade_color (&colors->base[0], DARKER, &c);
 	}
 	ge_cairo_set_color (cr, &c);
 
@@ -514,8 +515,8 @@ clearlooks_draw_entry (cairo_t *cr,
 	                                  width-2*xoffset, height-2*yoffset,
 	                                  radius, params->corners);
 
-	if (params->disabled) ge_shade_color (&colors->base[0], LIGHTER, &border);
-	else ge_shade_color (&colors->base[0], MIDTONE, &border);
+	if (params->disabled) ge_shade_color (&colors->base[0], MIDTONE, &border);
+	else ge_shade_color (&colors->base[0], DARKER, &border);
 
 	ge_cairo_set_color (cr, &border);
 	cairo_stroke (cr);
@@ -607,14 +608,14 @@ clearlooks_draw_spinbutton (cairo_t *cr,
 	params->style_functions->draw_button (cr, colors, params, x, y, width, height);
 	if (params->active)
 	{
-		if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &c);
-		else ge_shade_color (&colors->base[0], DARKEST, &c);
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
+		else ge_shade_color (&colors->base[0], DARKERST, &c);
 	}
 	else
 	{
-		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
-		else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTER, &c);
-		else ge_shade_color (&colors->base[0], MIDTONE, &c);
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKEST, &c);
+		else if (params->disabled) ge_shade_color (&colors->base[0], MIDTONE, &c);
+		else ge_shade_color (&colors->base[0], DARKER, &c);
 	}
 
 	cairo_translate (cr, x, y);
@@ -826,14 +827,14 @@ clearlooks_draw_slider (cairo_t *cr,
 	CairoColor c;
 	if (params->active)
 	{
-		if (params->prelight) ge_shade_color (&colors->base[0], MIDTONE, &c);
-		else ge_shade_color (&colors->base[0], DARKEST, &c);
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
+		else ge_shade_color (&colors->base[0], DARKERST, &c);
 	}
 	else
 	{
-		if (params->prelight) ge_shade_color (&colors->base[0], DARKER, &c);
-		else if (params->disabled) ge_shade_color (&colors->base[0], LIGHTER, &c);
-		else ge_shade_color (&colors->base[0], MIDTONE, &c);
+		if (params->prelight) ge_shade_color (&colors->base[0], DARKEST, &c);
+		else if (params->disabled) ge_shade_color (&colors->base[0], MIDTONE, &c);
+		else ge_shade_color (&colors->base[0], DARKER, &c);
 	}
 	ge_cairo_set_color (cr, &c);
 
@@ -1394,7 +1395,10 @@ clearlooks_draw_tab (cairo_t *cr,
 	}
 
 	/* Set the fill color */
+	if (params->state_type != GTK_STATE_NORMAL)
 	fill = &colors->bg[params->state_type];
+	else
+	fill = &colors->bg[GTK_STATE_PRELIGHT];
 
 	/* Set tab shape */
 	ge_cairo_rounded_rectangle (cr, 0.5, 0.5, width-1, height-1,
@@ -2316,7 +2320,7 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 	}
 	else
 	{
-		ge_shade_color (&colors->base[0], MIDTONE, &bval);
+		ge_shade_color (&colors->base[0], DARKER, &bval);
 		border = &bval;
 		//border = &colors->shade[6];
 		dot    = &colors->text[0];
@@ -2405,7 +2409,7 @@ clearlooks_draw_checkbox (cairo_t *cr,
 	}
 	else
 	{
-		ge_shade_color (&colors->base[0], MIDTONE, &bval);
+		ge_shade_color (&colors->base[0], DARKEST, &bval);
 		border = &bval;
 		//border = &colors->shade[6];
 		dot    = &colors->text[GTK_STATE_NORMAL];

@@ -42,3 +42,4 @@ debian/gtk2-engines-clearlookspix
 *.cdbs-orig
 intltool*.in
 autoreconf.*
+gtk-engines-clearlookspix.pc
