@@ -35,8 +35,6 @@
 
 /* #define DEBUG 1 */
 
-#define ENABLE_RESIZE
-
 #define DETAIL(xx)   ((detail) && (!strcmp(xx, detail)))
 #define CHECK_HINT(xx) (ge_check_hint ((xx), CLEARLOOKS_RC_STYLE ((style)->rc_style)->hint, widget))
 
@@ -194,15 +192,6 @@ clearlooks_style_draw_shadow (DRAW_ARGS)
 
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 
-#ifdef ENABLE_RESIZE
-		gint w, h;
-		gtk_widget_get_size_request (widget, &w, &h);
-		if (GE_IS_ENTRY (widget) && !GE_IS_COMBO_BOX_TEXT (widget->parent) && h == -1)
-		{
-			height += 2;
-			gtk_widget_set_size_request (widget, -1, height);
-		}
-#endif
 		if (CHECK_HINT (GE_HINT_COMBOBOX_ENTRY) || CHECK_HINT (GE_HINT_SPINBUTTON))
 		{
 			width += style->xthickness;
@@ -609,28 +598,6 @@ clearlooks_style_draw_box (DRAW_ARGS)
 	{
 	
 		WidgetParameters params;
-#ifdef ENABLE_RESIZE
-		gint w, h;
-		gtk_widget_get_size_request (widget, &w, &h);
-		if (GE_IS_COLOR_BUTTON (widget))
-		{
-			if (h == -1)
-			{
-				height -= 4;
-				gtk_widget_set_size_request (widget, -1, height);
-				gtk_widget_set_size_request (widget->parent, -1, height);
-			}
-		}
-		if (GE_IS_TOGGLE_BUTTON (widget) && GE_IS_COMBO_BOX_TEXT (widget->parent))
-		{
-			if (!CHECK_HINT (GE_HINT_COMBOBOX_ENTRY) && h == -1)
-			{
-				height -= 2;
-				gtk_widget_set_size_request (widget, -1, height);
-				gtk_widget_set_size_request (widget->parent, -1, height);
-			}
-		}
-#endif
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 		params.active = shadow_type == GTK_SHADOW_IN;
 
@@ -701,14 +668,8 @@ clearlooks_style_draw_box (DRAW_ARGS)
 					x--;
 			}
 
-#ifdef ENABLE_RESIZE
-			height++;
-#endif
 			if (DETAIL ("spinbutton_up"))
 			{
-#ifndef ENABLE_RESIZE
-				height+=2;
-#endif
 				if (params.ltr)
 					params.corners = CR_CORNER_TOPRIGHT;
 				else
@@ -716,20 +677,13 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			}
 			else
 			{
-#ifdef ENABLE_RESIZE
-				y += 1;
-#endif
 				if (params.ltr)
 					params.corners = CR_CORNER_BOTTOMRIGHT;
 				else
 					params.corners = CR_CORNER_BOTTOMLEFT;
 			}
 
-#ifdef ENABLE_RESIZE
-			STYLE_FUNCTION(draw_spinbutton_down) (cr, &clearlooks_style->colors, &params, x - 1, y - 1, width + 2, height + 2);
-#else
 			STYLE_FUNCTION(draw_spinbutton_down) (cr, &clearlooks_style->colors, &params, x, y, width, height);
-#endif
 		}
 	}
 	else if (DETAIL ("spinbutton"))
@@ -755,18 +709,6 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			width++;
 		}
 
-#ifdef ENABLE_RESIZE
-		GtkRequisition req;
-		gtk_widget_get_requisition (widget, &req);
-		if (height == area->height && height == req.height)
-		{
-			gint w, h;
-			w = gdk_window_get_width (GTK_SPIN_BUTTON (widget)->panel);
-			h = gdk_window_get_height (GTK_SPIN_BUTTON (widget)->panel);
-			gdk_window_resize (GTK_SPIN_BUTTON (widget)->panel, w, h + 2);
-			height += 2;
-		}
-#endif
 		STYLE_FUNCTION(draw_spinbutton) (cr, &clearlooks_style->colors, &params,
 		                                 x, y, width, height);
 	}
@@ -1555,8 +1497,6 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
         x -= 1;
         y -= 1;
     }
-
-	if (DETAIL("spinbutton")) y += 2;
 
 	STYLE_FUNCTION(draw_arrow) (cr, colors, &params, &arrow, x, y, width, height);
 
