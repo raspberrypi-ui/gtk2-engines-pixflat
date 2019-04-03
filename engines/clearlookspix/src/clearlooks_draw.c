@@ -1003,7 +1003,7 @@ clearlooks_draw_progressbar_fill (cairo_t *cr,
 
 	pattern = cairo_pattern_create_linear (0, 0, 0, height);
 	cairo_pattern_add_color_stop_rgb (pattern, 0.0, bg_shade.r, bg_shade.g, bg_shade.b);
-	cairo_pattern_add_color_stop_rgb (pattern, 1.0, shadow.r, shadow.g, shadow.b);
+	cairo_pattern_add_color_stop_rgb (pattern, 1.0, bg_shade.r, bg_shade.g, bg_shade.b);
 	cairo_set_source (cr, pattern);
 	cairo_paint (cr);
 	cairo_pattern_destroy (pattern);

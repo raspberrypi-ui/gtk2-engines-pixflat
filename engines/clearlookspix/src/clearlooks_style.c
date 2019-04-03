@@ -901,6 +901,22 @@ clearlooks_style_draw_box (DRAW_ARGS)
 			cairo_clip (cr);
 		}
 
+		x -= 1;
+		y -= 1;
+		width += 2;
+		height += 2;
+		if (area)
+		{
+			GdkRectangle tmp;
+			tmp.x = x;
+			tmp.y = y;
+			tmp.width = width;
+			tmp.height = height;
+			cairo_reset_clip (cr);
+			gdk_cairo_rectangle (cr, &tmp);
+			cairo_clip (cr);
+		}
+
 		STYLE_FUNCTION(draw_progressbar_fill) (cr, colors, &params, &progressbar,
 		                                       x, y, width, height,
 		                                       10 - (int)(elapsed * 10.0) % 10);
