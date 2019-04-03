@@ -669,7 +669,7 @@ clearlooks_scale_draw_gradient (cairo_t *cr,
 	cairo_pattern_t *pattern;
 
 	pattern = cairo_pattern_create_linear (0.5, 0.5, horizontal ? 0.5 :  width + 1, horizontal ? height + 1: 0.5);
-	cairo_pattern_add_color_stop_rgb (pattern, 0.0, c1->r, c1->g, c1->b);
+	cairo_pattern_add_color_stop_rgb (pattern, 0.0, c2->r, c2->g, c2->b);
 	cairo_pattern_add_color_stop_rgb (pattern, 1.0, c2->r, c2->g, c2->b);
 
 	cairo_rectangle (cr, x, y, width, height);
@@ -682,7 +682,7 @@ clearlooks_scale_draw_gradient (cairo_t *cr,
 	cairo_stroke (cr);
 }
 
-#define TROUGH_SIZE 7
+#define TROUGH_SIZE 8
 static void
 clearlooks_draw_scale_trough (cairo_t *cr,
                               const ClearlooksColors *colors,
@@ -715,8 +715,8 @@ clearlooks_draw_scale_trough (cairo_t *cr,
 	cairo_set_line_width (cr, 1.0);
 	cairo_translate (cr, translate_x, translate_y);
 
-	if (!slider->fill_level)
-		params->style_functions->draw_inset (cr, &params->parentbg, 0, 0, trough_width, trough_height, 0, 0);
+	//if (!slider->fill_level)
+	//	params->style_functions->draw_inset (cr, &params->parentbg, 0, 0, trough_width, trough_height, 0, 0);
 	
 	if (!slider->lower && !slider->fill_level)
 	{
@@ -725,7 +725,7 @@ clearlooks_draw_scale_trough (cairo_t *cr,
 
 		clearlooks_scale_draw_gradient (cr, &shadow, /* top */
 		                                &colors->shade[2], /* bottom */
-		                                &colors->shade[4], /* border */
+		                                &colors->shade[3], /* border */
 		                                1.0, 1.0, trough_width - 2, trough_height - 2,
 		                                slider->horizontal);
 	}
