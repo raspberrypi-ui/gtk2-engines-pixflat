@@ -2569,7 +2569,7 @@ _clearlooks_draw_arrow (cairo_t *cr, const CairoColor *color,
 	{
 		cairo_translate (cr, x, y);
 		cairo_rotate (cr, -rotate);
-		clearlooks_draw_normal_arrow (cr, color, 0, 0, width, height);
+		clearlooks_draw_scrollbar_arrow (cr, color, 0, 0, width, height);
 	}
 	else if (type == CL_ARROW_COMBO)
 	{
