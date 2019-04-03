@@ -735,7 +735,7 @@ clearlooks_draw_scale_trough (cairo_t *cr,
 		border.a = 0.64;
 
 		clearlooks_scale_draw_gradient (cr, &colors->spot[2], /* top */
-		                                &colors->spot[1], /* bottom */
+		                                &colors->bg[3], /* bottom */
 		                                &border, /* border */
 		                                1.0, 1.0, trough_width - 2, trough_height - 2,
 		                                slider->horizontal);
@@ -996,7 +996,7 @@ clearlooks_draw_progressbar_fill (cairo_t *cr,
 	ge_cairo_set_color (cr, &bg_shade);
 	cairo_paint (cr);
 #endif
-	ge_shade_color (&colors->spot[1], 1.0, &bg_shade);
+	ge_shade_color (&colors->bg[3], 1.0, &bg_shade);
 	ge_shade_color (&colors->spot[2], 1.0, &shadow);
 
 	pattern = cairo_pattern_create_linear (0, 0, 0, height);
