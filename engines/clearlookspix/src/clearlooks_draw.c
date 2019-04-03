@@ -871,8 +871,6 @@ clearlooks_draw_slider_button (cairo_t *cr,
 
 	if (!slider->horizontal)
 		ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
-	width /= 2;
-	x += width / 2;
 	cairo_translate (cr, x, y);
 
 	//params->style_functions->draw_shadow (cr, colors, radius, width, height);
