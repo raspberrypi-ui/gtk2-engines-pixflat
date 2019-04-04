@@ -1514,6 +1514,15 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
         y -= 1;
     }
 
+    // fix up spinbutton arrows to align them properly...
+    if (widget && (GE_IS_SPIN_BUTTON (widget)))
+    {
+        arrow.type = CL_ARROW_SCROLLBAR;
+        width += 2;
+        height += 5;
+        y -= (arrow.direction == CL_DIRECTION_UP) ? 3 : 1;
+    }
+
 	STYLE_FUNCTION(draw_arrow) (cr, colors, &params, &arrow, x, y, width, height);
 
 	cairo_destroy (cr);
