@@ -2341,7 +2341,7 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 	//cairo_stroke (cr);
 	cairo_pattern_destroy (pt);
 
-	cairo_set_line_width (cr, MAX (1.0, floor (radius/6)));
+	cairo_set_line_width (cr, 0.5);
 
 	cairo_arc (cr, ceil (cx), ceil (cy), MAX (1.0, ceil (radius) - 1.5), 0, G_PI*2);
 
