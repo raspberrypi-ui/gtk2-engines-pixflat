@@ -4,9 +4,6 @@
    the theme. */
 #undef ENABLE_WIDGET_CHECKS
 
-/* Defines whether to compile with animation support */
-#undef HAVE_ANIMATION
-
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #undef HAVE_DLFCN_H
 

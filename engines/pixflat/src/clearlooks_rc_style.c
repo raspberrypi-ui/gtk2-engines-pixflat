@@ -33,8 +33,6 @@
 #include "clearlooks_style.h"
 #include "clearlooks_rc_style.h"
 
-#include "animation.h"
-
 #ifdef HAVE_WORKING_ANIMATION
 static void      clearlooks_rc_style_finalize     (GObject                *object);
 #endif

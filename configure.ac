@@ -23,7 +23,6 @@ AM_PROG_LIBTOOL
 AC_ARG_ENABLE(all, 		[  --disable-all           skip all engines/themes by default], [defaultval=$enableval], 	[defaultval="yes"])
 AC_ARG_ENABLE(pixflat, 		[  --disable-pixflat       skip PixFlat engine/theme], 	[pixflat=$enableval], 	[pixflat="$defaultval"])
 
-AC_ARG_ENABLE(animation, 	[  --enable-animation      compile clearlooks with animation support], 	[animation=$enableval],	[animation="no"])
 AC_ARG_ENABLE(widget_checks, 	[  --disable-widget-checks disable superfluous widget checks (needs updated themes)], 	[widget_checks=$enableval],	[widget_checks="yes"])
 
 AC_ARG_ENABLE(development, 	[  --enable-development    Enable any development warnings/incomplete code],	[development=$enableval],	[development="no"])
@@ -67,10 +66,6 @@ AC_SUBST(BUILD_THEMES)
 AC_SUBST(BUILD_SCHEMAS)
 AC_SUBST([auto_find_tests], ['$(patsubst %,exported_%,$(BUILD_ENGINES)) torture_buildin $(patsubst %,torture_%,$(TORTURE_TEST_ENGINES))'])
 
-
-if test $animation = "yes"; then
-	AC_DEFINE_UNQUOTED(HAVE_ANIMATION, 1, [Defines whether to compile with animation support])
-fi
 
 if test $widget_checks = "yes"; then
 	AC_DEFINE_UNQUOTED(ENABLE_WIDGET_CHECKS, 1, [Defines whether to enable runtime widget checks as a fallback to hints from the theme.])
@@ -141,16 +136,10 @@ fi
 echo
 echo "Engines and Themes:"
 
-echo -n "      PixFlat - "
 if test "$pixflat" = "yes"; then
-        echo -n "Including"
-        if test $animation = "yes"; then
-        	echo " with animation support"
-        else
-        	echo " without animation support"
-        fi
+	echo -n "      PixFlat"
 else
-        echo "Skipping"
+        echo -n "      none"
 fi
 
 echo ""

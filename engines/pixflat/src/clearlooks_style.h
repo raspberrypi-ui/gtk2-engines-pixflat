@@ -31,7 +31,6 @@
 #ifndef CLEARLOOKS_STYLE_H
 #define CLEARLOOKS_STYLE_H
 
-#include "animation.h"
 #include "clearlooks_types.h"
 
 typedef struct _ClearlooksStyle ClearlooksPixStyle;
