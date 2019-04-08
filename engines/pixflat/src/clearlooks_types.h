@@ -34,10 +34,7 @@ typedef struct _ClearlooksStyleConstants ClearlooksStyleConstants;
 typedef enum
 {
 	CL_STYLE_CLASSIC = 0,
-	CL_STYLE_GLOSSY = 1,
-	CL_STYLE_INVERTED = 2,
-	CL_STYLE_GUMMY = 3,
-	CL_NUM_STYLES = 4
+	CL_NUM_STYLES = 1
 } ClearlooksStyles;
 
 typedef enum
@@ -333,13 +330,6 @@ struct _ClearlooksStyleConstants
 
 struct _ClearlooksStyleFunctions
 {
-	void (*draw_top_left_highlight) (cairo_t *cr,
-	                               const CairoColor *color,
-	                               const WidgetParameters *params,
-                                       int x, int y, int width, int height,
-                                       gdouble radius,
-                                       CairoCorners corners);
-
 	void (*draw_button)           (cairo_t *cr,
 	                               const ClearlooksColors *colors,
 	                               const WidgetParameters *widget,

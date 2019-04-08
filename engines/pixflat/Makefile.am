@@ -12,13 +12,8 @@ libpixflat_la_SOURCES =		\
 	./src/clearlooks_style.h	\
 	./src/clearlooks_theme_main.c	\
 	./src/support.c			\
-	./src/animation.c		\
-	./src/animation.h		\
 	./src/support.h			\
 	./src/clearlooks_draw.c		\
-	./src/clearlooks_draw_glossy.c	\
-	./src/clearlooks_draw_inverted.c	\
-	./src/clearlooks_draw_gummy.c	\
 	./src/clearlooks_draw.h		\
 	./src/clearlooks_types.h
 

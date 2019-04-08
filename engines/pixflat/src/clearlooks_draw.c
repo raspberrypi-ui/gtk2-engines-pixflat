@@ -126,50 +126,6 @@ clearlooks_draw_shadow (cairo_t *cr, const ClearlooksColors *colors, gfloat radi
 	cairo_restore (cr);
 }
 
-/* This is copied at least in clearlooks_draw_gummy.c.
- * KEEP IN SYNC IF POSSIBLE! */
-static void
-clearlooks_draw_top_left_highlight (cairo_t *cr, const CairoColor *color,
-                                    const WidgetParameters *params,
-                                    int x, int y, int width, int height,
-                                    gdouble radius, CairoCorners corners)
-{
-	CairoColor hilight;
-
-	double line_width = cairo_get_line_width (cr);
-	double offset = line_width / 2.0;
-	double light_top, light_bottom, light_left, light_right;
-
-	cairo_save (cr);
-
-	cairo_set_line_cap (cr, CAIRO_LINE_CAP_BUTT);
-
-	light_top = y + offset;
-	light_bottom = y + height;
-	light_left = x + offset;
-	light_right = x + width;
-	
-	if (corners & CR_CORNER_BOTTOMLEFT)
-		light_bottom -= radius;
-	if (corners & CR_CORNER_TOPRIGHT)
-		light_right -= radius;
-
-	ge_shade_color (color, params->style_constants->topleft_highlight_shade, &hilight);
-	cairo_move_to         (cr, light_left, light_bottom);
-
-	ge_cairo_rounded_corner (cr, light_left, light_top, radius, corners & CR_CORNER_TOPLEFT);
-
-	cairo_line_to         (cr, light_right, light_top);
-	cairo_set_source_rgba (cr, hilight.r, hilight.g, hilight.b, params->style_constants->topleft_highlight_alpha);
-	cairo_stroke          (cr);
-
-	cairo_restore (cr);
-}
-
-#ifdef DEVELOPMENT
-#warning seems to be very slow in scrollbar_stepper
-#endif
-
 static void
 clearlooks_draw_highlight_and_shade (cairo_t *cr, const ClearlooksColors *colors,
                                      const ShadowParameters *params,
@@ -1948,14 +1904,12 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 	{
 		ge_shade_color (&colors->base[0], MIDTONE, &bval);
 		border = &bval;
-		//border = &colors->shade[5];
 		dot    = &colors->shade[6];
 	}
 	else
 	{
 		ge_shade_color (&colors->base[0], DARKER, &bval);
 		border = &bval;
-		//border = &colors->shade[6];
 		dot    = &colors->text[0];
 	}
 
@@ -2037,14 +1991,12 @@ clearlooks_draw_checkbox (cairo_t *cr,
 	{
 		ge_shade_color (&colors->base[0], MIDTONE, &bval);
 		border = &bval;
-		//border = &colors->shade[5];
 		dot    = &colors->shade[6];
 	}
 	else
 	{
 		ge_shade_color (&colors->base[0], DARKEST, &bval);
 		border = &bval;
-		//border = &colors->shade[6];
 		dot    = &colors->text[GTK_STATE_NORMAL];
 	}
 
@@ -2087,11 +2039,6 @@ clearlooks_draw_checkbox (cairo_t *cr,
 			cairo_move_to (cr, 0.5 + (width*0.2), (height*0.5));
 			cairo_line_to (cr, 0.5 + (width*0.4), (height*0.7));
 			cairo_line_to (cr, 0.5 + (width*0.8), (height*0.3));
-
-			//cairo_curve_to (cr, 0.5 + (width*0.4), (height*0.7),
-			//                    0.5 + (width*0.5), (height*0.4),
-			//                    0.5 + (width*0.70), (height*0.25));
-
 		}
 
 		ge_cairo_set_color (cr, dot);
@@ -2315,7 +2262,6 @@ clearlooks_register_style_classic (ClearlooksStyleFunctions *functions, Clearloo
 {
 	g_assert (functions);
 
-	functions->draw_top_left_highlight  = clearlooks_draw_top_left_highlight;
 	functions->draw_button              = clearlooks_draw_button;
 	functions->draw_scale_trough        = clearlooks_draw_scale_trough;
 	functions->draw_progressbar_trough  = clearlooks_draw_progressbar_trough;

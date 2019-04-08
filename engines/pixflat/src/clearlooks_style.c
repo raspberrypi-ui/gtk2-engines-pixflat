@@ -154,11 +154,6 @@ clearlooks_style_draw_flat_box (DRAW_ARGS)
 
 		cairo_destroy (cr);
 	}
-	else if ((CLEARLOOKS_STYLE (style)->style == CL_STYLE_GLOSSY || CLEARLOOKS_STYLE (style)->style == CL_STYLE_GUMMY) &&
-	         ((DETAIL("checkbutton") || DETAIL("radiobutton")) && state_type == GTK_STATE_PRELIGHT))
-	{
-		/* XXX: Don't draw any check/radiobutton bg in GLOSSY or GUMMY mode. */
-	}
 	else
 	{
 		GTK_STYLE_CLASS (clearlooks_style_parent_class)->draw_flat_box (style, window, state_type,
@@ -1202,9 +1197,6 @@ clearlooks_style_draw_slider (DRAW_ARGS, GtkOrientation orientation)
 		slider.lower = FALSE;
 		slider.fill_level = FALSE;
 
-		if (clearlooks_style->style == CL_STYLE_GLOSSY) /* XXX! */
-			params.corners = CR_CORNER_ALL;
-
 		STYLE_FUNCTION(draw_slider_button) (cr, &clearlooks_style->colors,
 		                                    &params, &slider,
 		                                    x, y, width, height);
@@ -1233,10 +1225,6 @@ clearlooks_style_draw_slider (DRAW_ARGS, GtkOrientation orientation)
 			ge_gdk_color_to_cairo (&clearlooks_style->scrollbar_color, &scrollbar.color);
 			scrollbar.has_color = TRUE;
 		}
-
-		if ((clearlooks_style->style == CL_STYLE_GLOSSY || clearlooks_style->style == CL_STYLE_GUMMY)
-			&& !scrollbar.has_color)
-			scrollbar.color = colors->bg[0];
 
 		STYLE_FUNCTION(draw_scrollbar_slider) (cr, colors, &params, &scrollbar,
 		                                       x, y, width, height);
@@ -2041,21 +2029,6 @@ clearlooks_style_class_init (ClearlooksPixStyleClass * klass)
 
 	clearlooks_register_style_classic (&klass->style_functions[CL_STYLE_CLASSIC],
 	                                   &klass->style_constants[CL_STYLE_CLASSIC]);
-
-	klass->style_functions[CL_STYLE_GLOSSY] = klass->style_functions[CL_STYLE_CLASSIC];
-	klass->style_constants[CL_STYLE_GLOSSY] = klass->style_constants[CL_STYLE_CLASSIC];
-	clearlooks_register_style_glossy (&klass->style_functions[CL_STYLE_GLOSSY],
-	                                  &klass->style_constants[CL_STYLE_GLOSSY]);
-
-	klass->style_functions[CL_STYLE_INVERTED] = klass->style_functions[CL_STYLE_CLASSIC];
-	klass->style_constants[CL_STYLE_INVERTED] = klass->style_constants[CL_STYLE_CLASSIC];
-	clearlooks_register_style_inverted (&klass->style_functions[CL_STYLE_INVERTED],
-	                                    &klass->style_constants[CL_STYLE_INVERTED]);
-
-	klass->style_functions[CL_STYLE_GUMMY] = klass->style_functions[CL_STYLE_CLASSIC];
-	klass->style_constants[CL_STYLE_GUMMY] = klass->style_constants[CL_STYLE_CLASSIC];
-	clearlooks_register_style_gummy (&klass->style_functions[CL_STYLE_GUMMY],
-	                                 &klass->style_constants[CL_STYLE_GUMMY]);
 }
 
 static void
