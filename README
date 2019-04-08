@@ -1,4 +1,4 @@
-gtk2-engines-clearlookspix
+gtk2-engines-pixflat
 ===========
 
-gtk2-engines-clearlookspix provides the clearlookspix GTK+ engine
+gtk2-engines-pixflat provides the PiXFlat GTK+ engine, a heavily-modified version of ClearLooks
