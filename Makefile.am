@@ -3,7 +3,7 @@ DIST_SUBDIRS = $(SUBDIRS)
 
 EXTRA_DIST = \
 	autogen.sh	\
-	gtk-engines-clearlookspix.pc.in \
+	gtk-engines-pixflat.pc.in \
 	intltool-extract.in \
 	intltool-merge.in \
 	intltool-update.in
@@ -40,7 +40,7 @@ MAINTAINERCLEANFILES = \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = gtk-engines-clearlookspix.pc
+pkgconfig_DATA = gtk-engines-pixflat.pc
 
 test:	all
 	cd test && $(MAKE) $(AM_MAKEFLAGS) test

@@ -1,5 +1,5 @@
 
-AC_INIT([gtk2-engines-clearlookspix], [2.20.2])
+AC_INIT([gtk2-engines-pixflat], [2.20.2])
 AC_CONFIG_SRCDIR([README])
 
 AM_INIT_AUTOMAKE
@@ -21,7 +21,7 @@ AC_LIBTOOL_WIN32_DLL
 AM_PROG_LIBTOOL
 
 AC_ARG_ENABLE(all, 		[  --disable-all           skip all engines/themes by default], [defaultval=$enableval], 	[defaultval="yes"])
-AC_ARG_ENABLE(clearlookspix, 	[  --disable-clearlookspix    skip ClearLooks engine/theme], 	[clearlookspix=$enableval], 	[clearlookspix="$defaultval"])
+AC_ARG_ENABLE(pixflat, 		[  --disable-pixflat       skip PixFlat engine/theme], 	[pixflat=$enableval], 	[pixflat="$defaultval"])
 
 AC_ARG_ENABLE(animation, 	[  --enable-animation      compile clearlooks with animation support], 	[animation=$enableval],	[animation="no"])
 AC_ARG_ENABLE(widget_checks, 	[  --disable-widget-checks disable superfluous widget checks (needs updated themes)], 	[widget_checks=$enableval],	[widget_checks="yes"])
@@ -41,8 +41,8 @@ BUILD_ENGINES=""
 BUILD_THEMES=""
 BUILD_SCHEMAS=""
 
-if test $clearlookspix = "yes"; then
-	BUILD_ENGINES="$BUILD_ENGINES clearlookspix"
+if test $pixflat = "yes"; then
+	BUILD_ENGINES="$BUILD_ENGINES pixflat"
 fi
 
 # Don't forget to update the README when changing this.
@@ -97,8 +97,8 @@ AC_CONFIG_FILES([
 Makefile
 engines/Makefile
 engines/support/Makefile
-engines/clearlookspix/Makefile
-gtk-engines-clearlookspix.pc
+engines/pixflat/Makefile
+gtk-engines-pixflat.pc
 ]) 
 
 AC_OUTPUT
@@ -141,8 +141,8 @@ fi
 echo
 echo "Engines and Themes:"
 
-echo -n "      ClearLooksPix - "
-if test "$clearlookspix" = "yes"; then
+echo -n "      PixFlat - "
+if test "$pixflat" = "yes"; then
         echo -n "Including"
         if test $animation = "yes"; then
         	echo " with animation support"

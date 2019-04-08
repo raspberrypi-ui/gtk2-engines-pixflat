@@ -3,7 +3,7 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: gtk-engines-clearlookspix
-Description: GTK+ Clearlooks Engine modified for PiX theme
+Name: gtk-engines-pixflat
+Description: GTK+ PiXFlat Engine - originally based on Clearlooks but heavily modified
 Version: @VERSION@
 Requires: gtk+-2.0
