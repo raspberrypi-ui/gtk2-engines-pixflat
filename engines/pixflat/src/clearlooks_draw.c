@@ -2046,125 +2046,7 @@ clearlooks_draw_checkbox (cairo_t *cr,
 	}
 }
 
-static void
-clearlooks_draw_normal_arrow (cairo_t *cr, const CairoColor *color,
-                              double x, double y, double width, double height)
-{
-	double arrow_width;
-	double arrow_height;
-	double line_width_2;
 
-	cairo_save (cr);
-
-	arrow_width = MIN (height * 2.0 + MAX (1.0, ceil (height * 2.0 / 6.0 * 2.0) / 2.0) / 2.0, width);
-	line_width_2 = MAX (1.0, ceil (arrow_width / 6.0 * 2.0) / 2.0) / 2.0;
-	arrow_height = arrow_width / 2.0 + line_width_2;
-
-	cairo_translate (cr, x, y - arrow_height / 2.0);
-
-	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
-	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
-	cairo_line_to (cr, 0, arrow_height -2*line_width_2);
-	/* cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4); */
-	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
-	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
-	cairo_line_to (cr, 0, arrow_height);
-	cairo_close_path (cr);
-
-	ge_cairo_set_color (cr, color);
-	cairo_fill (cr);
-
-	cairo_restore (cr);
-}
-
-static void
-clearlooks_draw_scrollbar_arrow (cairo_t *cr, const CairoColor *color,
-                              double x, double y, double width, double height)
-{
-	double arrow_width;
-	double arrow_height;
-	double line_width_2;
-
-	cairo_save (cr);
-
-	arrow_width = MIN (height * 2.0 + MAX (1.0, ceil (height * 2.0 / 6.0 * 2.0) / 2.0) / 2.0, width);
-	line_width_2 = MAX (1.0, ceil (arrow_width / 6.0 * 2.0) / 2.0) / 2.0;
-	arrow_height = arrow_width / 2.0 + line_width_2;
-
-	cairo_translate (cr, x, y - arrow_height / 2.0);
-
-	cairo_move_to (cr, -arrow_width / 2.0, line_width_2);
-	cairo_line_to (cr, -arrow_width / 2.0 + line_width_2, 0);
-	/* cairo_arc_negative (cr, 0, arrow_height - 2*line_width_2 - 2*line_width_2 * sqrt(2), 2*line_width_2, G_PI_2 + G_PI_4, G_PI_4); */
-	cairo_line_to (cr, arrow_width / 2.0 - line_width_2, 0);
-	cairo_line_to (cr, arrow_width / 2.0, line_width_2);
-	cairo_line_to (cr, 0, arrow_height);
-	cairo_close_path (cr);
-
-	ge_cairo_set_color (cr, color);
-	cairo_fill (cr);
-
-	cairo_restore (cr);
-}
-
-static void
-clearlooks_draw_combo_arrow (cairo_t *cr, const CairoColor *color,
-                             double x, double y, double width, double height)
-{
-	double asize = MIN (height * 2.0 / 3.0, width);
-	double arrow_width = MIN (asize + MAX (1.0, ceil (asize / 6.0 * 2.0) / 2.0) / 2.0, asize);
-
-	cairo_save (cr);
-
-	cairo_translate (cr, x, y);
-
-	cairo_move_to (cr, -arrow_width / 2.0, 0);
-	cairo_line_to (cr, 0, arrow_width / 2.0);
-	cairo_line_to (cr, arrow_width / 2.0, 0);
-	cairo_close_path (cr);
-
-	ge_cairo_set_color (cr, color);
-	cairo_fill (cr);
-
-	cairo_restore (cr);
-}
-
-static void
-_clearlooks_draw_arrow (cairo_t *cr, const CairoColor *color,
-                        ClearlooksDirection dir, ClearlooksArrowType type,
-                        double x, double y, double width, double height)
-{
-	double rotate;
-
-	if (dir == CL_DIRECTION_LEFT)
-		rotate = G_PI*1.5;
-	else if (dir == CL_DIRECTION_RIGHT)
-		rotate = G_PI*0.5;
-	else if (dir == CL_DIRECTION_UP)
-		rotate = G_PI;
-	else if (dir == CL_DIRECTION_DOWN)
-		rotate = 0;
-	else
-		return;
-
-	if (type == CL_ARROW_NORMAL)
-	{
-		cairo_translate (cr, x, y);
-		cairo_rotate (cr, -rotate);
-		clearlooks_draw_scrollbar_arrow (cr, color, 0, 0, width, height);
-	}
-	else if (type == CL_ARROW_COMBO)
-	{
-		cairo_translate (cr, x, y);
-		clearlooks_draw_combo_arrow (cr, color, 0, 0, width, height);
-	}
-	else if (type == CL_ARROW_SCROLLBAR)
-	{
-		cairo_translate (cr, x, y);
-		cairo_rotate (cr, -rotate);
-		clearlooks_draw_scrollbar_arrow (cr, color, 0, 0, width, height);
-	}
-}
 
 static void
 clearlooks_draw_arrow (cairo_t *cr,
@@ -2174,24 +2056,38 @@ clearlooks_draw_arrow (cairo_t *cr,
                        int x, int y, int width, int height)
 {
 	const CairoColor *color = &colors->fg[widget->state_type];
-	gdouble tx, ty;
+	gdouble tx, ty, rotate = 0, size;
 
 	tx = x + width/2.0;
 	ty = y + height/2.0;
-
-	if (widget->disabled)
+	if (arrow->type == CL_ARROW_NORMAL || arrow->type == CL_ARROW_SCROLLBAR)
 	{
-		_clearlooks_draw_arrow (cr, &colors->shade[0],
-		                        arrow->direction, arrow->type,
-		                        tx + (arrow->type == CL_ARROW_SCROLLBAR ? 0 : 0.5),
-		                        ty + (arrow->type == CL_ARROW_SCROLLBAR ? 0 : 0.5),
-		                        width, height);
+		if (arrow->direction == CL_DIRECTION_LEFT)
+			rotate = G_PI*1.5;
+		else if (arrow->direction == CL_DIRECTION_RIGHT)
+			rotate = G_PI*0.5;
+		else if (arrow->direction == CL_DIRECTION_UP)
+			rotate = G_PI;
+		else rotate = 0;
 	}
 
-	cairo_identity_matrix (cr);
+	size = (arrow->type == CL_ARROW_COMBO) ? MIN (height * 2.0 / 3.0, width) : width;
 
-	_clearlooks_draw_arrow (cr, color, arrow->direction, arrow->type,
-	                        tx, ty, width, height);
+	cairo_save (cr);
+
+	cairo_translate (cr, tx, ty);
+	if (rotate) cairo_rotate (cr, -rotate);
+
+	cairo_translate (cr, 0, -size / 4.0);
+	cairo_move_to (cr, -size / 2.0, 0);
+	cairo_line_to (cr, 0, size / 2.0);
+	cairo_line_to (cr, size / 2.0, 0);
+	cairo_close_path (cr);
+
+	ge_cairo_set_color (cr, color);
+	cairo_fill (cr);
+
+	cairo_restore (cr);
 }
 
 void

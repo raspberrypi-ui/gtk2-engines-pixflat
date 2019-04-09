@@ -1479,17 +1479,7 @@ clearlooks_style_draw_arrow (GtkStyle  *style,
 	if (ge_is_combo_box (widget, FALSE))
 	{
 		arrow.type = CL_ARROW_COMBO;
-	}
-
-	/* I have no idea why, but the arrow of GtkCombo is larger than in other places.
-	 * Subtracting 3 seems to fix this. */
-	if (widget && widget->parent && GE_IS_COMBO (widget->parent->parent))
-	{
-		if (params.ltr)
-			x += 1;
-		else
-			x += 2;
-		width -= 3;
+		y += 3;
 	}
 
     // fix up scrollbar stepper arrows to align them properly...
