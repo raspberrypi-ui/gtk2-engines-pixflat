@@ -595,13 +595,11 @@ clearlooks_draw_slider_button (cairo_t *cr,
                                const SliderParameters *slider,
                                int x, int y, int width, int height)
 {
-	double radius = MIN (params->radius, MIN ((width - 1.0) / 2.0, (height - 1.0) / 2.0));
-
 	cairo_save (cr);
+
 	cairo_set_line_width (cr, 1.0);
 
-	if (!slider->horizontal)
-		ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
+	if (!slider->horizontal) ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
 	cairo_translate (cr, x, y);
 
 	params->style_functions->draw_slider (cr, colors, params, 1, 1, width-2, height-2);
@@ -615,48 +613,21 @@ clearlooks_draw_progressbar_trough (cairo_t *cr,
                                     const WidgetParameters *params,
                                     int x, int y, int width, int height)
 {
-	const CairoColor *border = &colors->shade[4];
-	CairoColor        shadow;
-	cairo_pattern_t  *pattern;
-	double            radius = MIN (params->radius, MIN ((height-2.0) / 2.0, (width-2.0) / 2.0));
+	double radius = MIN (params->radius, MIN ((height-2.0) / 2.0, (width-2.0) / 2.0));
 
 	cairo_save (cr);
 
 	cairo_set_line_width (cr, 1.0);
 
-	/* Create trough box */
+	/* trough */
 	ge_cairo_rounded_rectangle (cr, x+1, y+1, width-2, height-2, radius, params->corners);
 	ge_cairo_set_color (cr, &colors->shade[2]);
 	cairo_fill (cr);
 
-	/* Draw border */
+	/* border */
 	ge_cairo_rounded_rectangle (cr, x+0.5, y+0.5, width-1, height-1, radius, params->corners);
-	ge_cairo_set_color (cr, border);
+	ge_cairo_set_color (cr, &colors->shade[4]);
 	cairo_stroke (cr);
-
-	/* clip the corners of the shadows */
-	ge_cairo_rounded_rectangle (cr, x+1, y+1, width-2, height-2, radius, params->corners);
-	cairo_clip (cr);
-
-	ge_shade_color (border, 0.925, &shadow);
-
-	/* Top shadow */
-	cairo_rectangle (cr, x+1, y+1, width-2, 4);
-	pattern = cairo_pattern_create_linear (x, y, x, y+4);
-	cairo_pattern_add_color_stop_rgba (pattern, 0.0, shadow.r, shadow.g, shadow.b, 0.2);
-	cairo_pattern_add_color_stop_rgba (pattern, 1.0, shadow.r, shadow.g, shadow.b, 0);
-	cairo_set_source (cr, pattern);
-	cairo_fill (cr);
-	cairo_pattern_destroy (pattern);
-
-	/* Left shadow */
-	cairo_rectangle (cr, x+1, y+1, 4, height-2);
-	pattern = cairo_pattern_create_linear (x, y, x+4, y);
-	cairo_pattern_add_color_stop_rgba (pattern, 0.0, shadow.r, shadow.g, shadow.b, 0.2);
-	cairo_pattern_add_color_stop_rgba (pattern, 1.0, shadow.r, shadow.g, shadow.b, 0);
-	cairo_set_source (cr, pattern);
-	cairo_fill (cr);
-	cairo_pattern_destroy (pattern);
 
 	cairo_restore (cr);
 }
@@ -670,17 +641,11 @@ clearlooks_draw_progressbar_fill (cairo_t *cr,
                                   gint offset)
 {
 	boolean      is_horizontal = progressbar->orientation < 2;
-	double       tile_pos = 0;
-	double       stroke_width;
 	double       radius;
-	int          x_step;
-
-	cairo_pattern_t *pattern;
-	CairoColor       bg_shade;
-	CairoColor       border;
-	CairoColor       shadow;
+	CairoColor   border;
 
 	radius = MAX (0, params->radius - params->xthickness);
+	radius = MIN (radius, height / 2.0);
 
 	cairo_save (cr);
 
@@ -690,73 +655,15 @@ clearlooks_draw_progressbar_fill (cairo_t *cr,
 	if ((progressbar->orientation == CL_ORIENTATION_RIGHT_TO_LEFT) || (progressbar->orientation == CL_ORIENTATION_BOTTOM_TO_TOP))
 		ge_cairo_mirror (cr, CR_MIRROR_HORIZONTAL, &x, &y, &width, &height);
 
-	/* Clamp the radius so that the _height_ fits ...  */
-	radius = MIN (radius, height / 2.0);
-
-	stroke_width = height;
-	x_step = (((float)stroke_width/10)*offset); /* This looks weird ... */
-
 	cairo_translate (cr, x, y);
 
 	cairo_save (cr);
-	/* This is kind of nasty ... Clip twice from each side in case the length
-	 * of the fill is smaller than twice the radius. */
-	ge_cairo_rounded_rectangle (cr, 0, 0, width + radius, height, radius, CR_CORNER_TOPLEFT | CR_CORNER_BOTTOMLEFT);
-	cairo_clip (cr);
-	ge_cairo_rounded_rectangle (cr, -radius, 0, width + radius, height, radius, CR_CORNER_TOPRIGHT | CR_CORNER_BOTTOMRIGHT);
-	cairo_clip (cr);
 
-	/* Draw the background gradient */
-	ge_shade_color (&colors->bg[3], 1.0, &bg_shade);
-	ge_shade_color (&colors->spot[2], 1.0, &shadow);
-
-	pattern = cairo_pattern_create_linear (0, 0, 0, height);
-	cairo_pattern_add_color_stop_rgb (pattern, 0.0, bg_shade.r, bg_shade.g, bg_shade.b);
-	cairo_pattern_add_color_stop_rgb (pattern, 1.0, bg_shade.r, bg_shade.g, bg_shade.b);
-	cairo_set_source (cr, pattern);
+	/* fill */
+	ge_cairo_set_color (cr, &colors->bg[3]);
 	cairo_paint (cr);
-	cairo_pattern_destroy (pattern);
-	pattern = cairo_pattern_create_linear (0, 0, 0, height);
-	cairo_pattern_add_color_stop_rgba (pattern, 0.0, colors->spot[2].r, colors->spot[2].g, colors->spot[2].b, 0);
-	cairo_pattern_add_color_stop_rgba (pattern, 1.0, colors->spot[2].r, colors->spot[2].g, colors->spot[2].b, 0.24);
-	cairo_set_source (cr, pattern);
-	cairo_fill (cr);
-	cairo_pattern_destroy (pattern);
 
-	cairo_restore (cr); /* rounded clip region */
-
-	/* Draw the dark lines and the shadow */
-	cairo_save (cr);
-	/* Again, this weird clip area. */
-	ge_cairo_rounded_rectangle (cr, -1.0, 0, width + radius + 2.0, height, radius, CR_CORNER_TOPLEFT | CR_CORNER_BOTTOMLEFT);
-	cairo_clip (cr);
-	ge_cairo_rounded_rectangle (cr, -radius - 1.0, 0, width + radius + 2.0, height, radius, CR_CORNER_TOPRIGHT | CR_CORNER_BOTTOMRIGHT);
-	cairo_clip (cr);
-
-	shadow.r = 0.0;
-	shadow.g = 0.0;
-	shadow.b = 0.0;
-	shadow.a = 0.1;
-
-	if (progressbar->pulsing)
-	{
-		/* At the beginning of the bar. */
-		cairo_move_to (cr, -0.5 + radius, height + 0.5);
-		ge_cairo_rounded_corner (cr, -0.5, height + 0.5, radius + 1, CR_CORNER_BOTTOMLEFT);
-		ge_cairo_rounded_corner (cr, -0.5, -0.5, radius + 1, CR_CORNER_TOPLEFT);
-		ge_cairo_set_color (cr, &shadow);
-		cairo_stroke (cr);
-	}
-	if (progressbar->value < 1.0 || progressbar->pulsing)
-	{
-		/* At the end of the bar. */
-		cairo_move_to (cr, width + 0.5 - radius, -0.5);
-		ge_cairo_rounded_corner (cr, width + 0.5, -0.5, radius + 1, CR_CORNER_TOPRIGHT);
-		ge_cairo_rounded_corner (cr, width + 0.5, height + 0.5, radius + 1, CR_CORNER_BOTTOMRIGHT);
-		ge_cairo_set_color (cr, &shadow);
-		cairo_stroke (cr);
-	}
-
+	/* border */
 	border = colors->spot[2];
 	border.a = 0.6;
 	ge_cairo_rounded_rectangle (cr, 0.5, 0.5, width-1, height-1, radius, CR_CORNER_ALL);
