@@ -1913,26 +1913,10 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 		dot    = &colors->text[0];
 	}
 
-	ge_shade_color (&widget->parentbg, 0.9, &shadow);
-	ge_shade_color (&widget->parentbg, 1.1, &highlight);
-
-	pt = cairo_pattern_create_linear (0, 0, radius * 2.0, radius * 2.0);
-	cairo_pattern_add_color_stop_rgb (pt, 0.0, shadow.r, shadow.b, shadow.g);
-	cairo_pattern_add_color_stop_rgba (pt, 0.5, shadow.r, shadow.b, shadow.g, 0.5);
-	cairo_pattern_add_color_stop_rgba (pt, 0.5, highlight.r, highlight.g, highlight.b, 0.5);
-	cairo_pattern_add_color_stop_rgb (pt, 1.0, highlight.r, highlight.g, highlight.b);
-
 	cairo_translate (cr, x, y);
 
-	cairo_set_line_width (cr, MAX (1.0, floor (radius/3)));
+	cairo_set_line_width (cr, 1.0);
 	cairo_arc (cr, ceil (cx), ceil (cy), floor (radius - 0.1), 0, G_PI*2);
-	cairo_set_source (cr, pt);
-	//cairo_stroke (cr);
-	cairo_pattern_destroy (pt);
-
-	cairo_set_line_width (cr, 0.5);
-
-	cairo_arc (cr, ceil (cx), ceil (cy), MAX (1.0, ceil (radius) - 1.5), 0, G_PI*2);
 
 	if (!widget->disabled)
 	{
