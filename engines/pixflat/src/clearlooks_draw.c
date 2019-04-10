@@ -854,81 +854,30 @@ clearlooks_draw_frame            (cairo_t *cr,
                                   const FrameParameters      *frame,
                                   int x, int y, int width, int height)
 {
-	const CairoColor *border = frame->border;
-	const CairoColor *dark   = (CairoColor*)&colors->shade[4];
-	ClearlooksRectangle bevel_clip = {0, 0, 0, 0};
-	ClearlooksRectangle frame_clip = {0, 0, 0, 0};
 	double radius = MIN (params->radius, MIN ((width - 2.0) / 2.0, (height - 2.0) / 2.0));
-	CairoColor hilight;
 
-	ge_shade_color (&colors->bg[0], 1.05, &hilight);
+	if (frame->shadow == CL_SHADOW_NONE) return;
 
-	if (frame->shadow == CL_SHADOW_NONE)
-		return;
-
-	if (frame->gap_x != -1)
-		clearlooks_get_frame_gap_clip (x, y, width, height,
-		                               frame, &bevel_clip, &frame_clip);
+	cairo_save (cr);
 
 	cairo_set_line_width (cr, 1.0);
-	cairo_translate      (cr, x, y);
+	cairo_translate (cr, x, y);
 
-	/* save everything */
-	cairo_save (cr);
-	/* Set clip for the bevel */
 	if (frame->gap_x != -1)
 	{
-		/* Set clip for gap */
-		cairo_set_fill_rule  (cr, CAIRO_FILL_RULE_EVEN_ODD);
-		cairo_rectangle      (cr, 0, 0, width, height);
-		cairo_rectangle      (cr, bevel_clip.x, bevel_clip.y, bevel_clip.width, bevel_clip.height);
-		cairo_clip           (cr);
+		ClearlooksRectangle bevel_clip = {0, 0, 0, 0}, frame_clip = {0, 0, 0, 0};
+
+		/* clip for gap */
+		clearlooks_get_frame_gap_clip (x, y, width, height, frame, &bevel_clip, &frame_clip);
+		cairo_set_fill_rule (cr, CAIRO_FILL_RULE_EVEN_ODD);
+		cairo_rectangle (cr, 0, 0, width, height);
+		cairo_rectangle (cr, frame_clip.x, frame_clip.y, frame_clip.width, frame_clip.height);
+		cairo_clip  (cr);
 	}
 
-	/* Draw the bevel */
-	if (frame->shadow == CL_SHADOW_ETCHED_IN || frame->shadow == CL_SHADOW_ETCHED_OUT)
-	{
-		ge_cairo_set_color (cr, &hilight);
-		if (frame->shadow == CL_SHADOW_ETCHED_IN)
-			ge_cairo_inner_rounded_rectangle (cr, 1, 1, width-1, height-1, radius, params->corners);
-		else
-			ge_cairo_inner_rounded_rectangle (cr, 0, 0, width-1, height-1, radius, params->corners);
-		cairo_stroke (cr);
-	}
-	else if (frame->shadow != CL_SHADOW_NONE)
-	{
-		ShadowParameters shadow;
-		shadow.corners = params->corners;
-		shadow.shadow  = frame->shadow;
-		clearlooks_draw_highlight_and_shade (cr, colors, &shadow, width, height, radius);
-	}
-
-	/* restore the previous clip region */
-	cairo_restore    (cr);
-	cairo_save       (cr);
-	if (frame->gap_x != -1)
-	{
-		/* Set clip for gap */
-		cairo_set_fill_rule  (cr, CAIRO_FILL_RULE_EVEN_ODD);
-		cairo_rectangle      (cr, 0, 0, width, height);
-		cairo_rectangle      (cr, frame_clip.x, frame_clip.y, frame_clip.width, frame_clip.height);
-		cairo_clip           (cr);
-	}
-
-	/* Draw frame */
-	if (frame->shadow == CL_SHADOW_ETCHED_IN || frame->shadow == CL_SHADOW_ETCHED_OUT)
-	{
-		ge_cairo_set_color (cr, dark);
-		if (frame->shadow == CL_SHADOW_ETCHED_IN)
-			ge_cairo_inner_rounded_rectangle (cr, 0, 0, width-1, height-1, radius, params->corners);
-		else
-			ge_cairo_inner_rounded_rectangle (cr, 1, 1, width-1, height-1, radius, params->corners);
-	}
-	else
-	{
-		ge_cairo_set_color (cr, border);
-		ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
-	}
+	/* frame */
+	ge_cairo_set_color (cr, &colors->shade[5]);
+	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
 	cairo_stroke (cr);
 
 	cairo_restore (cr);
@@ -941,101 +890,41 @@ clearlooks_draw_tab (cairo_t *cr,
                      const TabParameters    *tab,
                      int x, int y, int width, int height)
 {
-	const CairoColor *border1       = &colors->shade[6];
-	const CairoColor *border2       = &colors->shade[5];
-	const CairoColor *stripe_fill   = &colors->spot[1];
-	const CairoColor *stripe_border = &colors->spot[2];
-	const CairoColor *fill;
-	CairoColor        hilight;
+	double radius = MIN (params->radius, MIN ((width - 2.0) / 2.0, (height - 2.0) / 2.0));
 
-	cairo_pattern_t  *pattern;
-
-	double            radius;
-	double            stripe_size = 2.0;
-	double            stripe_fill_size;
-	double            length;
-
-	radius = MIN (params->radius, MIN ((width - 2.0) / 2.0, (height - 2.0) / 2.0));
 	cairo_save (cr);
 
-	/* Set clip */
-	cairo_rectangle      (cr, x, y, width, height);
-	cairo_clip           (cr);
-	cairo_new_path       (cr);
+	/* clip */
+	cairo_rectangle (cr, x, y, width, height);
+	cairo_clip (cr);
+	cairo_new_path (cr);
 
 	/* Translate and set line width */
 	cairo_set_line_width (cr, 1.0);
-	cairo_translate      (cr, x, y);
-
+	cairo_translate (cr, x, y);
 
 	/* Make the tabs slightly bigger than they should be, to create a gap */
-	/* And calculate the strip size too, while you're at it */
-	if (tab->gap_side == CL_GAP_TOP || tab->gap_side == CL_GAP_BOTTOM)
+	switch (tab->gap_side)
 	{
-		height += 3.0;
-		length = height;
-		stripe_fill_size = (tab->gap_side == CL_GAP_TOP ? stripe_size/height : stripe_size/(height-2));
-
-		if (tab->gap_side == CL_GAP_TOP)
-			cairo_translate (cr, 0.0, -3.0); /* gap at the other side */
-	}
-	else
-	{
-		width += 3.0;
-		length = width;
-		stripe_fill_size = (tab->gap_side == CL_GAP_LEFT ? stripe_size/width : stripe_size/(width-2));
-
-		if (tab->gap_side == CL_GAP_LEFT)
-			cairo_translate (cr, -3.0, 0.0); /* gap at the other side */
+		case CL_GAP_TOP : 		cairo_translate (cr, 0.0, -3.0);
+		case CL_GAP_BOTTOM :	height += 3.0;
+								break;
+		case CL_GAP_LEFT :		cairo_translate (cr, -3.0, 0.0);
+		case CL_GAP_RIGHT :		width += 3.0;
+								break;
 	}
 
-	/* Set the fill color */
-	if (params->state_type != GTK_STATE_NORMAL)
-	fill = &colors->bg[params->state_type];
-	else
-	fill = &colors->bg[GTK_STATE_PRELIGHT];
+	/* fill */
+	if (params->state_type != GTK_STATE_NORMAL)	ge_cairo_set_color (cr, &colors->bg[params->state_type]);
+	else ge_cairo_set_color (cr, &colors->bg[GTK_STATE_PRELIGHT]);
+	ge_cairo_rounded_rectangle (cr, 0.5, 0.5, width-1, height-1, radius, params->corners);
+	cairo_fill (cr);
 
-	/* Set tab shape */
-	ge_cairo_rounded_rectangle (cr, 0.5, 0.5, width-1, height-1,
-	                            radius, params->corners);
-
-	/* Draw fill */
-	ge_cairo_set_color (cr, fill);
-	cairo_fill   (cr);
-
+	/* border */
+	if (params->active)	ge_cairo_set_color (cr, &colors->shade[4]);
+	else ge_cairo_set_color (cr, &colors->shade[5]);
 	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
-
-	if (params->active)
-	{
-		ge_cairo_set_color (cr, border2);
-		cairo_stroke (cr);
-	}
-	else
-	{
-		switch (tab->gap_side)
-		{
-			case CL_GAP_TOP:
-				pattern = cairo_pattern_create_linear (2.5, height-1.5, 2.5, 2.5);
-				break;
-			case CL_GAP_BOTTOM:
-				pattern = cairo_pattern_create_linear (2.5, 2.5, 2.5, height+0.5);
-				break;
-			case CL_GAP_LEFT:
-				pattern = cairo_pattern_create_linear (width-1.5, 2.5, 2.5, 2.5);
-				break;
-			case CL_GAP_RIGHT:
-				pattern = cairo_pattern_create_linear (2.5, 2.5, width+0.5, 2.5);
-				break;
-			default:
-				pattern = NULL;
-		}
-
-		cairo_pattern_add_color_stop_rgb (pattern, stripe_fill_size, border1->r,       border1->g,       border1->b);
-		cairo_pattern_add_color_stop_rgb (pattern, 1.0,        border2->r,       border2->g,       border2->b);
-		cairo_set_source (cr, pattern);
-		cairo_stroke (cr);
-		cairo_pattern_destroy (pattern);
-	}
+	cairo_stroke (cr);
 
 	cairo_restore (cr);
 }
