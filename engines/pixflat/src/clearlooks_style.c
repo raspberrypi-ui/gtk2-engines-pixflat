@@ -241,7 +241,6 @@ clearlooks_style_draw_shadow (DRAW_ARGS)
 
 		frame.shadow  = shadow_type;
 		frame.gap_x   = -1;  /* No gap will be drawn */
-		frame.border  = &colors->shade[4];
 
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 		params.corners = CR_CORNER_NONE;
@@ -253,11 +252,7 @@ clearlooks_style_draw_shadow (DRAW_ARGS)
 	{
 		CairoColor border;
 
-		if (CLEARLOOKS_STYLE (style)->style == CL_STYLE_CLASSIC)
-			ge_shade_color ((CairoColor*)&colors->bg[0], 0.78, &border);
-		else
-			border = colors->shade[5];
-
+		ge_shade_color ((CairoColor*)&colors->bg[0], 0.78, &border);
 		cairo_rectangle (cr, x+0.5, y+0.5, width-1, height-1);
 		ge_cairo_set_color (cr, &border);
 		cairo_set_line_width (cr, 1);
@@ -270,7 +265,6 @@ clearlooks_style_draw_shadow (DRAW_ARGS)
 
 		frame.shadow = shadow_type;
 		frame.gap_x  = -1;
-		frame.border = &colors->shade[5];
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 		params.corners = CR_CORNER_ALL;
 
@@ -305,7 +299,6 @@ clearlooks_style_draw_box_gap (DRAW_ARGS,
 		frame.gap_side  = gap_side;
 		frame.gap_x     = gap_x;
 		frame.gap_width = gap_width;
-		frame.border    = &colors->shade[5];
 
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 
@@ -1364,7 +1357,6 @@ clearlooks_style_draw_shadow_gap (DRAW_ARGS,
 		frame.gap_side  = gap_side;
 		frame.gap_x     = gap_x;
 		frame.gap_width = gap_width;
-		frame.border    = &colors->shade[5];
 
 		clearlooks_set_widget_parameters (widget, style, state_type, &params);
 
@@ -1548,15 +1540,16 @@ clearlooks_style_realize (GtkStyle * style)
 
 	contrast = CLEARLOOKS_RC_STYLE (style->rc_style)->contrast;
 
-	/* Lighter to darker */
-	ge_gdk_color_to_cairo (&style->bg[GTK_STATE_NORMAL], &bg_normal);
-
-	for (i = 0; i < 9; i++)
-	{
-		ge_shade_color (&bg_normal, (shades[i] < 1.0) ?
-		                (shades[i]/contrast) : (shades[i]*contrast),
-		                &clearlooks_style->colors.shade[i]);
-	}
+	ge_gdk_color_to_cairo (&style->base[GTK_STATE_NORMAL], &bg_normal);
+	ge_shade_color (&bg_normal, 1.00, &clearlooks_style->colors.shade[0]);
+	ge_shade_color (&bg_normal, 0.90, &clearlooks_style->colors.shade[1]);
+	ge_shade_color (&bg_normal, 0.87, &clearlooks_style->colors.shade[2]);
+	ge_shade_color (&bg_normal, 0.81, &clearlooks_style->colors.shade[3]);
+	ge_shade_color (&bg_normal, 0.78, &clearlooks_style->colors.shade[4]);
+	ge_shade_color (&bg_normal, 0.75, &clearlooks_style->colors.shade[5]);
+	ge_shade_color (&bg_normal, 0.70, &clearlooks_style->colors.shade[6]);
+	ge_shade_color (&bg_normal, 0.65, &clearlooks_style->colors.shade[7]);
+	ge_shade_color (&bg_normal, 0.62, &clearlooks_style->colors.shade[8]);
 
 	ge_gdk_color_to_cairo (&style->bg[GTK_STATE_SELECTED], &spot_color);
 
