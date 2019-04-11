@@ -184,11 +184,8 @@ clearlooks_set_border_gradient (cairo_t *cr, const CairoColor *color, double hil
 	cairo_pattern_destroy (pattern);
 }
 
-static void
-clearlooks_draw_button (cairo_t *cr,
-                        const ClearlooksColors *colors,
-                        const WidgetParameters *params,
-                        int x, int y, int width, int height)
+static void pixflat_draw_button (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	int x, int y, int width, int height)
 {
 	double xoffset = 0, yoffset = 0;
 	double radius = params->radius;
@@ -269,12 +266,8 @@ clearlooks_draw_button (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_entry (cairo_t *cr,
-                       const ClearlooksColors *colors,
-                       const WidgetParameters *params,
-                       const FocusParameters  *focus,
-                       int x, int y, int width, int height)
+static void pixflat_draw_entry (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const FocusParameters *focus, int x, int y, int width, int height)
 {
 	const CairoColor *base = &colors->base[params->state_type];
 	double radius = MIN (params->radius, MIN ((width - 4.0) / 2.0, (height - 4.0) / 2.0));
@@ -410,11 +403,8 @@ clearlooks_draw_entry_progress (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_spinbutton (cairo_t *cr,
-                            const ClearlooksColors *colors,
-                            const WidgetParameters *params,
-                            int x, int y, int width, int height)
+static void pixflat_draw_spinbutton (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	int x, int y, int width, int height)
 {
 	CairoColor c;
 
@@ -440,11 +430,8 @@ clearlooks_draw_spinbutton (cairo_t *cr,
 	cairo_stroke (cr);
 }
 
-static void
-clearlooks_draw_spinbutton_down (cairo_t *cr,
-                                 const ClearlooksColors *colors,
-                                 const WidgetParameters *params,
-                                 int x, int y, int width, int height)
+static void pixflat_draw_spinbutton_down (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	int x, int y, int width, int height)
 {
 	double radius = MIN (params->radius, MIN ((width - 4.0) / 2.0, (height - 4.0) / 2.0));
 	CairoColor shadow;
@@ -467,12 +454,8 @@ clearlooks_draw_spinbutton_down (cairo_t *cr,
 	cairo_fill (cr);
 }
 
-static void
-clearlooks_draw_scale_trough (cairo_t *cr,
-                              const ClearlooksColors *colors,
-                              const WidgetParameters *params,
-                              const SliderParameters *slider,
-                              int x, int y, int width, int height)
+static void pixflat_draw_scale_trough (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const SliderParameters *slider, int x, int y, int width, int height)
 {
 	int     trough_width, trough_height;
 	double  translate_x, translate_y;
@@ -526,11 +509,8 @@ clearlooks_draw_scale_trough (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_slider (cairo_t *cr,
-                        const ClearlooksColors *colors,
-                        const WidgetParameters *params,
-                        int x, int y, int width, int height)
+static void pixflat_draw_slider (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	int x, int y, int width, int height)
 {
 	CairoColor fill, border;
 
@@ -588,12 +568,8 @@ clearlooks_draw_slider (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_slider_button (cairo_t *cr,
-                               const ClearlooksColors *colors,
-                               const WidgetParameters *params,
-                               const SliderParameters *slider,
-                               int x, int y, int width, int height)
+static void pixflat_draw_slider_button (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const SliderParameters *slider, int x, int y, int width, int height)
 {
 	cairo_save (cr);
 
@@ -607,11 +583,8 @@ clearlooks_draw_slider_button (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_progressbar_trough (cairo_t *cr,
-                                    const ClearlooksColors *colors,
-                                    const WidgetParameters *params,
-                                    int x, int y, int width, int height)
+static void pixflat_draw_progressbar_trough (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	int x, int y, int width, int height)
 {
 	double radius = MIN (params->radius, MIN ((height-2.0) / 2.0, (width-2.0) / 2.0));
 
@@ -632,13 +605,8 @@ clearlooks_draw_progressbar_trough (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_progressbar_fill (cairo_t *cr,
-                                  const ClearlooksColors *colors,
-                                  const WidgetParameters *params,
-                                  const ProgressBarParameters *progressbar,
-                                  int x, int y, int width, int height,
-                                  gint offset)
+static void pixflat_draw_progressbar_fill (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const ProgressBarParameters *progressbar, int x, int y, int width, int height, gint offset)
 {
 	boolean      is_horizontal = progressbar->orientation < 2;
 	double       radius;
@@ -847,12 +815,8 @@ clearlooks_get_frame_gap_clip (int x, int y, int width, int height,
 	}
 }
 
-static void
-clearlooks_draw_frame            (cairo_t *cr,
-                                  const ClearlooksColors     *colors,
-                                  const WidgetParameters     *params,
-                                  const FrameParameters      *frame,
-                                  int x, int y, int width, int height)
+static void pixflat_draw_frame (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const FrameParameters *frame, int x, int y, int width, int height)
 {
 	double radius = MIN (params->radius, MIN ((width - 2.0) / 2.0, (height - 2.0) / 2.0));
 
@@ -883,12 +847,8 @@ clearlooks_draw_frame            (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_tab (cairo_t *cr,
-                     const ClearlooksColors *colors,
-                     const WidgetParameters *params,
-                     const TabParameters    *tab,
-                     int x, int y, int width, int height)
+static void pixflat_draw_tab (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const TabParameters *tab, int x, int y, int width, int height)
 {
 	double radius = MIN (params->radius, MIN ((width - 2.0) / 2.0, (height - 2.0) / 2.0));
 
@@ -1161,13 +1121,8 @@ clearlooks_draw_selected_cell (cairo_t                  *cr,
 	cairo_restore (cr);
 }
 
-
-static void
-clearlooks_draw_scrollbar_trough (cairo_t *cr,
-                                  const ClearlooksColors           *colors,
-                                  const WidgetParameters           *widget,
-                                  const ScrollBarParameters        *scrollbar,
-                                  int x, int y, int width, int height)
+static void pixflat_draw_scrollbar_trough (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *widget,
+	const ScrollBarParameters *scrollbar, int x, int y, int width, int height)
 {
 	const CairoColor *bg     = &colors->shade[2];
 	const CairoColor *border = &colors->shade[5];
@@ -1189,13 +1144,8 @@ clearlooks_draw_scrollbar_trough (cairo_t *cr,
 	cairo_fill (cr);
 }
 
-static void
-clearlooks_draw_scrollbar_stepper (cairo_t *cr,
-                                   const ClearlooksColors           *colors,
-                                   const WidgetParameters           *widget,
-                                   const ScrollBarParameters        *scrollbar,
-                                   const ScrollBarStepperParameters *stepper,
-                                   int x, int y, int width, int height)
+static void pixflat_draw_scrollbar_stepper (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *widget,
+	const ScrollBarParameters *scrollbar, const ScrollBarStepperParameters *stepper, int x, int y, int width, int height)
 {
 	CairoCorners corners = CR_CORNER_NONE;
 	CairoColor   border;
@@ -1256,12 +1206,8 @@ clearlooks_draw_scrollbar_stepper (cairo_t *cr,
 	cairo_stroke (cr);
 }
 
-static void
-clearlooks_draw_scrollbar_slider (cairo_t *cr,
-                                   const ClearlooksColors          *colors,
-                                   const WidgetParameters          *widget,
-                                   const ScrollBarParameters       *scrollbar,
-                                   int x, int y, int width, int height)
+static void pixflat_draw_scrollbar_slider (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *widget,
+	const ScrollBarParameters *scrollbar, int x, int y, int width, int height)
 {
 	cairo_save (cr);
 
@@ -1337,6 +1283,7 @@ clearlooks_draw_menu_frame (cairo_t *cr,
                             const WidgetParameters          *widget,
                             int x, int y, int width, int height)
 {
+	/* const CairoColor *border = &colors->shade[5]; modified for pixflat */
 	const CairoColor *border = &colors->shade[2];
 	cairo_translate      (cr, x, y);
 	cairo_set_line_width (cr, 1);
@@ -1439,7 +1386,17 @@ clearlooks_draw_handle (cairo_t *cr,
 	cairo_translate (cr, x, y);
 
 	cairo_set_line_width (cr, 1);
-
+#if 0
+	/* removed for pixflat */
+	if (handle->horizontal)
+	{
+		params->style_functions->draw_gripdots (cr, colors, 0, 0, width, height, num_bars, 2, 0.1);
+	}
+	else
+	{
+		params->style_functions->draw_gripdots (cr, colors, 0, 0, width, height, 2, num_bars, 0.1);
+	}
+#endif
 	cairo_restore (cr);
 }
 
@@ -1513,12 +1470,8 @@ clearlooks_draw_resize_grip (cairo_t *cr,
 	cairo_restore (cr);
 }
 
-static void
-clearlooks_draw_radiobutton (cairo_t *cr,
-                             const ClearlooksColors  *colors,
-                             const WidgetParameters  *widget,
-                             const CheckboxParameters *checkbox,
-                             int x, int y, int width, int height)
+static void pixflat_draw_radiobutton (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *widget,
+	const CheckboxParameters *checkbox, int x, int y, int width, int height)
 {
 	const CairoColor *border;
 	const CairoColor *dot;
@@ -1593,12 +1546,8 @@ clearlooks_draw_radiobutton (cairo_t *cr,
 	}
 }
 
-static void
-clearlooks_draw_checkbox (cairo_t *cr,
-                          const ClearlooksColors  *colors,
-                          const WidgetParameters  *widget,
-                          const CheckboxParameters *checkbox,
-                          int x, int y, int width, int height)
+static void pixflat_draw_checkbox (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *widget,
+	const CheckboxParameters *checkbox, int x, int y, int width, int height)
 {
 	const CairoColor *border;
 	const CairoColor *dot;
@@ -1668,12 +1617,8 @@ clearlooks_draw_checkbox (cairo_t *cr,
 	}
 }
 
-static void
-clearlooks_draw_arrow (cairo_t *cr,
-                       const ClearlooksColors *colors,
-                       const WidgetParameters *widget,
-                       const ArrowParameters  *arrow,
-                       int x, int y, int width, int height)
+static void pixflat_draw_arrow (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *widget,
+	const ArrowParameters *arrow, int x, int y, int width, int height)
 {
 	const CairoColor *color = &colors->fg[widget->state_type];
 	gdouble tx, ty, rotate = 0, size;
@@ -1778,20 +1723,20 @@ clearlooks_register_style_classic (ClearlooksStyleFunctions *functions, Clearloo
 {
 	g_assert (functions);
 
-	functions->draw_button              = clearlooks_draw_button;
-	functions->draw_scale_trough        = clearlooks_draw_scale_trough;
-	functions->draw_progressbar_trough  = clearlooks_draw_progressbar_trough;
-	functions->draw_progressbar_fill    = clearlooks_draw_progressbar_fill;
-	functions->draw_slider_button       = clearlooks_draw_slider_button;
-	functions->draw_entry               = clearlooks_draw_entry;
+	functions->draw_button              = pixflat_draw_button;
+	functions->draw_scale_trough        = pixflat_draw_scale_trough;
+	functions->draw_progressbar_trough  = pixflat_draw_progressbar_trough;
+	functions->draw_progressbar_fill    = pixflat_draw_progressbar_fill;
+	functions->draw_slider_button       = pixflat_draw_slider_button;
+	functions->draw_entry               = pixflat_draw_entry;
 	functions->draw_entry_progress      = clearlooks_draw_entry_progress;
-	functions->draw_spinbutton          = clearlooks_draw_spinbutton;
-	functions->draw_spinbutton_down     = clearlooks_draw_spinbutton_down;
+	functions->draw_spinbutton          = pixflat_draw_spinbutton;
+	functions->draw_spinbutton_down     = pixflat_draw_spinbutton_down;
 	functions->draw_optionmenu          = clearlooks_draw_optionmenu;
 	functions->draw_inset               = clearlooks_draw_inset;
 	functions->draw_menubar	            = clearlooks_draw_menubar;
-	functions->draw_tab                 = clearlooks_draw_tab;
-	functions->draw_frame               = clearlooks_draw_frame;
+	functions->draw_tab                 = pixflat_draw_tab;
+	functions->draw_frame               = pixflat_draw_frame;
 	functions->draw_separator           = clearlooks_draw_separator;
 	functions->draw_menu_item_separator = clearlooks_draw_menu_item_separator;
 	functions->draw_list_view_header    = clearlooks_draw_list_view_header;
@@ -1799,20 +1744,20 @@ clearlooks_register_style_classic (ClearlooksStyleFunctions *functions, Clearloo
 	functions->draw_menuitem            = clearlooks_draw_menuitem;
 	functions->draw_menubaritem         = clearlooks_draw_menubaritem;
 	functions->draw_selected_cell       = clearlooks_draw_selected_cell;
-	functions->draw_scrollbar_stepper   = clearlooks_draw_scrollbar_stepper;
-	functions->draw_scrollbar_slider    = clearlooks_draw_scrollbar_slider;
-	functions->draw_scrollbar_trough    = clearlooks_draw_scrollbar_trough;
+	functions->draw_scrollbar_stepper   = pixflat_draw_scrollbar_stepper;
+	functions->draw_scrollbar_slider    = pixflat_draw_scrollbar_slider;
+	functions->draw_scrollbar_trough    = pixflat_draw_scrollbar_trough;
 	functions->draw_statusbar           = clearlooks_draw_statusbar;
 	functions->draw_menu_frame          = clearlooks_draw_menu_frame;
 	functions->draw_tooltip             = clearlooks_draw_tooltip;
 	functions->draw_icon_view_item      = clearlooks_draw_icon_view_item;
 	functions->draw_handle              = clearlooks_draw_handle;
 	functions->draw_resize_grip         = clearlooks_draw_resize_grip;
-	functions->draw_arrow               = clearlooks_draw_arrow;
+	functions->draw_arrow               = pixflat_draw_arrow;
 	functions->draw_focus               = clearlooks_draw_focus;
-	functions->draw_checkbox            = clearlooks_draw_checkbox;
-	functions->draw_radiobutton         = clearlooks_draw_radiobutton;
-	functions->draw_slider              = clearlooks_draw_slider;
+	functions->draw_checkbox            = pixflat_draw_checkbox;
+	functions->draw_radiobutton         = pixflat_draw_radiobutton;
+	functions->draw_slider              = pixflat_draw_slider;
 
 	constants->topleft_highlight_shade  = 1.3;
 	constants->topleft_highlight_alpha  = 0.6;
