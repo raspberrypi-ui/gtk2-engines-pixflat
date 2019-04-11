@@ -876,7 +876,7 @@ clearlooks_draw_frame            (cairo_t *cr,
 	}
 
 	/* frame */
-	ge_cairo_set_color (cr, &colors->shade[5]);
+	ge_cairo_set_color (cr, &colors->fg[GTK_STATE_NORMAL]);
 	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
 	cairo_stroke (cr);
 
@@ -915,14 +915,14 @@ clearlooks_draw_tab (cairo_t *cr,
 	}
 
 	/* fill */
-	if (params->state_type != GTK_STATE_NORMAL)	ge_cairo_set_color (cr, &colors->bg[params->state_type]);
-	else ge_cairo_set_color (cr, &colors->bg[GTK_STATE_PRELIGHT]);
+	if (params->active) ge_cairo_set_color (cr, &colors->bg[GTK_STATE_ACTIVE]);
+	else ge_cairo_set_color (cr, &colors->bg[GTK_STATE_NORMAL]);
 	ge_cairo_rounded_rectangle (cr, 0.5, 0.5, width-1, height-1, radius, params->corners);
 	cairo_fill (cr);
 
 	/* border */
-	if (params->active)	ge_cairo_set_color (cr, &colors->shade[4]);
-	else ge_cairo_set_color (cr, &colors->shade[5]);
+	if (params->active) ge_cairo_set_color (cr, &colors->fg[GTK_STATE_ACTIVE]);
+	else ge_cairo_set_color (cr, &colors->fg[GTK_STATE_NORMAL]);
 	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, radius, params->corners);
 	cairo_stroke (cr);
 
