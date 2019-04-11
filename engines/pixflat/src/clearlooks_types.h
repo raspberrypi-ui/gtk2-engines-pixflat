@@ -522,13 +522,6 @@ struct _ClearlooksStyleFunctions
 	                               const ClearlooksColors *colors,
 	                               const WidgetParameters *widget,
 	                               int x, int y, int width, int height);
-
-	/* Style internal functions */
-	/* XXX: Only used by slider_button, inline it? */
-	void (*draw_slider)           (cairo_t *cr,
-	                               const ClearlooksColors *colors,
-	                               const WidgetParameters *widget,
-	                               int x, int y, int width, int height);
 };
 
 

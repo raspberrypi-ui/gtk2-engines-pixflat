@@ -514,10 +514,15 @@ static void pixflat_draw_scale_trough (cairo_t *cr, const ClearlooksColors *colo
 	cairo_restore (cr);
 }
 
-static void pixflat_draw_slider (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
-	int x, int y, int width, int height)
+static void pixflat_draw_slider_button (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
+	const SliderParameters *slider, int x, int y, int width, int height)
 {
 	const CairoColor *fill, *border;
+
+	cairo_save (cr);
+
+	if (!slider->horizontal) ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
+	cairo_translate (cr, x, y);
 
 	if (params->active)
 	{
@@ -551,39 +556,22 @@ static void pixflat_draw_slider (cairo_t *cr, const ClearlooksColors *colors, co
 		}
 	}
 
-	cairo_save (cr);
-
 	cairo_set_line_width (cr, 1.0);
-	cairo_translate      (cr, x, y);
+	cairo_translate (cr, 1, 1);
 
 	/* set clip */
-	cairo_rectangle (cr, 0.0, 0.0, width, height);
+	cairo_rectangle (cr, 0.0, 0.0, width - 2, height - 2);
 	cairo_clip_preserve (cr);
 
 	/* handle fill */
-	ge_cairo_rounded_rectangle (cr, 1.0, 0.0, width, height, params->radius, params->corners);
+	ge_cairo_rounded_rectangle (cr, 1.0, 0.0, width - 2, height - 2, params->radius, params->corners);
 	ge_cairo_set_color (cr, fill);
 	cairo_fill (cr);
 
 	/* handle border */
-	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width, height, params->radius, params->corners);
+	ge_cairo_inner_rounded_rectangle (cr, 0, 0, width - 2, height - 2, params->radius, params->corners);
 	ge_cairo_set_color (cr, border);
 	cairo_stroke (cr);
-
-	cairo_restore (cr);
-}
-
-static void pixflat_draw_slider_button (cairo_t *cr, const ClearlooksColors *colors, const WidgetParameters *params,
-	const SliderParameters *slider, int x, int y, int width, int height)
-{
-	cairo_save (cr);
-
-	cairo_set_line_width (cr, 1.0);
-
-	if (!slider->horizontal) ge_cairo_exchange_axis (cr, &x, &y, &width, &height);
-	cairo_translate (cr, x, y);
-
-	params->style_functions->draw_slider (cr, colors, params, 1, 1, width-2, height-2);
 
 	cairo_restore (cr);
 }
@@ -1729,7 +1717,6 @@ clearlooks_register_style_classic (ClearlooksStyleFunctions *functions, Clearloo
 	functions->draw_focus               = clearlooks_draw_focus;
 	functions->draw_checkbox            = pixflat_draw_checkbox;
 	functions->draw_radiobutton         = pixflat_draw_radiobutton;
-	functions->draw_slider              = pixflat_draw_slider;
 
 	constants->topleft_highlight_shade  = 1.3;
 	constants->topleft_highlight_alpha  = 0.6;
