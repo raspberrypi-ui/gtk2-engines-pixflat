@@ -207,7 +207,7 @@ static void pixflat_draw_button (cairo_t *cr, const ClearlooksColors *colors, co
 			fill = &colors->bg[GTK_STATE_ACTIVE];
 		else 
 			fill = &colors->bg[GTK_STATE_NORMAL];
-		border = &colors->shade[8];
+		border = fill;
 	}
 	else if (params->active)
 	{
