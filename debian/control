@@ -6,12 +6,11 @@ Source: gtk2-engines-pixflat
 Section: x11
 Priority: optional
 Maintainer: Simon Long <simon@raspberrypi.org>
-Standards-Version: 3.8.4
+Standards-Version: 4.3.0
 Build-Depends: debhelper (>= 5),
                dh-autoreconf,
                libgtk2.0-dev (>= 2.19.7-2),
                gnome-pkg-tools (>= 0.10),
-               cdbs (>= 0.4.41),
                libxml-parser-perl,
                intltool
 

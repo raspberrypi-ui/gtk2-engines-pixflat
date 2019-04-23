@@ -2,7 +2,7 @@
 AC_INIT([gtk2-engines-pixflat], [2.20.2])
 AC_CONFIG_SRCDIR([README])
 
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign subdir-objects])
 
 # Use AM_SILENT_RULES if present
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -36,13 +36,7 @@ AC_ARG_WITH(system-lua,	[  --with-system-lua        link with system Lua library
 
 AM_CONDITIONAL([SYSTEM_LUA], [test x$system_lua = xyes])
 
-BUILD_ENGINES=""
-BUILD_THEMES=""
-BUILD_SCHEMAS=""
-
-if test $pixflat = "yes"; then
-	BUILD_ENGINES="$BUILD_ENGINES pixflat"
-fi
+BUILD_ENGINES="pixflat"
 
 # Don't forget to update the README when changing this.
 PKG_CHECK_MODULES(GTK, gtk+-2.0 >= 2.12.0,,
@@ -62,8 +56,6 @@ if test $system_lua = "yes"; then
 fi
 
 AC_SUBST(BUILD_ENGINES)
-AC_SUBST(BUILD_THEMES)
-AC_SUBST(BUILD_SCHEMAS)
 AC_SUBST([auto_find_tests], ['$(patsubst %,exported_%,$(BUILD_ENGINES)) torture_buildin $(patsubst %,torture_%,$(TORTURE_TEST_ENGINES))'])
 
 

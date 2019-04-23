@@ -3,8 +3,7 @@ Upstream-Name: gtk2-engines-pixflat
 Source: http://github.com/raspberrypi-ui/gtk2-engines-pixflat
 
 Files: *
-Copyright: 2019 Simon Long <simon@raspberrypi.org>
-Copyright: Richard Stellingwerff <remenic@gmail.com>, Daniel Borgmann <daniel.borgmann@gmail.com>
+Copyright: 2019 Simon Long <simon@raspberrypi.org>, Richard Stellingwerff <remenic@gmail.com>, Daniel Borgmann <daniel.borgmann@gmail.com>
 
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
