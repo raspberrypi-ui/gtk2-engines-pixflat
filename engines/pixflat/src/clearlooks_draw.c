@@ -247,7 +247,7 @@ static void pixflat_draw_button (cairo_t *cr, const ClearlooksColors *colors, co
 	cairo_set_line_width (cr, 1.0);
 
 	/* fill */
-	ge_cairo_rounded_rectangle (cr, xoffset+1, yoffset+1, width-(xoffset*2)-2, height-(yoffset*2)-2, radius, params->corners);
+	ge_cairo_rounded_rectangle (cr, xoffset+1, yoffset+1, width-(xoffset*2)-2, height-(yoffset*2)-2, 0, params->corners);
 	ge_cairo_set_color (cr, fill);
 	cairo_fill (cr);
 
