@@ -1875,7 +1875,7 @@ clearlooks_style_draw_layout (GtkStyle * style,
 		etched.green = (int) (temp.g * 65535);
 		etched.blue = (int) (temp.b * 65535);
 
-		gdk_draw_layout_with_colors (window, gc, x + 1, y + 1, layout, &etched, NULL);
+		//gdk_draw_layout_with_colors (window, gc, x + 1, y + 1, layout, &etched, NULL);
 		gdk_draw_layout (window, gc, x, y, layout);
 	}
 	else
