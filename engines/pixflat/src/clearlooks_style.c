@@ -293,6 +293,7 @@ clearlooks_style_draw_box_gap (DRAW_ARGS,
 	{
 		WidgetParameters params;
 		FrameParameters  frame;
+		CairoColor col;
 		gboolean start, end;
 
 		frame.shadow    = shadow_type;
@@ -353,9 +354,10 @@ clearlooks_style_draw_box_gap (DRAW_ARGS,
 			break;
 		}
 
-		/* Fill the background with bg[NORMAL] */
+		/* Fill the background */
 		ge_cairo_rounded_rectangle (cr, x, y, width, height, params.radius, params.corners);
-		ge_cairo_set_color (cr, &colors->bg[GTK_STATE_PRELIGHT]);
+		ge_shade_color (&colors->shade[0], 0.955, &col);
+		ge_cairo_set_color (cr, &col);
 		cairo_fill (cr);
 
 		STYLE_FUNCTION(draw_frame) (cr, colors, &params, &frame,
