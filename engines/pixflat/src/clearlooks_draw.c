@@ -871,7 +871,11 @@ static void pixflat_draw_tab (cairo_t *cr, const ClearlooksColors *colors, const
 
 	/* fill */
 	if (params->active) ge_cairo_set_color (cr, &colors->bg[GTK_STATE_ACTIVE]);
-	else ge_cairo_set_color (cr, &colors->bg[GTK_STATE_NORMAL]);
+	else
+	{
+		if (params->prelight) ge_cairo_set_color (cr, &colors->bg[GTK_STATE_PRELIGHT]);
+		else ge_cairo_set_color (cr, &colors->bg[GTK_STATE_NORMAL]);
+	}
 	ge_cairo_rounded_rectangle (cr, 0.5, 0.5, width-1, height-1, radius, params->corners);
 	cairo_fill (cr);
 
