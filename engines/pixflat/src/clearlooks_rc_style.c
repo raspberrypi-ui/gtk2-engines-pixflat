@@ -99,7 +99,7 @@ static gchar* clearlooks_rc_symbols =
 	"TRUE\0"
 	"FALSE\0";
 
-G_DEFINE_DYNAMIC_TYPE (ClearlooksPixRcStyle, clearlooks_rc_style, GTK_TYPE_RC_STYLE)
+G_DEFINE_DYNAMIC_TYPE (PixflatRcStyle, clearlooks_rc_style, GTK_TYPE_RC_STYLE)
 
 void
 clearlooks_rc_style_register_types (GTypeModule *module)
@@ -108,7 +108,7 @@ clearlooks_rc_style_register_types (GTypeModule *module)
 }
 
 static void
-clearlooks_rc_style_init (ClearlooksPixRcStyle *clearlooks_rc)
+clearlooks_rc_style_init (PixflatRcStyle *clearlooks_rc)
 {
 	clearlooks_rc->style = CL_STYLE_CLASSIC;
 
@@ -139,7 +139,7 @@ clearlooks_rc_style_finalize (GObject *object)
 
 
 static void
-clearlooks_rc_style_class_init (ClearlooksPixRcStyleClass *klass)
+clearlooks_rc_style_class_init (PixflatRcStyleClass *klass)
 {
 	GtkRcStyleClass *rc_style_class = GTK_RC_STYLE_CLASS (klass);
 #ifdef HAVE_WORKING_ANIMATION
@@ -156,7 +156,7 @@ clearlooks_rc_style_class_init (ClearlooksPixRcStyleClass *klass)
 }
 
 static void
-clearlooks_rc_style_class_finalize (ClearlooksPixRcStyleClass *klass)
+clearlooks_rc_style_class_finalize (PixflatRcStyleClass *klass)
 {
 }
 
@@ -307,7 +307,7 @@ clearlooks_rc_style_parse (GtkRcStyle *rc_style,
                            GScanner   *scanner)
 {
 	static GQuark scope_id = 0;
-	ClearlooksPixRcStyle *clearlooks_style = CLEARLOOKS_RC_STYLE (rc_style);
+	PixflatRcStyle *clearlooks_style = CLEARLOOKS_RC_STYLE (rc_style);
 
 	guint old_scope;
 	guint token;
@@ -433,7 +433,7 @@ static void
 clearlooks_rc_style_merge (GtkRcStyle *dest,
                            GtkRcStyle *src)
 {
-	ClearlooksPixRcStyle *dest_w, *src_w;
+	PixflatRcStyle *dest_w, *src_w;
 	ClearlooksRcFlags flags;
 
 	GTK_RC_STYLE_CLASS (clearlooks_rc_style_parent_class)->merge (dest, src);

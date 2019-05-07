@@ -33,15 +33,15 @@
 
 #include "clearlooks_types.h"
 
-typedef struct _ClearlooksStyle ClearlooksPixStyle;
-typedef struct _ClearlooksStyleClass ClearlooksPixStyleClass;
+typedef struct _ClearlooksStyle PixflatStyle;
+typedef struct _ClearlooksStyleClass PixflatStyleClass;
 
 #define CLEARLOOKS_TYPE_STYLE              (clearlooks_style_get_type ())
-#define CLEARLOOKS_STYLE(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), CLEARLOOKS_TYPE_STYLE, ClearlooksPixStyle))
-#define CLEARLOOKS_STYLE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), CLEARLOOKS_TYPE_STYLE, ClearlooksPixStyleClass))
+#define CLEARLOOKS_STYLE(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), CLEARLOOKS_TYPE_STYLE, PixflatStyle))
+#define CLEARLOOKS_STYLE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), CLEARLOOKS_TYPE_STYLE, PixflatStyleClass))
 #define CLEARLOOKS_IS_STYLE(object)        (G_TYPE_CHECK_INSTANCE_TYPE ((object), CLEARLOOKS_TYPE_STYLE))
 #define CLEARLOOKS_IS_STYLE_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), CLEARLOOKS_TYPE_STYLE))
-#define CLEARLOOKS_STYLE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), CLEARLOOKS_TYPE_STYLE, ClearlooksPixStyleClass))
+#define CLEARLOOKS_STYLE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), CLEARLOOKS_TYPE_STYLE, PixflatStyleClass))
 
 struct _ClearlooksStyle
 {
