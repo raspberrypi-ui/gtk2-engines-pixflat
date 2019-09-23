@@ -1507,7 +1507,7 @@ static void pixflat_draw_radiobutton (cairo_t *cr, const ClearlooksColors *color
 		}
 		else
 		{
-			cairo_arc (cr, ceil (cx), ceil (cy), floor (radius/2.0), 0, G_PI*2);
+			cairo_arc (cr, ceil (cx), ceil (cy), floor (radius/2.5), 0, G_PI*2);
 			ge_cairo_set_color (cr, dot);
 			cairo_fill (cr);
 		}
@@ -1570,7 +1570,7 @@ static void pixflat_draw_checkbox (cairo_t *cr, const ClearlooksColors *colors, 
 		}
 		else
 		{
-			cairo_set_line_width (cr, 2.5);
+			cairo_set_line_width (cr, 3);
 			cairo_move_to (cr, 0.5 + (width*0.2), (height*0.5));
 			cairo_line_to (cr, 0.5 + (width*0.4), (height*0.7));
 			cairo_line_to (cr, 0.5 + (width*0.8), (height*0.3));

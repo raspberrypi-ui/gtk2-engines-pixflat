@@ -1,3 +1,9 @@
+gtk2-engines-pixflat (0.2) buster; urgency=medium
+
+  * Small tweaks to radio and check buttons to match GTK3 more closely
+
+ -- Simon Long <simon@raspberrypi.org>  Mon, 23 Sep 2019 11:34:27 +0100
+
 gtk2-engines-pixflat (0.1) unstable; urgency=medium
 
   * Initial release
