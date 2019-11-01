@@ -154,6 +154,20 @@ clearlooks_style_draw_flat_box (DRAW_ARGS)
 
 		cairo_destroy (cr);
 	}
+	else if (DETAIL ("cell_even_sorted"))
+	{
+		GTK_STYLE_CLASS (clearlooks_style_parent_class)->draw_flat_box (style, window, state_type,
+		                                        shadow_type,
+		                                        area, widget, "cell_even",
+		                                        x, y, width, height);
+	}
+	else if (DETAIL ("cell_odd_sorted"))
+	{
+		GTK_STYLE_CLASS (clearlooks_style_parent_class)->draw_flat_box (style, window, state_type,
+		                                        shadow_type,
+		                                        area, widget, "cell_odd",
+		                                        x, y, width, height);
+	}
 	else
 	{
 		GTK_STYLE_CLASS (clearlooks_style_parent_class)->draw_flat_box (style, window, state_type,
