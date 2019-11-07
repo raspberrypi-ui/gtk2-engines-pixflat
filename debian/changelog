@@ -1,3 +1,9 @@
+gtk2-engines-pixflat (0.3) buster; urgency=medium
+
+  * Remove shading of sort column in tree view
+
+ -- Simon Long <simon@raspberrypi.org>  Thu, 07 Nov 2019 11:21:06 +0000
+
 gtk2-engines-pixflat (0.2) buster; urgency=medium
 
   * Small tweaks to radio and check buttons to match GTK3 more closely
