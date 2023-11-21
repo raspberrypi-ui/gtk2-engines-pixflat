@@ -663,7 +663,7 @@ clearlooks_draw_menu_item_separator (cairo_t                   *cr,
 {
 	cairo_save (cr);
 	cairo_set_line_cap (cr, CAIRO_LINE_CAP_BUTT);
-	ge_cairo_set_color (cr, &colors->shade[8]);
+	ge_cairo_set_color (cr, &colors->fg[0]);
 
 	if (separator->horizontal)
 		cairo_rectangle (cr, x, y, width, 1);
