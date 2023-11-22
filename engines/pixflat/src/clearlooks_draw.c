@@ -895,7 +895,7 @@ clearlooks_draw_separator (cairo_t *cr,
                            const SeparatorParameters  *separator,
                            int x, int y, int width, int height)
 {
-	CairoColor color = colors->shade[2];
+	CairoColor color = colors->fg[0];
 	CairoColor hilight;
 	ge_shade_color (&colors->bg[0], 1.065, &hilight);
 
