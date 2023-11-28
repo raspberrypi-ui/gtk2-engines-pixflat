@@ -1,3 +1,9 @@
+gtk2-engines-pixflat (0.5) bookworm; urgency=medium
+
+  * Fix Qt's use of separator for menus
+
+ -- Simon Long <simon@raspberrypi.com>  Tue, 28 Nov 2023 09:11:57 +0000
+
 gtk2-engines-pixflat (0.4) bookworm; urgency=medium
 
   * Make menu separator themeable
